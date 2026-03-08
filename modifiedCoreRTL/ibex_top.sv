@@ -152,12 +152,11 @@ module ibex_top import ibex_pkg::*; #(
   output logic                         alert_major_bus_o,
   output logic                         core_sleep_o,
 
-
-  // Passive addition: random bits from noise generator
-  input logic [15:0]                   randbits,
-
   // DFT bypass controls
-  input logic                          scan_rst_ni
+  input logic                          scan_rst_ni,
+
+  // Random bits for masked core wrapper
+  input logic [15:0]                   randbits
 );
 
   localparam bit          Lockstep              = SecureIbex;
@@ -220,6 +219,7 @@ module ibex_top import ibex_pkg::*; #(
   logic                        scramble_req_d, scramble_req_q;
 
   ibex_mubi_t                  fetch_enable_buf;
+
 
   /////////////////////
   // Main clock gate //
@@ -297,44 +297,7 @@ module ibex_top import ibex_pkg::*; #(
     assign unused_intg = ^{instr_rdata_intg_i, data_rdata_intg_i};
   end
 
-  ibex_core #(
-    .PMPEnable        (PMPEnable),
-    .PMPGranularity   (PMPGranularity),
-    .PMPNumRegions    (PMPNumRegions),
-    .PMPRstCfg        (PMPRstCfg),
-    .PMPRstAddr       (PMPRstAddr),
-    .PMPRstMsecCfg    (PMPRstMsecCfg),
-    .MHPMCounterNum   (MHPMCounterNum),
-    .MHPMCounterWidth (MHPMCounterWidth),
-    .RV32E            (RV32E),
-    .RV32M            (RV32M),
-    .RV32B            (RV32B),
-    .BranchTargetALU  (BranchTargetALU),
-    .ICache           (ICache),
-    .ICacheECC        (ICacheECC),
-    .BusSizeECC       (BusSizeECC),
-    .TagSizeECC       (TagSizeECC),
-    .LineSizeECC      (LineSizeECC),
-    .BranchPredictor  (BranchPredictor),
-    .DbgTriggerEn     (DbgTriggerEn),
-    .DbgHwBreakNum    (DbgHwBreakNum),
-    .WritebackStage   (WritebackStage),
-    .ResetAll         (ResetAll),
-    .RndCnstLfsrSeed  (RndCnstLfsrSeed),
-    .RndCnstLfsrPerm  (RndCnstLfsrPerm),
-    .SecureIbex       (SecureIbex),
-    .DummyInstructions(DummyInstructions),
-    .RegFileECC       (RegFileECC),
-    .RegFileDataWidth (RegFileDataWidth),
-    .MemECC           (MemECC),
-    .MemDataWidth     (MemDataWidth),
-    .DmBaseAddr       (DmBaseAddr),
-    .DmAddrMask       (DmAddrMask),
-    .DmHaltAddr       (DmHaltAddr),
-    .DmExceptionAddr  (DmExceptionAddr),
-    .CsrMvendorId     (CsrMvendorId),
-    .CsrMimpId        (CsrMimpId)
-  ) u_ibex_core (
+  ibex_core_wrapper u_ibex_core (
     .clk_i(clk),
     .rst_ni,
 
@@ -345,7 +308,7 @@ module ibex_top import ibex_pkg::*; #(
     .instr_gnt_i,
     .instr_rvalid_i,
     .instr_addr_o,
-    .instr_rdata_i(instr_rdata_core),
+    .instr_rdata_i(instr_rdata_core[31:0]),
     .instr_err_i,
 
     .data_req_o,
@@ -354,8 +317,8 @@ module ibex_top import ibex_pkg::*; #(
     .data_we_o,
     .data_be_o,
     .data_addr_o,
-    .data_wdata_o(data_wdata_core),
-    .data_rdata_i(data_rdata_core),
+    .data_wdata_o(data_wdata_core[31:0]),
+    .data_rdata_i(data_rdata_core[31:0]),
     .data_err_i,
 
     .dummy_instr_id_o (dummy_instr_id),
@@ -392,49 +355,13 @@ module ibex_top import ibex_pkg::*; #(
     .crash_dump_o,
     .double_fault_seen_o,
 
-`ifdef RVFI
-    .rvfi_valid,
-    .rvfi_order,
-    .rvfi_insn,
-    .rvfi_trap,
-    .rvfi_halt,
-    .rvfi_intr,
-    .rvfi_mode,
-    .rvfi_ixl,
-    .rvfi_rs1_addr,
-    .rvfi_rs2_addr,
-    .rvfi_rs3_addr,
-    .rvfi_rs1_rdata,
-    .rvfi_rs2_rdata,
-    .rvfi_rs3_rdata,
-    .rvfi_rd_addr,
-    .rvfi_rd_wdata,
-    .rvfi_pc_rdata,
-    .rvfi_pc_wdata,
-    .rvfi_mem_addr,
-    .rvfi_mem_rmask,
-    .rvfi_mem_wmask,
-    .rvfi_mem_rdata,
-    .rvfi_mem_wdata,
-    .rvfi_ext_pre_mip,
-    .rvfi_ext_post_mip,
-    .rvfi_ext_nmi,
-    .rvfi_ext_nmi_int,
-    .rvfi_ext_debug_req,
-    .rvfi_ext_debug_mode,
-    .rvfi_ext_rf_wr_suppress,
-    .rvfi_ext_mcycle,
-    .rvfi_ext_mhpmcounters,
-    .rvfi_ext_mhpmcountersh,
-    .rvfi_ext_ic_scr_key_valid,
-    .rvfi_ext_irq_valid,
-`endif
-
     .fetch_enable_i        (fetch_enable_buf),
     .alert_minor_o         (core_alert_minor),
     .alert_major_internal_o(core_alert_major_internal),
     .alert_major_bus_o     (core_alert_major_bus),
-    .core_busy_o           (core_busy_d)
+    .core_busy_o           (core_busy_d),
+
+    .randbits(randbits)
   );
 
   /////////////////////////////////
@@ -1349,15 +1276,15 @@ module ibex_top import ibex_pkg::*; #(
   // instructions are enabled.
   `ASSERT(WaddrAZeroForDummyInstr, dummy_instr_wb && rf_we_wb |-> rf_waddr_wb == '0)
 
-  // Ensure the crash dump is connected to the correct internal signals
-  `ASSERT(CrashDumpCurrentPCConn, crash_dump_o.current_pc === u_ibex_core.pc_id)
-  `ASSERT(CrashDumpNextPCConn, crash_dump_o.next_pc === u_ibex_core.pc_if)
-  `ASSERT(CrashDumpLastDataAddrConn,
-    crash_dump_o.last_data_addr === u_ibex_core.load_store_unit_i.addr_last_q)
-  `ASSERT(CrashDumpExceptionPCConn,
-    crash_dump_o.exception_pc === u_ibex_core.cs_registers_i.mepc_q)
-  `ASSERT(CrashDumpExceptionAddrConn,
-    crash_dump_o.exception_addr === u_ibex_core.cs_registers_i.mtval_q)
+  // Crash dump assertions disabled — internal signals not visible through masked wrapper/netlist
+  // `ASSERT(CrashDumpCurrentPCConn, crash_dump_o.current_pc === u_ibex_core.pc_id)
+  // `ASSERT(CrashDumpNextPCConn, crash_dump_o.next_pc === u_ibex_core.pc_if)
+  // `ASSERT(CrashDumpLastDataAddrConn,
+  //   crash_dump_o.last_data_addr === u_ibex_core.load_store_unit_i.addr_last_q)
+  // `ASSERT(CrashDumpExceptionPCConn,
+  //   crash_dump_o.exception_pc === u_ibex_core.cs_registers_i.mepc_q)
+  // `ASSERT(CrashDumpExceptionAddrConn,
+  //   crash_dump_o.exception_addr === u_ibex_core.cs_registers_i.mtval_q)
 
   // Explicit INC_ASSERT due to instantiation of prim_secded_inv_39_32_dec below that is only used
   // by assertions

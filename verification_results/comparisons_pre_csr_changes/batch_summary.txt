@@ -1,0 +1,24 @@
+TEST                                                 SEED RESULT
+----                                                 ---- ------
+riscv_arithmetic_basic_test                          1000 PASS
+riscv_arithmetic_basic_test                          2000 PASS
+riscv_rv32im_instr_test                              1000 PASS
+riscv_rv32im_instr_test                              2000 PASS
+riscv_machine_mode_rand_test                         1000 PASS
+riscv_machine_mode_rand_test                         2000 PASS
+riscv_rand_instr_test                                1000 FAIL (mismatch)
+riscv_rand_instr_test                                2000 PASS
+riscv_rand_jump_test                                 1000 PASS
+riscv_rand_jump_test                                 2000 PASS
+riscv_jump_stress_test                               1000 PASS
+riscv_jump_stress_test                               2000 PASS
+riscv_loop_test                                      1000 PASS
+riscv_loop_test                                      2000 PASS
+riscv_mmu_stress_test                                1000 PASS
+riscv_mmu_stress_test                                2000 PASS
+riscv_unaligned_load_store_test                      1000 PASS
+riscv_unaligned_load_store_test                      2000 PASS
+riscv_illegal_instr_test                             1000 PASS
+riscv_illegal_instr_test                             2000 PASS
+riscv_hint_instr_test                                1000 FAIL (run error)
+riscv_hint_instr_test                                2000 FAIL (run error)

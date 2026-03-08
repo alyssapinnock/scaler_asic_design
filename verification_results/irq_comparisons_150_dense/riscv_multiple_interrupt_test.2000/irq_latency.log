@@ -1,0 +1,23 @@
+# Interrupt Latency Measurements (closed-loop)
+# IRQ#, Assert_Cycle, Handler_Cycle, Latency_Cycles, Handler_PC
+1, 500, 536, 36, 0x8000272c
+2, 686, 693, 7, 0x8000272c
+3, 843, 850, 7, 0x8000272c
+4, 1000, 1043, 43, 0x8000272c
+5, 1193, 1225, 32, 0x8000272c
+6, 1375, 1382, 7, 0x8000272c
+7, 1532, 1566, 34, 0x8000272c
+8, 1716, 1745, 29, 0x8000272c
+9, 1895, 1902, 7, 0x8000272c
+10, 2052, 2077, 25, 0x8000272c
+11, 2227, 2253, 26, 0x8000272c
+12, 2403, 2426, 23, 0x8000272c
+13, 2576, 2583, 7, 0x8000272c
+14, 2733, 2740, 7, 0x8000272c
+
+# ---- Summary ----
+# Measurements : 14
+# Min latency  : 7 cycles
+# Max latency  : 43 cycles
+# Avg latency  : 20 cycles
+# NOTE: Simulation ended with one IRQ still pending service.

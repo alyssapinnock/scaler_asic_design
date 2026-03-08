@@ -1,0 +1,13 @@
+TEST                                            SEED STATUS      COUNT    MIN    MAX    AVG
+----                                            ---- ------      -----    ---    ---    ---
+riscv_single_interrupt_test                     1000 PASS           20      6     36     11
+riscv_single_interrupt_test                     2000 PASS           20      7     36     10
+riscv_single_interrupt_test                     3000 PASS           20      6     39     17
+riscv_single_interrupt_test                     4000 PASS           20      6     43     10
+riscv_single_interrupt_test                     5000 PASS           20      7     43     17
+riscv_multiple_interrupt_test                   1000 PASS           20      7     42     19
+riscv_multiple_interrupt_test                   2000 PASS            3      7     36     20
+riscv_multiple_interrupt_test                   3000 PASS           20      6     35     10
+riscv_multiple_interrupt_test                   4000 PASS           20      6     16      8
+riscv_multiple_interrupt_test                   5000 DV_ERR          -      -      -      -
+riscv_interrupt_wfi_test                        1000 DV_ERR          -      -      -      -

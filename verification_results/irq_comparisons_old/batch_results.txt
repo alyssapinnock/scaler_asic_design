@@ -1,0 +1,3162 @@
+Interrupt Latency Batch — Fri Mar  6 14:28:51 EST 2026
+Tests: 5, Seeds: 1000 2000 3000 4000 5000
+IRQ params: interval=300 first_delay=500 pulse=10 max=20
+==========================================
+
+===== [1] riscv_single_interrupt_test  seed=1000 =====
+>>> Step 1: Generating test binary via Ibex DV ...
+Building RTL testbench
+Generating core configuration file
+Building randomized test generator
+Running randomized test generator to create assembly file /home/net/al663069/ws/ibex/dv/uvm/core_ibex/out/run/tests/riscv_single_interrupt_test.1000/test.S
+Compiling riscvdv test assembly to create binary at /home/net/al663069/ws/ibex/dv/uvm/core_ibex/out/run/tests/riscv_single_interrupt_test.1000/test.bin
+Running RTL simulation at /home/net/al663069/ws/ibex/dv/uvm/core_ibex/out/run/tests/riscv_single_interrupt_test.1000
+Collecting simulation results and checking logs of testcase at /home/net/al663069/ws/ibex/dv/uvm/core_ibex/out/run/tests/riscv_single_interrupt_test.1000/trr.yaml
+Collecting up results of tests into report regr.log
+100.00% PASS 1 PASSED, 0 FAILED
+    Binary copied to /home/net/al663069/ws/irq_comparisons/riscv_single_interrupt_test.1000/
+
+>>> Step 2: Running interrupt testbench ...
+TOOL:	xrun(64)	23.09-s006: Started on Mar 06, 2026 at 14:38:10 EST
+xrun(64): 23.09-s006: (c) Copyright 1995-2024 Cadence Design Systems, Inc.
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_assert.sv
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_pkg.sv
+	package worklib.ibex_pkg:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_tracer_pkg.sv
+	package worklib.ibex_tracer_pkg:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_ram_1p_pkg.sv
+	package worklib.prim_ram_1p_pkg:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_secded_pkg.sv
+	package worklib.prim_secded_pkg:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_pkg.sv
+	package worklib.prim_pkg:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/gng.v
+	module worklib.gng:v
+		errors: 0, warnings: 0
+	module worklib.gng_coef:v
+		errors: 0, warnings: 0
+	module worklib.gng_ctg:v
+		errors: 0, warnings: 0
+	module worklib.gng_interp:v
+		errors: 0, warnings: 0
+	module worklib.gng_lzd:v
+		errors: 0, warnings: 0
+	module worklib.gng_smul_16_18:v
+		errors: 0, warnings: 0
+	module worklib.gng_smul_16_18_sadd_37:v
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_alu.sv
+	module worklib.ibex_alu:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_compressed_decoder.sv
+	module worklib.ibex_compressed_decoder:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_controller.sv
+	module worklib.ibex_controller:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_counter.sv
+	module worklib.ibex_counter:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_csr.sv
+	module worklib.ibex_csr:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_cs_registers.sv
+	module worklib.ibex_cs_registers:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_decoder.sv
+	module worklib.ibex_decoder:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_dummy_instr.sv
+	module worklib.ibex_dummy_instr:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_ex_block.sv
+	module worklib.ibex_ex_block:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_fetch_fifo.sv
+	module worklib.ibex_fetch_fifo:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_icache.sv
+	module worklib.ibex_icache:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_id_stage.sv
+	module worklib.ibex_id_stage:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_if_stage.sv
+	module worklib.ibex_if_stage:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_load_store_unit.sv
+	module worklib.ibex_load_store_unit:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_lockstep.sv
+	module worklib.ibex_lockstep:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_multdiv_fast.sv
+	module worklib.ibex_multdiv_fast:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_multdiv_slow.sv
+	module worklib.ibex_multdiv_slow:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_prefetch_buffer.sv
+	module worklib.ibex_prefetch_buffer:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_pmp.sv
+	module worklib.ibex_pmp:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_register_file_ff.sv
+	module worklib.ibex_register_file_ff:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_wb_stage.sv
+	module worklib.ibex_wb_stage:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_branch_predict.sv
+	module worklib.ibex_branch_predict:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_core.sv
+	module worklib.ibex_core:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_top.sv
+	module worklib.ibex_top:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_top_tracing.sv
+	module worklib.ibex_top_tracing:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_tracer.sv
+	module worklib.ibex_tracer:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_buf.sv
+	module worklib.prim_buf:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_generic_buf.sv
+	module worklib.prim_generic_buf:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_clock_gating.sv
+	module worklib.prim_clock_gating:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_generic_clock_gating.sv
+	module worklib.prim_generic_clock_gating:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_flop_macros.sv
+file: masked_core_tb_interrupt.sv
+	module worklib.masked_core_tb:sv
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		ibex_pkg
+		prim_ram_1p_pkg
+		prim_secded_pkg
+		prim_pkg
+		ibex_tracer_pkg
+		masked_core_tb
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.ibex_tracer:sv <0x0caf524c>
+			streams:  54, words: 168030
+		worklib.ibex_csr:sv <0x60925401>
+			streams:   4, words:   981
+		worklib.ibex_csr:sv <0x2b3c60ab>
+			streams:   4, words:   927
+		worklib.ibex_counter:sv <0x7dcd1ceb>
+			streams:   9, words:  5929
+		worklib.ibex_counter:sv <0x43dbcdd6>
+			streams:   9, words:  5774
+		worklib.ibex_counter:sv <0x148dddae>
+			streams:   6, words:  3970
+		worklib.ibex_csr:sv <0x5cc91402>
+			streams:   4, words:   975
+		worklib.ibex_csr:sv <0x7747b744>
+			streams:   4, words:   963
+		worklib.ibex_csr:sv <0x414931de>
+			streams:   4, words:   975
+		worklib.ibex_csr:sv <0x399f25b4>
+			streams:   4, words:   923
+		worklib.ibex_csr:sv <0x64919a45>
+			streams:   4, words:   904
+		worklib.ibex_csr:sv <0x74be4f27>
+			streams:   4, words:   976
+		worklib.ibex_csr:sv <0x260d775b>
+			streams:   4, words:   907
+		worklib.ibex_csr:sv <0x50525780>
+			streams:   4, words:   925
+		worklib.ibex_csr:sv <0x2c10d7ec>
+			streams:   4, words:   895
+		worklib.ibex_csr:sv <0x7ed6b7ee>
+			streams:   4, words:   988
+		worklib.ibex_wb_stage:sv <0x46bdbef6>
+			streams:  31, words:  8678
+		worklib.ibex_load_store_unit:sv <0x6badb48b>
+			streams:  36, words: 25798
+		worklib.ibex_multdiv_fast:sv <0x63449840>
+			streams:  35, words: 35045
+		worklib.ibex_ex_block:sv <0x65c54abd>
+			streams:  31, words: 15361
+		worklib.ibex_decoder:sv <0x78497b65>
+			streams:  19, words: 51900
+		worklib.ibex_compressed_decoder:sv <0x10b24dc9>
+			streams:   3, words: 10294
+		worklib.prim_generic_buf:sv <0x100a5a28>
+			streams:   2, words:   397
+		worklib.prim_buf:sv <0x5a7b5f37>
+			streams:   1, words:   375
+		worklib.prim_generic_buf:sv <0x39a3c22b>
+			streams:   2, words:   407
+		worklib.prim_buf:sv <0x1f5e1654>
+			streams:   1, words:   384
+		worklib.prim_generic_clock_gating:sv <0x08a28a85>
+			streams:   2, words:   577
+		worklib.prim_clock_gating:sv <0x44690828>
+			streams:   1, words:   404
+		worklib.ibex_top:sv <0x467b5a88>
+			streams: 123, words: 45059
+		worklib.gng_smul_16_18:v <0x16b3a698>
+			streams:   5, words:  1301
+		worklib.gng_smul_16_18_sadd_37:v <0x36116fae>
+			streams:   9, words:  2414
+		worklib.gng_coef:v <0x570eb596>
+			streams:   3, words: 14463
+		worklib.gng_lzd:v <0x130f33d6>
+			streams:  65, words: 15690
+		worklib.gng_interp:v <0x7d32c6e0>
+			streams:  30, words: 11127
+		worklib.gng_ctg:v <0x092f2558>
+			streams:  10, words:  4341
+		worklib.masked_core_tb:sv <0x40707048>
+			streams:  59, words: 54654
+		worklib.prim_secded_pkg:sv <0x20bf3998>
+			streams:  38, words: 206599
+		worklib.ibex_alu:sv <0x4bcbe894>
+			streams:  47, words: 32653
+		worklib.ibex_core:sv <0x1cf07689>
+			streams: 535, words: 241927
+		worklib.ibex_id_stage:sv <0x6c76aa53>
+			streams: 170, words: 67433
+		worklib.ibex_cs_registers:sv <0x4a5e4e51>
+			streams: 248, words: 148098
+		worklib.ibex_fetch_fifo:sv <0x0e28d196>
+			streams:  42, words: 20142
+		worklib.ibex_prefetch_buffer:sv <0x17c9a102>
+			streams:  40, words: 14242
+		worklib.ibex_pmp:sv <0x66d26228>
+			streams:  81, words: 73730
+		worklib.ibex_register_file_ff:sv <0x45596e58>
+			streams:  14, words:  5507
+		worklib.ibex_top_tracing:sv <0x230bff17>
+			streams:  85, words: 24732
+		worklib.ibex_controller:sv <0x5377bf6c>
+			streams:  49, words: 41938
+		worklib.ibex_if_stage:sv <0x2f46adf1>
+			streams:  88, words: 26193
+		worklib.ibex_pkg:sv <0x0ea50bd6>
+			streams:   0, words:     0
+		worklib.ibex_counter:sv <0x7d2f9678>
+			streams:   6, words:  3832
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                  Instances  Unique
+		Modules:                 98      38
+		Verilog packages:         5       5
+		Registers:             2176    2257
+		Scalar wires:          2262       -
+		Expanded wires:          64       1
+		Vectored wires:        1258       -
+		Always blocks:          295     218
+		Initial blocks:          17      17
+		Final blocks:             2       2
+		Cont. assignments:     1950    1265
+		Pseudo assignments:     885       -
+		Process Clocks:         151       6
+		Simulation timescale:   1ps
+	Writing initial simulation snapshot: worklib.masked_core_tb:sv
+Loading snapshot worklib.masked_core_tb:sv .................... Done
+xcelium> source /home/net/cadence/installs/XCELIUM2309/tools/xcelium/files/xmsimrc
+xcelium> source /home/net/cadence/installs/XCELIUM2309/tools/xcelium/files/xmsimrc
+xcelium> run
+[TB] Loaded 183528 bytes from /home/net/al663069/ws/irq_comparisons/riscv_single_interrupt_test.1000/test.bin at 0x80000000
+masked_core_tb.u_dut.u_ibex_tracer.unmblk2.unmblk1: Writing execution trace to /home/net/al663069/ws/irq_comparisons/riscv_single_interrupt_test.1000/trace_00000000.log
+[IRQ-INJ] #1: Assert irq_external at cycle 500
+[IRQ-LAT] #1: Assert@500 -> Handler@508  Latency = 8 cycles  PC=0x8000272c
+[IRQ-INJ] #1: Deassert irq_external at cycle 508
+[IRQ-INJ] #2: Assert irq_external at cycle 808
+[IRQ-LAT] #2: Assert@808 -> Handler@815  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #2: Deassert irq_external at cycle 815
+[IRQ-INJ] #3: Assert irq_external at cycle 1115
+[IRQ-LAT] #3: Assert@1115 -> Handler@1122  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #3: Deassert irq_external at cycle 1122
+[IRQ-INJ] #4: Assert irq_external at cycle 1422
+[IRQ-LAT] #4: Assert@1422 -> Handler@1429  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #4: Deassert irq_external at cycle 1429
+[IRQ-INJ] #5: Assert irq_external at cycle 1729
+[IRQ-LAT] #5: Assert@1729 -> Handler@1739  Latency = 10 cycles  PC=0x8000272c
+[IRQ-INJ] #5: Deassert irq_external at cycle 1739
+[IRQ-INJ] #6: Assert irq_external at cycle 2039
+[IRQ-LAT] #6: Assert@2039 -> Handler@2045  Latency = 6 cycles  PC=0x8000272c
+[IRQ-INJ] #6: Deassert irq_external at cycle 2045
+[IRQ-INJ] #7: Assert irq_external at cycle 2345
+[IRQ-LAT] #7: Assert@2345 -> Handler@2352  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #7: Deassert irq_external at cycle 2352
+[IRQ-INJ] #8: Assert irq_external at cycle 2652
+[IRQ-LAT] #8: Assert@2652 -> Handler@2659  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #8: Deassert irq_external at cycle 2659
+[IRQ-INJ] #9: Assert irq_external at cycle 2959
+[IRQ-LAT] #9: Assert@2959 -> Handler@2966  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #9: Deassert irq_external at cycle 2966
+[IRQ-INJ] #10: Assert irq_external at cycle 3266
+[IRQ-LAT] #10: Assert@3266 -> Handler@3282  Latency = 16 cycles  PC=0x8000272c
+[IRQ-INJ] #10: Deassert irq_external at cycle 3282
+[IRQ-INJ] #11: Assert irq_external at cycle 3582
+[IRQ-LAT] #11: Assert@3582 -> Handler@3611  Latency = 29 cycles  PC=0x8000272c
+[IRQ-INJ] #11: Deassert irq_external at cycle 3611
+[IRQ-INJ] #12: Assert irq_external at cycle 3911
+[IRQ-LAT] #12: Assert@3911 -> Handler@3918  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #12: Deassert irq_external at cycle 3918
+[IRQ-INJ] #13: Assert irq_external at cycle 4218
+[IRQ-LAT] #13: Assert@4218 -> Handler@4228  Latency = 10 cycles  PC=0x8000272c
+[IRQ-INJ] #13: Deassert irq_external at cycle 4228
+[IRQ-INJ] #14: Assert irq_external at cycle 4528
+[IRQ-LAT] #14: Assert@4528 -> Handler@4534  Latency = 6 cycles  PC=0x8000272c
+[IRQ-INJ] #14: Deassert irq_external at cycle 4534
+[IRQ-INJ] #15: Assert irq_external at cycle 4834
+[IRQ-LAT] #15: Assert@4834 -> Handler@4842  Latency = 8 cycles  PC=0x8000272c
+[IRQ-INJ] #15: Deassert irq_external at cycle 4842
+[IRQ-INJ] #16: Assert irq_external at cycle 5142
+[IRQ-LAT] #16: Assert@5142 -> Handler@5149  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #16: Deassert irq_external at cycle 5149
+[IRQ-INJ] #17: Assert irq_external at cycle 5449
+[IRQ-LAT] #17: Assert@5449 -> Handler@5456  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #17: Deassert irq_external at cycle 5456
+[IRQ-INJ] #18: Assert irq_external at cycle 5756
+[IRQ-LAT] #18: Assert@5756 -> Handler@5789  Latency = 33 cycles  PC=0x8000272c
+[IRQ-INJ] #18: Deassert irq_external at cycle 5789
+[IRQ-INJ] #19: Assert irq_external at cycle 6089
+[IRQ-LAT] #19: Assert@6089 -> Handler@6096  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #19: Deassert irq_external at cycle 6096
+[IRQ-INJ] #20: Assert irq_external at cycle 6396
+[IRQ-LAT] #20: Assert@6396 -> Handler@6432  Latency = 36 cycles  PC=0x8000272c
+[IRQ-INJ] #20: Deassert irq_external at cycle 6432
+[TB] *** TEST PASSED at 467495000 ***
+
+[IRQ-LAT] ============ LATENCY SUMMARY ============
+[IRQ-LAT]   Interrupts measured : 20
+[IRQ-LAT]   Min latency         : 6 cycles
+[IRQ-LAT]   Max latency         : 36 cycles
+[IRQ-LAT]   Avg latency         : 11 cycles
+[IRQ-LAT] ==========================================
+Simulation complete via $finish(1) at time 467595 NS + 0
+./masked_core_tb_interrupt.sv:232       $finish;
+xcelium> exit
+TOOL:	xrun(64)	23.09-s006: Exiting on Mar 06, 2026 at 14:41:08 EST  (total: 00:02:58)
+    Simulation complete
+
+>>> Step 3: Parsing latency results ...
+  >> PASS — 20 interrupts measured
+     Min=6  Max=36  Avg=11 cycles
+
+
+===== [2] riscv_single_interrupt_test  seed=2000 =====
+>>> Step 1: Generating test binary via Ibex DV ...
+Building RTL testbench
+Generating core configuration file
+Building randomized test generator
+Running randomized test generator to create assembly file /home/net/al663069/ws/ibex/dv/uvm/core_ibex/out/run/tests/riscv_single_interrupt_test.2000/test.S
+Compiling riscvdv test assembly to create binary at /home/net/al663069/ws/ibex/dv/uvm/core_ibex/out/run/tests/riscv_single_interrupt_test.2000/test.bin
+Running RTL simulation at /home/net/al663069/ws/ibex/dv/uvm/core_ibex/out/run/tests/riscv_single_interrupt_test.2000
+Collecting simulation results and checking logs of testcase at /home/net/al663069/ws/ibex/dv/uvm/core_ibex/out/run/tests/riscv_single_interrupt_test.2000/trr.yaml
+Collecting up results of tests into report regr.log
+100.00% PASS 1 PASSED, 0 FAILED
+    Binary copied to /home/net/al663069/ws/irq_comparisons/riscv_single_interrupt_test.2000/
+
+>>> Step 2: Running interrupt testbench ...
+TOOL:	xrun(64)	23.09-s006: Started on Mar 06, 2026 at 15:02:04 EST
+xrun(64): 23.09-s006: (c) Copyright 1995-2024 Cadence Design Systems, Inc.
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_assert.sv
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_pkg.sv
+	package worklib.ibex_pkg:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_tracer_pkg.sv
+	package worklib.ibex_tracer_pkg:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_ram_1p_pkg.sv
+	package worklib.prim_ram_1p_pkg:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_secded_pkg.sv
+	package worklib.prim_secded_pkg:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_pkg.sv
+	package worklib.prim_pkg:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/gng.v
+	module worklib.gng:v
+		errors: 0, warnings: 0
+	module worklib.gng_coef:v
+		errors: 0, warnings: 0
+	module worklib.gng_ctg:v
+		errors: 0, warnings: 0
+	module worklib.gng_interp:v
+		errors: 0, warnings: 0
+	module worklib.gng_lzd:v
+		errors: 0, warnings: 0
+	module worklib.gng_smul_16_18:v
+		errors: 0, warnings: 0
+	module worklib.gng_smul_16_18_sadd_37:v
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_alu.sv
+	module worklib.ibex_alu:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_compressed_decoder.sv
+	module worklib.ibex_compressed_decoder:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_controller.sv
+	module worklib.ibex_controller:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_counter.sv
+	module worklib.ibex_counter:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_csr.sv
+	module worklib.ibex_csr:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_cs_registers.sv
+	module worklib.ibex_cs_registers:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_decoder.sv
+	module worklib.ibex_decoder:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_dummy_instr.sv
+	module worklib.ibex_dummy_instr:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_ex_block.sv
+	module worklib.ibex_ex_block:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_fetch_fifo.sv
+	module worklib.ibex_fetch_fifo:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_icache.sv
+	module worklib.ibex_icache:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_id_stage.sv
+	module worklib.ibex_id_stage:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_if_stage.sv
+	module worklib.ibex_if_stage:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_load_store_unit.sv
+	module worklib.ibex_load_store_unit:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_lockstep.sv
+	module worklib.ibex_lockstep:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_multdiv_fast.sv
+	module worklib.ibex_multdiv_fast:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_multdiv_slow.sv
+	module worklib.ibex_multdiv_slow:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_prefetch_buffer.sv
+	module worklib.ibex_prefetch_buffer:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_pmp.sv
+	module worklib.ibex_pmp:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_register_file_ff.sv
+	module worklib.ibex_register_file_ff:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_wb_stage.sv
+	module worklib.ibex_wb_stage:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_branch_predict.sv
+	module worklib.ibex_branch_predict:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_core.sv
+	module worklib.ibex_core:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_top.sv
+	module worklib.ibex_top:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_top_tracing.sv
+	module worklib.ibex_top_tracing:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_tracer.sv
+	module worklib.ibex_tracer:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_buf.sv
+	module worklib.prim_buf:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_generic_buf.sv
+	module worklib.prim_generic_buf:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_clock_gating.sv
+	module worklib.prim_clock_gating:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_generic_clock_gating.sv
+	module worklib.prim_generic_clock_gating:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_flop_macros.sv
+file: masked_core_tb_interrupt.sv
+	module worklib.masked_core_tb:sv
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		ibex_pkg
+		prim_ram_1p_pkg
+		prim_secded_pkg
+		prim_pkg
+		ibex_tracer_pkg
+		masked_core_tb
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.ibex_tracer:sv <0x0caf524c>
+			streams:  54, words: 168030
+		worklib.ibex_csr:sv <0x60925401>
+			streams:   4, words:   981
+		worklib.ibex_csr:sv <0x2b3c60ab>
+			streams:   4, words:   927
+		worklib.ibex_counter:sv <0x7dcd1ceb>
+			streams:   9, words:  5929
+		worklib.ibex_counter:sv <0x43dbcdd6>
+			streams:   9, words:  5774
+		worklib.ibex_counter:sv <0x148dddae>
+			streams:   6, words:  3970
+		worklib.ibex_csr:sv <0x5cc91402>
+			streams:   4, words:   975
+		worklib.ibex_csr:sv <0x7747b744>
+			streams:   4, words:   963
+		worklib.ibex_csr:sv <0x414931de>
+			streams:   4, words:   975
+		worklib.ibex_csr:sv <0x399f25b4>
+			streams:   4, words:   923
+		worklib.ibex_csr:sv <0x64919a45>
+			streams:   4, words:   904
+		worklib.ibex_csr:sv <0x74be4f27>
+			streams:   4, words:   976
+		worklib.ibex_csr:sv <0x260d775b>
+			streams:   4, words:   907
+		worklib.ibex_csr:sv <0x50525780>
+			streams:   4, words:   925
+		worklib.ibex_csr:sv <0x2c10d7ec>
+			streams:   4, words:   895
+		worklib.ibex_csr:sv <0x7ed6b7ee>
+			streams:   4, words:   988
+		worklib.ibex_wb_stage:sv <0x46bdbef6>
+			streams:  31, words:  8678
+		worklib.ibex_load_store_unit:sv <0x6badb48b>
+			streams:  36, words: 25798
+		worklib.ibex_multdiv_fast:sv <0x63449840>
+			streams:  35, words: 35045
+		worklib.ibex_ex_block:sv <0x65c54abd>
+			streams:  31, words: 15361
+		worklib.ibex_decoder:sv <0x78497b65>
+			streams:  19, words: 51900
+		worklib.ibex_compressed_decoder:sv <0x10b24dc9>
+			streams:   3, words: 10294
+		worklib.prim_generic_buf:sv <0x100a5a28>
+			streams:   2, words:   397
+		worklib.prim_buf:sv <0x5a7b5f37>
+			streams:   1, words:   375
+		worklib.prim_generic_buf:sv <0x39a3c22b>
+			streams:   2, words:   407
+		worklib.prim_buf:sv <0x1f5e1654>
+			streams:   1, words:   384
+		worklib.prim_generic_clock_gating:sv <0x08a28a85>
+			streams:   2, words:   577
+		worklib.prim_clock_gating:sv <0x44690828>
+			streams:   1, words:   404
+		worklib.ibex_top:sv <0x467b5a88>
+			streams: 123, words: 45059
+		worklib.gng_smul_16_18:v <0x16b3a698>
+			streams:   5, words:  1301
+		worklib.gng_smul_16_18_sadd_37:v <0x36116fae>
+			streams:   9, words:  2414
+		worklib.gng_coef:v <0x570eb596>
+			streams:   3, words: 14463
+		worklib.gng_lzd:v <0x130f33d6>
+			streams:  65, words: 15690
+		worklib.gng_interp:v <0x7d32c6e0>
+			streams:  30, words: 11127
+		worklib.gng_ctg:v <0x092f2558>
+			streams:  10, words:  4341
+		worklib.masked_core_tb:sv <0x40707048>
+			streams:  59, words: 54654
+		worklib.prim_secded_pkg:sv <0x20bf3998>
+			streams:  38, words: 206599
+		worklib.ibex_alu:sv <0x4bcbe894>
+			streams:  47, words: 32653
+		worklib.ibex_core:sv <0x1cf07689>
+			streams: 535, words: 241927
+		worklib.ibex_id_stage:sv <0x6c76aa53>
+			streams: 170, words: 67433
+		worklib.ibex_cs_registers:sv <0x4a5e4e51>
+			streams: 248, words: 148098
+		worklib.ibex_fetch_fifo:sv <0x0e28d196>
+			streams:  42, words: 20142
+		worklib.ibex_prefetch_buffer:sv <0x17c9a102>
+			streams:  40, words: 14242
+		worklib.ibex_pmp:sv <0x66d26228>
+			streams:  81, words: 73730
+		worklib.ibex_register_file_ff:sv <0x45596e58>
+			streams:  14, words:  5507
+		worklib.ibex_top_tracing:sv <0x230bff17>
+			streams:  85, words: 24732
+		worklib.ibex_controller:sv <0x5377bf6c>
+			streams:  49, words: 41938
+		worklib.ibex_if_stage:sv <0x2f46adf1>
+			streams:  88, words: 26193
+		worklib.ibex_pkg:sv <0x0ea50bd6>
+			streams:   0, words:     0
+		worklib.ibex_counter:sv <0x7d2f9678>
+			streams:   6, words:  3832
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                  Instances  Unique
+		Modules:                 98      38
+		Verilog packages:         5       5
+		Registers:             2176    2257
+		Scalar wires:          2262       -
+		Expanded wires:          64       1
+		Vectored wires:        1258       -
+		Always blocks:          295     218
+		Initial blocks:          17      17
+		Final blocks:             2       2
+		Cont. assignments:     1950    1265
+		Pseudo assignments:     885       -
+		Process Clocks:         151       6
+		Simulation timescale:   1ps
+	Writing initial simulation snapshot: worklib.masked_core_tb:sv
+Loading snapshot worklib.masked_core_tb:sv .................... Done
+xcelium> source /home/net/cadence/installs/XCELIUM2309/tools/xcelium/files/xmsimrc
+xcelium> source /home/net/cadence/installs/XCELIUM2309/tools/xcelium/files/xmsimrc
+xcelium> run
+[TB] Loaded 183528 bytes from /home/net/al663069/ws/irq_comparisons/riscv_single_interrupt_test.2000/test.bin at 0x80000000
+masked_core_tb.u_dut.u_ibex_tracer.unmblk2.unmblk1: Writing execution trace to /home/net/al663069/ws/irq_comparisons/riscv_single_interrupt_test.2000/trace_00000000.log
+[IRQ-INJ] #1: Assert irq_external at cycle 500
+[IRQ-LAT] #1: Assert@500 -> Handler@507  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #1: Deassert irq_external at cycle 507
+[IRQ-INJ] #2: Assert irq_external at cycle 807
+[IRQ-LAT] #2: Assert@807 -> Handler@826  Latency = 19 cycles  PC=0x8000272c
+[IRQ-INJ] #2: Deassert irq_external at cycle 826
+[IRQ-INJ] #3: Assert irq_external at cycle 1126
+[IRQ-LAT] #3: Assert@1126 -> Handler@1133  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #3: Deassert irq_external at cycle 1133
+[IRQ-INJ] #4: Assert irq_external at cycle 1433
+[IRQ-LAT] #4: Assert@1433 -> Handler@1442  Latency = 9 cycles  PC=0x8000272c
+[IRQ-INJ] #4: Deassert irq_external at cycle 1442
+[IRQ-INJ] #5: Assert irq_external at cycle 1742
+[IRQ-LAT] #5: Assert@1742 -> Handler@1754  Latency = 12 cycles  PC=0x8000272c
+[IRQ-INJ] #5: Deassert irq_external at cycle 1754
+[IRQ-INJ] #6: Assert irq_external at cycle 2054
+[IRQ-LAT] #6: Assert@2054 -> Handler@2061  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #6: Deassert irq_external at cycle 2061
+[IRQ-INJ] #7: Assert irq_external at cycle 2361
+[IRQ-LAT] #7: Assert@2361 -> Handler@2368  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #7: Deassert irq_external at cycle 2368
+[IRQ-INJ] #8: Assert irq_external at cycle 2668
+[IRQ-LAT] #8: Assert@2668 -> Handler@2675  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #8: Deassert irq_external at cycle 2675
+[IRQ-INJ] #9: Assert irq_external at cycle 2975
+[IRQ-LAT] #9: Assert@2975 -> Handler@2996  Latency = 21 cycles  PC=0x8000272c
+[IRQ-INJ] #9: Deassert irq_external at cycle 2996
+[IRQ-INJ] #10: Assert irq_external at cycle 3296
+[IRQ-LAT] #10: Assert@3296 -> Handler@3303  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #10: Deassert irq_external at cycle 3303
+[IRQ-INJ] #11: Assert irq_external at cycle 3603
+[IRQ-LAT] #11: Assert@3603 -> Handler@3639  Latency = 36 cycles  PC=0x8000272c
+[IRQ-INJ] #11: Deassert irq_external at cycle 3639
+[IRQ-INJ] #12: Assert irq_external at cycle 3939
+[IRQ-LAT] #12: Assert@3939 -> Handler@3946  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #12: Deassert irq_external at cycle 3946
+[IRQ-INJ] #13: Assert irq_external at cycle 4246
+[IRQ-LAT] #13: Assert@4246 -> Handler@4258  Latency = 12 cycles  PC=0x8000272c
+[IRQ-INJ] #13: Deassert irq_external at cycle 4258
+[IRQ-INJ] #14: Assert irq_external at cycle 4558
+[IRQ-LAT] #14: Assert@4558 -> Handler@4565  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #14: Deassert irq_external at cycle 4565
+[IRQ-INJ] #15: Assert irq_external at cycle 4865
+[IRQ-LAT] #15: Assert@4865 -> Handler@4872  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #15: Deassert irq_external at cycle 4872
+[IRQ-INJ] #16: Assert irq_external at cycle 5172
+[IRQ-LAT] #16: Assert@5172 -> Handler@5179  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #16: Deassert irq_external at cycle 5179
+[IRQ-INJ] #17: Assert irq_external at cycle 5479
+[IRQ-LAT] #17: Assert@5479 -> Handler@5486  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #17: Deassert irq_external at cycle 5486
+[IRQ-INJ] #18: Assert irq_external at cycle 5786
+[IRQ-LAT] #18: Assert@5786 -> Handler@5798  Latency = 12 cycles  PC=0x8000272c
+[IRQ-INJ] #18: Deassert irq_external at cycle 5798
+[IRQ-INJ] #19: Assert irq_external at cycle 6098
+[IRQ-LAT] #19: Assert@6098 -> Handler@6105  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #19: Deassert irq_external at cycle 6105
+[IRQ-INJ] #20: Assert irq_external at cycle 6405
+[IRQ-LAT] #20: Assert@6405 -> Handler@6412  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #20: Deassert irq_external at cycle 6412
+[TB] *** TEST PASSED at 392925000 ***
+
+[IRQ-LAT] ============ LATENCY SUMMARY ============
+[IRQ-LAT]   Interrupts measured : 20
+[IRQ-LAT]   Min latency         : 7 cycles
+[IRQ-LAT]   Max latency         : 36 cycles
+[IRQ-LAT]   Avg latency         : 10 cycles
+[IRQ-LAT] ==========================================
+Simulation complete via $finish(1) at time 393025 NS + 0
+./masked_core_tb_interrupt.sv:232       $finish;
+xcelium> exit
+TOOL:	xrun(64)	23.09-s006: Exiting on Mar 06, 2026 at 15:02:12 EST  (total: 00:00:08)
+    Simulation complete
+
+>>> Step 3: Parsing latency results ...
+  >> PASS — 20 interrupts measured
+     Min=7  Max=36  Avg=10 cycles
+
+
+===== [3] riscv_single_interrupt_test  seed=3000 =====
+>>> Step 1: Generating test binary via Ibex DV ...
+Building RTL testbench
+Generating core configuration file
+Building randomized test generator
+Running randomized test generator to create assembly file /home/net/al663069/ws/ibex/dv/uvm/core_ibex/out/run/tests/riscv_single_interrupt_test.3000/test.S
+Compiling riscvdv test assembly to create binary at /home/net/al663069/ws/ibex/dv/uvm/core_ibex/out/run/tests/riscv_single_interrupt_test.3000/test.bin
+Running RTL simulation at /home/net/al663069/ws/ibex/dv/uvm/core_ibex/out/run/tests/riscv_single_interrupt_test.3000
+Collecting simulation results and checking logs of testcase at /home/net/al663069/ws/ibex/dv/uvm/core_ibex/out/run/tests/riscv_single_interrupt_test.3000/trr.yaml
+Collecting up results of tests into report regr.log
+100.00% PASS 1 PASSED, 0 FAILED
+    Binary copied to /home/net/al663069/ws/irq_comparisons/riscv_single_interrupt_test.3000/
+
+>>> Step 2: Running interrupt testbench ...
+TOOL:	xrun(64)	23.09-s006: Started on Mar 06, 2026 at 15:36:18 EST
+xrun(64): 23.09-s006: (c) Copyright 1995-2024 Cadence Design Systems, Inc.
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_assert.sv
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_pkg.sv
+	package worklib.ibex_pkg:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_tracer_pkg.sv
+	package worklib.ibex_tracer_pkg:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_ram_1p_pkg.sv
+	package worklib.prim_ram_1p_pkg:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_secded_pkg.sv
+	package worklib.prim_secded_pkg:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_pkg.sv
+	package worklib.prim_pkg:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/gng.v
+	module worklib.gng:v
+		errors: 0, warnings: 0
+	module worklib.gng_coef:v
+		errors: 0, warnings: 0
+	module worklib.gng_ctg:v
+		errors: 0, warnings: 0
+	module worklib.gng_interp:v
+		errors: 0, warnings: 0
+	module worklib.gng_lzd:v
+		errors: 0, warnings: 0
+	module worklib.gng_smul_16_18:v
+		errors: 0, warnings: 0
+	module worklib.gng_smul_16_18_sadd_37:v
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_alu.sv
+	module worklib.ibex_alu:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_compressed_decoder.sv
+	module worklib.ibex_compressed_decoder:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_controller.sv
+	module worklib.ibex_controller:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_counter.sv
+	module worklib.ibex_counter:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_csr.sv
+	module worklib.ibex_csr:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_cs_registers.sv
+	module worklib.ibex_cs_registers:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_decoder.sv
+	module worklib.ibex_decoder:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_dummy_instr.sv
+	module worklib.ibex_dummy_instr:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_ex_block.sv
+	module worklib.ibex_ex_block:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_fetch_fifo.sv
+	module worklib.ibex_fetch_fifo:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_icache.sv
+	module worklib.ibex_icache:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_id_stage.sv
+	module worklib.ibex_id_stage:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_if_stage.sv
+	module worklib.ibex_if_stage:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_load_store_unit.sv
+	module worklib.ibex_load_store_unit:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_lockstep.sv
+	module worklib.ibex_lockstep:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_multdiv_fast.sv
+	module worklib.ibex_multdiv_fast:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_multdiv_slow.sv
+	module worklib.ibex_multdiv_slow:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_prefetch_buffer.sv
+	module worklib.ibex_prefetch_buffer:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_pmp.sv
+	module worklib.ibex_pmp:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_register_file_ff.sv
+	module worklib.ibex_register_file_ff:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_wb_stage.sv
+	module worklib.ibex_wb_stage:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_branch_predict.sv
+	module worklib.ibex_branch_predict:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_core.sv
+	module worklib.ibex_core:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_top.sv
+	module worklib.ibex_top:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_top_tracing.sv
+	module worklib.ibex_top_tracing:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_tracer.sv
+	module worklib.ibex_tracer:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_buf.sv
+	module worklib.prim_buf:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_generic_buf.sv
+	module worklib.prim_generic_buf:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_clock_gating.sv
+	module worklib.prim_clock_gating:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_generic_clock_gating.sv
+	module worklib.prim_generic_clock_gating:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_flop_macros.sv
+file: masked_core_tb_interrupt.sv
+	module worklib.masked_core_tb:sv
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		ibex_pkg
+		prim_ram_1p_pkg
+		prim_secded_pkg
+		prim_pkg
+		ibex_tracer_pkg
+		masked_core_tb
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.ibex_tracer:sv <0x0caf524c>
+			streams:  54, words: 168030
+		worklib.ibex_csr:sv <0x60925401>
+			streams:   4, words:   981
+		worklib.ibex_csr:sv <0x2b3c60ab>
+			streams:   4, words:   927
+		worklib.ibex_counter:sv <0x7dcd1ceb>
+			streams:   9, words:  5929
+		worklib.ibex_counter:sv <0x43dbcdd6>
+			streams:   9, words:  5774
+		worklib.ibex_counter:sv <0x148dddae>
+			streams:   6, words:  3970
+		worklib.ibex_csr:sv <0x5cc91402>
+			streams:   4, words:   975
+		worklib.ibex_csr:sv <0x7747b744>
+			streams:   4, words:   963
+		worklib.ibex_csr:sv <0x414931de>
+			streams:   4, words:   975
+		worklib.ibex_csr:sv <0x399f25b4>
+			streams:   4, words:   923
+		worklib.ibex_csr:sv <0x64919a45>
+			streams:   4, words:   904
+		worklib.ibex_csr:sv <0x74be4f27>
+			streams:   4, words:   976
+		worklib.ibex_csr:sv <0x260d775b>
+			streams:   4, words:   907
+		worklib.ibex_csr:sv <0x50525780>
+			streams:   4, words:   925
+		worklib.ibex_csr:sv <0x2c10d7ec>
+			streams:   4, words:   895
+		worklib.ibex_csr:sv <0x7ed6b7ee>
+			streams:   4, words:   988
+		worklib.ibex_wb_stage:sv <0x46bdbef6>
+			streams:  31, words:  8678
+		worklib.ibex_load_store_unit:sv <0x6badb48b>
+			streams:  36, words: 25798
+		worklib.ibex_multdiv_fast:sv <0x63449840>
+			streams:  35, words: 35045
+		worklib.ibex_ex_block:sv <0x65c54abd>
+			streams:  31, words: 15361
+		worklib.ibex_decoder:sv <0x78497b65>
+			streams:  19, words: 51900
+		worklib.ibex_compressed_decoder:sv <0x10b24dc9>
+			streams:   3, words: 10294
+		worklib.prim_generic_buf:sv <0x100a5a28>
+			streams:   2, words:   397
+		worklib.prim_buf:sv <0x5a7b5f37>
+			streams:   1, words:   375
+		worklib.prim_generic_buf:sv <0x39a3c22b>
+			streams:   2, words:   407
+		worklib.prim_buf:sv <0x1f5e1654>
+			streams:   1, words:   384
+		worklib.prim_generic_clock_gating:sv <0x08a28a85>
+			streams:   2, words:   577
+		worklib.prim_clock_gating:sv <0x44690828>
+			streams:   1, words:   404
+		worklib.ibex_top:sv <0x467b5a88>
+			streams: 123, words: 45059
+		worklib.gng_smul_16_18:v <0x16b3a698>
+			streams:   5, words:  1301
+		worklib.gng_smul_16_18_sadd_37:v <0x36116fae>
+			streams:   9, words:  2414
+		worklib.gng_coef:v <0x570eb596>
+			streams:   3, words: 14463
+		worklib.gng_lzd:v <0x130f33d6>
+			streams:  65, words: 15690
+		worklib.gng_interp:v <0x7d32c6e0>
+			streams:  30, words: 11127
+		worklib.gng_ctg:v <0x092f2558>
+			streams:  10, words:  4341
+		worklib.masked_core_tb:sv <0x40707048>
+			streams:  59, words: 54654
+		worklib.prim_secded_pkg:sv <0x20bf3998>
+			streams:  38, words: 206599
+		worklib.ibex_alu:sv <0x4bcbe894>
+			streams:  47, words: 32653
+		worklib.ibex_core:sv <0x1cf07689>
+			streams: 535, words: 241927
+		worklib.ibex_id_stage:sv <0x6c76aa53>
+			streams: 170, words: 67433
+		worklib.ibex_cs_registers:sv <0x4a5e4e51>
+			streams: 248, words: 148098
+		worklib.ibex_fetch_fifo:sv <0x0e28d196>
+			streams:  42, words: 20142
+		worklib.ibex_prefetch_buffer:sv <0x17c9a102>
+			streams:  40, words: 14242
+		worklib.ibex_pmp:sv <0x66d26228>
+			streams:  81, words: 73730
+		worklib.ibex_register_file_ff:sv <0x45596e58>
+			streams:  14, words:  5507
+		worklib.ibex_top_tracing:sv <0x230bff17>
+			streams:  85, words: 24732
+		worklib.ibex_controller:sv <0x5377bf6c>
+			streams:  49, words: 41938
+		worklib.ibex_if_stage:sv <0x2f46adf1>
+			streams:  88, words: 26193
+		worklib.ibex_pkg:sv <0x0ea50bd6>
+			streams:   0, words:     0
+		worklib.ibex_counter:sv <0x7d2f9678>
+			streams:   6, words:  3832
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                  Instances  Unique
+		Modules:                 98      38
+		Verilog packages:         5       5
+		Registers:             2176    2257
+		Scalar wires:          2262       -
+		Expanded wires:          64       1
+		Vectored wires:        1258       -
+		Always blocks:          295     218
+		Initial blocks:          17      17
+		Final blocks:             2       2
+		Cont. assignments:     1950    1265
+		Pseudo assignments:     885       -
+		Process Clocks:         151       6
+		Simulation timescale:   1ps
+	Writing initial simulation snapshot: worklib.masked_core_tb:sv
+Loading snapshot worklib.masked_core_tb:sv .................... Done
+xcelium> source /home/net/cadence/installs/XCELIUM2309/tools/xcelium/files/xmsimrc
+xcelium> source /home/net/cadence/installs/XCELIUM2309/tools/xcelium/files/xmsimrc
+xcelium> run
+[TB] Loaded 183528 bytes from /home/net/al663069/ws/irq_comparisons/riscv_single_interrupt_test.3000/test.bin at 0x80000000
+masked_core_tb.u_dut.u_ibex_tracer.unmblk2.unmblk1: Writing execution trace to /home/net/al663069/ws/irq_comparisons/riscv_single_interrupt_test.3000/trace_00000000.log
+[IRQ-INJ] #1: Assert irq_external at cycle 500
+[IRQ-LAT] #1: Assert@500 -> Handler@523  Latency = 23 cycles  PC=0x8000272c
+[IRQ-INJ] #1: Deassert irq_external at cycle 523
+[IRQ-INJ] #2: Assert irq_external at cycle 823
+[IRQ-LAT] #2: Assert@823 -> Handler@848  Latency = 25 cycles  PC=0x8000272c
+[IRQ-INJ] #2: Deassert irq_external at cycle 848
+[IRQ-INJ] #3: Assert irq_external at cycle 1148
+[IRQ-LAT] #3: Assert@1148 -> Handler@1155  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #3: Deassert irq_external at cycle 1155
+[IRQ-INJ] #4: Assert irq_external at cycle 1455
+[IRQ-LAT] #4: Assert@1455 -> Handler@1462  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #4: Deassert irq_external at cycle 1462
+[IRQ-INJ] #5: Assert irq_external at cycle 1762
+[IRQ-LAT] #5: Assert@1762 -> Handler@1773  Latency = 11 cycles  PC=0x8000272c
+[IRQ-INJ] #5: Deassert irq_external at cycle 1773
+[IRQ-INJ] #6: Assert irq_external at cycle 2073
+[IRQ-LAT] #6: Assert@2073 -> Handler@2079  Latency = 6 cycles  PC=0x8000272c
+[IRQ-INJ] #6: Deassert irq_external at cycle 2079
+[IRQ-INJ] #7: Assert irq_external at cycle 2379
+[IRQ-LAT] #7: Assert@2379 -> Handler@2386  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #7: Deassert irq_external at cycle 2386
+[IRQ-INJ] #8: Assert irq_external at cycle 2686
+[IRQ-LAT] #8: Assert@2686 -> Handler@2706  Latency = 20 cycles  PC=0x8000272c
+[IRQ-INJ] #8: Deassert irq_external at cycle 2706
+[IRQ-INJ] #9: Assert irq_external at cycle 3006
+[IRQ-LAT] #9: Assert@3006 -> Handler@3023  Latency = 17 cycles  PC=0x8000272c
+[IRQ-INJ] #9: Deassert irq_external at cycle 3023
+[IRQ-INJ] #10: Assert irq_external at cycle 3323
+[IRQ-LAT] #10: Assert@3323 -> Handler@3349  Latency = 26 cycles  PC=0x8000272c
+[IRQ-INJ] #10: Deassert irq_external at cycle 3349
+[IRQ-INJ] #11: Assert irq_external at cycle 3649
+[IRQ-LAT] #11: Assert@3649 -> Handler@3669  Latency = 20 cycles  PC=0x8000272c
+[IRQ-INJ] #11: Deassert irq_external at cycle 3669
+[IRQ-INJ] #12: Assert irq_external at cycle 3969
+[IRQ-LAT] #12: Assert@3969 -> Handler@4008  Latency = 39 cycles  PC=0x8000272c
+[IRQ-INJ] #12: Deassert irq_external at cycle 4008
+[IRQ-INJ] #13: Assert irq_external at cycle 4308
+[IRQ-LAT] #13: Assert@4308 -> Handler@4315  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #13: Deassert irq_external at cycle 4315
+[IRQ-INJ] #14: Assert irq_external at cycle 4615
+[IRQ-LAT] #14: Assert@4615 -> Handler@4622  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #14: Deassert irq_external at cycle 4622
+[IRQ-INJ] #15: Assert irq_external at cycle 4922
+[IRQ-LAT] #15: Assert@4922 -> Handler@4961  Latency = 39 cycles  PC=0x8000272c
+[IRQ-INJ] #15: Deassert irq_external at cycle 4961
+[IRQ-INJ] #16: Assert irq_external at cycle 5261
+[IRQ-LAT] #16: Assert@5261 -> Handler@5271  Latency = 10 cycles  PC=0x8000272c
+[IRQ-INJ] #16: Deassert irq_external at cycle 5271
+[IRQ-INJ] #17: Assert irq_external at cycle 5571
+[IRQ-LAT] #17: Assert@5571 -> Handler@5604  Latency = 33 cycles  PC=0x8000272c
+[IRQ-INJ] #17: Deassert irq_external at cycle 5604
+[IRQ-INJ] #18: Assert irq_external at cycle 5904
+[IRQ-LAT] #18: Assert@5904 -> Handler@5911  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #18: Deassert irq_external at cycle 5911
+[IRQ-INJ] #19: Assert irq_external at cycle 6211
+[IRQ-LAT] #19: Assert@6211 -> Handler@6226  Latency = 15 cycles  PC=0x8000272c
+[IRQ-INJ] #19: Deassert irq_external at cycle 6226
+[IRQ-INJ] #20: Assert irq_external at cycle 6526
+[IRQ-LAT] #20: Assert@6526 -> Handler@6551  Latency = 25 cycles  PC=0x8000272c
+[IRQ-INJ] #20: Deassert irq_external at cycle 6551
+[TB] *** TEST PASSED at 958705000 ***
+
+[IRQ-LAT] ============ LATENCY SUMMARY ============
+[IRQ-LAT]   Interrupts measured : 20
+[IRQ-LAT]   Min latency         : 6 cycles
+[IRQ-LAT]   Max latency         : 39 cycles
+[IRQ-LAT]   Avg latency         : 17 cycles
+[IRQ-LAT] ==========================================
+Simulation complete via $finish(1) at time 958805 NS + 0
+./masked_core_tb_interrupt.sv:232       $finish;
+xcelium> exit
+TOOL:	xrun(64)	23.09-s006: Exiting on Mar 06, 2026 at 15:36:31 EST  (total: 00:00:13)
+    Simulation complete
+
+>>> Step 3: Parsing latency results ...
+  >> PASS — 20 interrupts measured
+     Min=6  Max=39  Avg=17 cycles
+
+
+===== [4] riscv_single_interrupt_test  seed=4000 =====
+>>> Step 1: Generating test binary via Ibex DV ...
+Building RTL testbench
+Generating core configuration file
+Building randomized test generator
+Running randomized test generator to create assembly file /home/net/al663069/ws/ibex/dv/uvm/core_ibex/out/run/tests/riscv_single_interrupt_test.4000/test.S
+Compiling riscvdv test assembly to create binary at /home/net/al663069/ws/ibex/dv/uvm/core_ibex/out/run/tests/riscv_single_interrupt_test.4000/test.bin
+Running RTL simulation at /home/net/al663069/ws/ibex/dv/uvm/core_ibex/out/run/tests/riscv_single_interrupt_test.4000
+Collecting simulation results and checking logs of testcase at /home/net/al663069/ws/ibex/dv/uvm/core_ibex/out/run/tests/riscv_single_interrupt_test.4000/trr.yaml
+Collecting up results of tests into report regr.log
+100.00% PASS 1 PASSED, 0 FAILED
+    Binary copied to /home/net/al663069/ws/irq_comparisons/riscv_single_interrupt_test.4000/
+
+>>> Step 2: Running interrupt testbench ...
+TOOL:	xrun(64)	23.09-s006: Started on Mar 06, 2026 at 16:25:59 EST
+xrun(64): 23.09-s006: (c) Copyright 1995-2024 Cadence Design Systems, Inc.
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_assert.sv
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_pkg.sv
+	package worklib.ibex_pkg:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_tracer_pkg.sv
+	package worklib.ibex_tracer_pkg:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_ram_1p_pkg.sv
+	package worklib.prim_ram_1p_pkg:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_secded_pkg.sv
+	package worklib.prim_secded_pkg:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_pkg.sv
+	package worklib.prim_pkg:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/gng.v
+	module worklib.gng:v
+		errors: 0, warnings: 0
+	module worklib.gng_coef:v
+		errors: 0, warnings: 0
+	module worklib.gng_ctg:v
+		errors: 0, warnings: 0
+	module worklib.gng_interp:v
+		errors: 0, warnings: 0
+	module worklib.gng_lzd:v
+		errors: 0, warnings: 0
+	module worklib.gng_smul_16_18:v
+		errors: 0, warnings: 0
+	module worklib.gng_smul_16_18_sadd_37:v
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_alu.sv
+	module worklib.ibex_alu:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_compressed_decoder.sv
+	module worklib.ibex_compressed_decoder:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_controller.sv
+	module worklib.ibex_controller:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_counter.sv
+	module worklib.ibex_counter:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_csr.sv
+	module worklib.ibex_csr:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_cs_registers.sv
+	module worklib.ibex_cs_registers:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_decoder.sv
+	module worklib.ibex_decoder:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_dummy_instr.sv
+	module worklib.ibex_dummy_instr:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_ex_block.sv
+	module worklib.ibex_ex_block:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_fetch_fifo.sv
+	module worklib.ibex_fetch_fifo:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_icache.sv
+	module worklib.ibex_icache:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_id_stage.sv
+	module worklib.ibex_id_stage:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_if_stage.sv
+	module worklib.ibex_if_stage:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_load_store_unit.sv
+	module worklib.ibex_load_store_unit:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_lockstep.sv
+	module worklib.ibex_lockstep:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_multdiv_fast.sv
+	module worklib.ibex_multdiv_fast:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_multdiv_slow.sv
+	module worklib.ibex_multdiv_slow:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_prefetch_buffer.sv
+	module worklib.ibex_prefetch_buffer:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_pmp.sv
+	module worklib.ibex_pmp:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_register_file_ff.sv
+	module worklib.ibex_register_file_ff:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_wb_stage.sv
+	module worklib.ibex_wb_stage:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_branch_predict.sv
+	module worklib.ibex_branch_predict:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_core.sv
+	module worklib.ibex_core:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_top.sv
+	module worklib.ibex_top:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_top_tracing.sv
+	module worklib.ibex_top_tracing:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_tracer.sv
+	module worklib.ibex_tracer:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_buf.sv
+	module worklib.prim_buf:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_generic_buf.sv
+	module worklib.prim_generic_buf:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_clock_gating.sv
+	module worklib.prim_clock_gating:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_generic_clock_gating.sv
+	module worklib.prim_generic_clock_gating:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_flop_macros.sv
+file: masked_core_tb_interrupt.sv
+	module worklib.masked_core_tb:sv
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		ibex_pkg
+		prim_ram_1p_pkg
+		prim_secded_pkg
+		prim_pkg
+		ibex_tracer_pkg
+		masked_core_tb
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.ibex_tracer:sv <0x0caf524c>
+			streams:  54, words: 168030
+		worklib.ibex_csr:sv <0x60925401>
+			streams:   4, words:   981
+		worklib.ibex_csr:sv <0x2b3c60ab>
+			streams:   4, words:   927
+		worklib.ibex_counter:sv <0x7dcd1ceb>
+			streams:   9, words:  5929
+		worklib.ibex_counter:sv <0x43dbcdd6>
+			streams:   9, words:  5774
+		worklib.ibex_counter:sv <0x148dddae>
+			streams:   6, words:  3970
+		worklib.ibex_csr:sv <0x5cc91402>
+			streams:   4, words:   975
+		worklib.ibex_csr:sv <0x7747b744>
+			streams:   4, words:   963
+		worklib.ibex_csr:sv <0x414931de>
+			streams:   4, words:   975
+		worklib.ibex_csr:sv <0x399f25b4>
+			streams:   4, words:   923
+		worklib.ibex_csr:sv <0x64919a45>
+			streams:   4, words:   904
+		worklib.ibex_csr:sv <0x74be4f27>
+			streams:   4, words:   976
+		worklib.ibex_csr:sv <0x260d775b>
+			streams:   4, words:   907
+		worklib.ibex_csr:sv <0x50525780>
+			streams:   4, words:   925
+		worklib.ibex_csr:sv <0x2c10d7ec>
+			streams:   4, words:   895
+		worklib.ibex_csr:sv <0x7ed6b7ee>
+			streams:   4, words:   988
+		worklib.ibex_wb_stage:sv <0x46bdbef6>
+			streams:  31, words:  8678
+		worklib.ibex_load_store_unit:sv <0x6badb48b>
+			streams:  36, words: 25798
+		worklib.ibex_multdiv_fast:sv <0x63449840>
+			streams:  35, words: 35045
+		worklib.ibex_ex_block:sv <0x65c54abd>
+			streams:  31, words: 15361
+		worklib.ibex_decoder:sv <0x78497b65>
+			streams:  19, words: 51900
+		worklib.ibex_compressed_decoder:sv <0x10b24dc9>
+			streams:   3, words: 10294
+		worklib.prim_generic_buf:sv <0x100a5a28>
+			streams:   2, words:   397
+		worklib.prim_buf:sv <0x5a7b5f37>
+			streams:   1, words:   375
+		worklib.prim_generic_buf:sv <0x39a3c22b>
+			streams:   2, words:   407
+		worklib.prim_buf:sv <0x1f5e1654>
+			streams:   1, words:   384
+		worklib.prim_generic_clock_gating:sv <0x08a28a85>
+			streams:   2, words:   577
+		worklib.prim_clock_gating:sv <0x44690828>
+			streams:   1, words:   404
+		worklib.ibex_top:sv <0x467b5a88>
+			streams: 123, words: 45059
+		worklib.gng_smul_16_18:v <0x16b3a698>
+			streams:   5, words:  1301
+		worklib.gng_smul_16_18_sadd_37:v <0x36116fae>
+			streams:   9, words:  2414
+		worklib.gng_coef:v <0x570eb596>
+			streams:   3, words: 14463
+		worklib.gng_lzd:v <0x130f33d6>
+			streams:  65, words: 15690
+		worklib.gng_interp:v <0x7d32c6e0>
+			streams:  30, words: 11127
+		worklib.gng_ctg:v <0x092f2558>
+			streams:  10, words:  4341
+		worklib.masked_core_tb:sv <0x40707048>
+			streams:  59, words: 54654
+		worklib.prim_secded_pkg:sv <0x20bf3998>
+			streams:  38, words: 206599
+		worklib.ibex_alu:sv <0x4bcbe894>
+			streams:  47, words: 32653
+		worklib.ibex_core:sv <0x1cf07689>
+			streams: 535, words: 241927
+		worklib.ibex_id_stage:sv <0x6c76aa53>
+			streams: 170, words: 67433
+		worklib.ibex_cs_registers:sv <0x4a5e4e51>
+			streams: 248, words: 148098
+		worklib.ibex_fetch_fifo:sv <0x0e28d196>
+			streams:  42, words: 20142
+		worklib.ibex_prefetch_buffer:sv <0x17c9a102>
+			streams:  40, words: 14242
+		worklib.ibex_pmp:sv <0x66d26228>
+			streams:  81, words: 73730
+		worklib.ibex_register_file_ff:sv <0x45596e58>
+			streams:  14, words:  5507
+		worklib.ibex_top_tracing:sv <0x230bff17>
+			streams:  85, words: 24732
+		worklib.ibex_controller:sv <0x5377bf6c>
+			streams:  49, words: 41938
+		worklib.ibex_if_stage:sv <0x2f46adf1>
+			streams:  88, words: 26193
+		worklib.ibex_pkg:sv <0x0ea50bd6>
+			streams:   0, words:     0
+		worklib.ibex_counter:sv <0x7d2f9678>
+			streams:   6, words:  3832
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                  Instances  Unique
+		Modules:                 98      38
+		Verilog packages:         5       5
+		Registers:             2176    2257
+		Scalar wires:          2262       -
+		Expanded wires:          64       1
+		Vectored wires:        1258       -
+		Always blocks:          295     218
+		Initial blocks:          17      17
+		Final blocks:             2       2
+		Cont. assignments:     1950    1265
+		Pseudo assignments:     885       -
+		Process Clocks:         151       6
+		Simulation timescale:   1ps
+	Writing initial simulation snapshot: worklib.masked_core_tb:sv
+Loading snapshot worklib.masked_core_tb:sv .................... Done
+xcelium> source /home/net/cadence/installs/XCELIUM2309/tools/xcelium/files/xmsimrc
+xcelium> source /home/net/cadence/installs/XCELIUM2309/tools/xcelium/files/xmsimrc
+xcelium> run
+[TB] Loaded 179432 bytes from /home/net/al663069/ws/irq_comparisons/riscv_single_interrupt_test.4000/test.bin at 0x80000000
+masked_core_tb.u_dut.u_ibex_tracer.unmblk2.unmblk1: Writing execution trace to /home/net/al663069/ws/irq_comparisons/riscv_single_interrupt_test.4000/trace_00000000.log
+[IRQ-INJ] #1: Assert irq_external at cycle 500
+[IRQ-LAT] #1: Assert@500 -> Handler@513  Latency = 13 cycles  PC=0x8000252c
+[IRQ-INJ] #1: Deassert irq_external at cycle 513
+[IRQ-INJ] #2: Assert irq_external at cycle 813
+[IRQ-LAT] #2: Assert@813 -> Handler@819  Latency = 6 cycles  PC=0x8000252c
+[IRQ-INJ] #2: Deassert irq_external at cycle 819
+[IRQ-INJ] #3: Assert irq_external at cycle 1119
+[IRQ-LAT] #3: Assert@1119 -> Handler@1126  Latency = 7 cycles  PC=0x8000252c
+[IRQ-INJ] #3: Deassert irq_external at cycle 1126
+[IRQ-INJ] #4: Assert irq_external at cycle 1426
+[IRQ-LAT] #4: Assert@1426 -> Handler@1433  Latency = 7 cycles  PC=0x8000252c
+[IRQ-INJ] #4: Deassert irq_external at cycle 1433
+[IRQ-INJ] #5: Assert irq_external at cycle 1733
+[IRQ-LAT] #5: Assert@1733 -> Handler@1740  Latency = 7 cycles  PC=0x8000252c
+[IRQ-INJ] #5: Deassert irq_external at cycle 1740
+[IRQ-INJ] #6: Assert irq_external at cycle 2040
+[IRQ-LAT] #6: Assert@2040 -> Handler@2047  Latency = 7 cycles  PC=0x8000252c
+[IRQ-INJ] #6: Deassert irq_external at cycle 2047
+[IRQ-INJ] #7: Assert irq_external at cycle 2347
+[IRQ-LAT] #7: Assert@2347 -> Handler@2357  Latency = 10 cycles  PC=0x8000252c
+[IRQ-INJ] #7: Deassert irq_external at cycle 2357
+[IRQ-INJ] #8: Assert irq_external at cycle 2657
+[IRQ-LAT] #8: Assert@2657 -> Handler@2664  Latency = 7 cycles  PC=0x8000252c
+[IRQ-INJ] #8: Deassert irq_external at cycle 2664
+[IRQ-INJ] #9: Assert irq_external at cycle 2964
+[IRQ-LAT] #9: Assert@2964 -> Handler@2971  Latency = 7 cycles  PC=0x8000252c
+[IRQ-INJ] #9: Deassert irq_external at cycle 2971
+[IRQ-INJ] #10: Assert irq_external at cycle 3271
+[IRQ-LAT] #10: Assert@3271 -> Handler@3278  Latency = 7 cycles  PC=0x8000252c
+[IRQ-INJ] #10: Deassert irq_external at cycle 3278
+[IRQ-INJ] #11: Assert irq_external at cycle 3578
+[IRQ-LAT] #11: Assert@3578 -> Handler@3585  Latency = 7 cycles  PC=0x8000252c
+[IRQ-INJ] #11: Deassert irq_external at cycle 3585
+[IRQ-INJ] #12: Assert irq_external at cycle 3885
+[IRQ-LAT] #12: Assert@3885 -> Handler@3892  Latency = 7 cycles  PC=0x8000252c
+[IRQ-INJ] #12: Deassert irq_external at cycle 3892
+[IRQ-INJ] #13: Assert irq_external at cycle 4192
+[IRQ-LAT] #13: Assert@4192 -> Handler@4199  Latency = 7 cycles  PC=0x8000252c
+[IRQ-INJ] #13: Deassert irq_external at cycle 4199
+[IRQ-INJ] #14: Assert irq_external at cycle 4499
+[IRQ-LAT] #14: Assert@4499 -> Handler@4506  Latency = 7 cycles  PC=0x8000252c
+[IRQ-INJ] #14: Deassert irq_external at cycle 4506
+[IRQ-INJ] #15: Assert irq_external at cycle 4806
+[IRQ-LAT] #15: Assert@4806 -> Handler@4819  Latency = 13 cycles  PC=0x8000252c
+[IRQ-INJ] #15: Deassert irq_external at cycle 4819
+[IRQ-INJ] #16: Assert irq_external at cycle 5119
+[IRQ-LAT] #16: Assert@5119 -> Handler@5162  Latency = 43 cycles  PC=0x8000252c
+[IRQ-INJ] #16: Deassert irq_external at cycle 5162
+[IRQ-INJ] #17: Assert irq_external at cycle 5462
+[IRQ-LAT] #17: Assert@5462 -> Handler@5481  Latency = 19 cycles  PC=0x8000252c
+[IRQ-INJ] #17: Deassert irq_external at cycle 5481
+[IRQ-INJ] #18: Assert irq_external at cycle 5781
+[IRQ-LAT] #18: Assert@5781 -> Handler@5789  Latency = 8 cycles  PC=0x8000252c
+[IRQ-INJ] #18: Deassert irq_external at cycle 5789
+[IRQ-INJ] #19: Assert irq_external at cycle 6089
+[IRQ-LAT] #19: Assert@6089 -> Handler@6096  Latency = 7 cycles  PC=0x8000252c
+[IRQ-INJ] #19: Deassert irq_external at cycle 6096
+[IRQ-INJ] #20: Assert irq_external at cycle 6396
+[IRQ-LAT] #20: Assert@6396 -> Handler@6403  Latency = 7 cycles  PC=0x8000252c
+[IRQ-INJ] #20: Deassert irq_external at cycle 6403
+[TB] *** TEST PASSED at 219415000 ***
+
+[IRQ-LAT] ============ LATENCY SUMMARY ============
+[IRQ-LAT]   Interrupts measured : 20
+[IRQ-LAT]   Min latency         : 6 cycles
+[IRQ-LAT]   Max latency         : 43 cycles
+[IRQ-LAT]   Avg latency         : 10 cycles
+[IRQ-LAT] ==========================================
+Simulation complete via $finish(1) at time 219515 NS + 0
+./masked_core_tb_interrupt.sv:232       $finish;
+xcelium> exit
+TOOL:	xrun(64)	23.09-s006: Exiting on Mar 06, 2026 at 16:26:10 EST  (total: 00:00:11)
+    Simulation complete
+
+>>> Step 3: Parsing latency results ...
+  >> PASS — 20 interrupts measured
+     Min=6  Max=43  Avg=10 cycles
+
+
+===== [5] riscv_single_interrupt_test  seed=5000 =====
+>>> Step 1: Generating test binary via Ibex DV ...
+Building RTL testbench
+Generating core configuration file
+Building randomized test generator
+Running randomized test generator to create assembly file /home/net/al663069/ws/ibex/dv/uvm/core_ibex/out/run/tests/riscv_single_interrupt_test.5000/test.S
+Compiling riscvdv test assembly to create binary at /home/net/al663069/ws/ibex/dv/uvm/core_ibex/out/run/tests/riscv_single_interrupt_test.5000/test.bin
+Running RTL simulation at /home/net/al663069/ws/ibex/dv/uvm/core_ibex/out/run/tests/riscv_single_interrupt_test.5000
+Collecting simulation results and checking logs of testcase at /home/net/al663069/ws/ibex/dv/uvm/core_ibex/out/run/tests/riscv_single_interrupt_test.5000/trr.yaml
+Collecting up results of tests into report regr.log
+100.00% PASS 1 PASSED, 0 FAILED
+    Binary copied to /home/net/al663069/ws/irq_comparisons/riscv_single_interrupt_test.5000/
+
+>>> Step 2: Running interrupt testbench ...
+TOOL:	xrun(64)	23.09-s006: Started on Mar 06, 2026 at 17:08:09 EST
+xrun(64): 23.09-s006: (c) Copyright 1995-2024 Cadence Design Systems, Inc.
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_assert.sv
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_pkg.sv
+	package worklib.ibex_pkg:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_tracer_pkg.sv
+	package worklib.ibex_tracer_pkg:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_ram_1p_pkg.sv
+	package worklib.prim_ram_1p_pkg:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_secded_pkg.sv
+	package worklib.prim_secded_pkg:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_pkg.sv
+	package worklib.prim_pkg:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/gng.v
+	module worklib.gng:v
+		errors: 0, warnings: 0
+	module worklib.gng_coef:v
+		errors: 0, warnings: 0
+	module worklib.gng_ctg:v
+		errors: 0, warnings: 0
+	module worklib.gng_interp:v
+		errors: 0, warnings: 0
+	module worklib.gng_lzd:v
+		errors: 0, warnings: 0
+	module worklib.gng_smul_16_18:v
+		errors: 0, warnings: 0
+	module worklib.gng_smul_16_18_sadd_37:v
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_alu.sv
+	module worklib.ibex_alu:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_compressed_decoder.sv
+	module worklib.ibex_compressed_decoder:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_controller.sv
+	module worklib.ibex_controller:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_counter.sv
+	module worklib.ibex_counter:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_csr.sv
+	module worklib.ibex_csr:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_cs_registers.sv
+	module worklib.ibex_cs_registers:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_decoder.sv
+	module worklib.ibex_decoder:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_dummy_instr.sv
+	module worklib.ibex_dummy_instr:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_ex_block.sv
+	module worklib.ibex_ex_block:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_fetch_fifo.sv
+	module worklib.ibex_fetch_fifo:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_icache.sv
+	module worklib.ibex_icache:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_id_stage.sv
+	module worklib.ibex_id_stage:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_if_stage.sv
+	module worklib.ibex_if_stage:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_load_store_unit.sv
+	module worklib.ibex_load_store_unit:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_lockstep.sv
+	module worklib.ibex_lockstep:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_multdiv_fast.sv
+	module worklib.ibex_multdiv_fast:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_multdiv_slow.sv
+	module worklib.ibex_multdiv_slow:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_prefetch_buffer.sv
+	module worklib.ibex_prefetch_buffer:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_pmp.sv
+	module worklib.ibex_pmp:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_register_file_ff.sv
+	module worklib.ibex_register_file_ff:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_wb_stage.sv
+	module worklib.ibex_wb_stage:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_branch_predict.sv
+	module worklib.ibex_branch_predict:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_core.sv
+	module worklib.ibex_core:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_top.sv
+	module worklib.ibex_top:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_top_tracing.sv
+	module worklib.ibex_top_tracing:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_tracer.sv
+	module worklib.ibex_tracer:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_buf.sv
+	module worklib.prim_buf:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_generic_buf.sv
+	module worklib.prim_generic_buf:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_clock_gating.sv
+	module worklib.prim_clock_gating:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_generic_clock_gating.sv
+	module worklib.prim_generic_clock_gating:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_flop_macros.sv
+file: masked_core_tb_interrupt.sv
+	module worklib.masked_core_tb:sv
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		ibex_pkg
+		prim_ram_1p_pkg
+		prim_secded_pkg
+		prim_pkg
+		ibex_tracer_pkg
+		masked_core_tb
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.ibex_tracer:sv <0x0caf524c>
+			streams:  54, words: 168030
+		worklib.ibex_csr:sv <0x60925401>
+			streams:   4, words:   981
+		worklib.ibex_csr:sv <0x2b3c60ab>
+			streams:   4, words:   927
+		worklib.ibex_counter:sv <0x7dcd1ceb>
+			streams:   9, words:  5929
+		worklib.ibex_counter:sv <0x43dbcdd6>
+			streams:   9, words:  5774
+		worklib.ibex_counter:sv <0x148dddae>
+			streams:   6, words:  3970
+		worklib.ibex_csr:sv <0x5cc91402>
+			streams:   4, words:   975
+		worklib.ibex_csr:sv <0x7747b744>
+			streams:   4, words:   963
+		worklib.ibex_csr:sv <0x414931de>
+			streams:   4, words:   975
+		worklib.ibex_csr:sv <0x399f25b4>
+			streams:   4, words:   923
+		worklib.ibex_csr:sv <0x64919a45>
+			streams:   4, words:   904
+		worklib.ibex_csr:sv <0x74be4f27>
+			streams:   4, words:   976
+		worklib.ibex_csr:sv <0x260d775b>
+			streams:   4, words:   907
+		worklib.ibex_csr:sv <0x50525780>
+			streams:   4, words:   925
+		worklib.ibex_csr:sv <0x2c10d7ec>
+			streams:   4, words:   895
+		worklib.ibex_csr:sv <0x7ed6b7ee>
+			streams:   4, words:   988
+		worklib.ibex_wb_stage:sv <0x46bdbef6>
+			streams:  31, words:  8678
+		worklib.ibex_load_store_unit:sv <0x6badb48b>
+			streams:  36, words: 25798
+		worklib.ibex_multdiv_fast:sv <0x63449840>
+			streams:  35, words: 35045
+		worklib.ibex_ex_block:sv <0x65c54abd>
+			streams:  31, words: 15361
+		worklib.ibex_decoder:sv <0x78497b65>
+			streams:  19, words: 51900
+		worklib.ibex_compressed_decoder:sv <0x10b24dc9>
+			streams:   3, words: 10294
+		worklib.prim_generic_buf:sv <0x100a5a28>
+			streams:   2, words:   397
+		worklib.prim_buf:sv <0x5a7b5f37>
+			streams:   1, words:   375
+		worklib.prim_generic_buf:sv <0x39a3c22b>
+			streams:   2, words:   407
+		worklib.prim_buf:sv <0x1f5e1654>
+			streams:   1, words:   384
+		worklib.prim_generic_clock_gating:sv <0x08a28a85>
+			streams:   2, words:   577
+		worklib.prim_clock_gating:sv <0x44690828>
+			streams:   1, words:   404
+		worklib.ibex_top:sv <0x467b5a88>
+			streams: 123, words: 45059
+		worklib.gng_smul_16_18:v <0x16b3a698>
+			streams:   5, words:  1301
+		worklib.gng_smul_16_18_sadd_37:v <0x36116fae>
+			streams:   9, words:  2414
+		worklib.gng_coef:v <0x570eb596>
+			streams:   3, words: 14463
+		worklib.gng_lzd:v <0x130f33d6>
+			streams:  65, words: 15690
+		worklib.gng_interp:v <0x7d32c6e0>
+			streams:  30, words: 11127
+		worklib.gng_ctg:v <0x092f2558>
+			streams:  10, words:  4341
+		worklib.masked_core_tb:sv <0x40707048>
+			streams:  59, words: 54654
+		worklib.prim_secded_pkg:sv <0x20bf3998>
+			streams:  38, words: 206599
+		worklib.ibex_alu:sv <0x4bcbe894>
+			streams:  47, words: 32653
+		worklib.ibex_core:sv <0x1cf07689>
+			streams: 535, words: 241927
+		worklib.ibex_id_stage:sv <0x6c76aa53>
+			streams: 170, words: 67433
+		worklib.ibex_cs_registers:sv <0x4a5e4e51>
+			streams: 248, words: 148098
+		worklib.ibex_fetch_fifo:sv <0x0e28d196>
+			streams:  42, words: 20142
+		worklib.ibex_prefetch_buffer:sv <0x17c9a102>
+			streams:  40, words: 14242
+		worklib.ibex_pmp:sv <0x66d26228>
+			streams:  81, words: 73730
+		worklib.ibex_register_file_ff:sv <0x45596e58>
+			streams:  14, words:  5507
+		worklib.ibex_top_tracing:sv <0x230bff17>
+			streams:  85, words: 24732
+		worklib.ibex_controller:sv <0x5377bf6c>
+			streams:  49, words: 41938
+		worklib.ibex_if_stage:sv <0x2f46adf1>
+			streams:  88, words: 26193
+		worklib.ibex_pkg:sv <0x0ea50bd6>
+			streams:   0, words:     0
+		worklib.ibex_counter:sv <0x7d2f9678>
+			streams:   6, words:  3832
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                  Instances  Unique
+		Modules:                 98      38
+		Verilog packages:         5       5
+		Registers:             2176    2257
+		Scalar wires:          2262       -
+		Expanded wires:          64       1
+		Vectored wires:        1258       -
+		Always blocks:          295     218
+		Initial blocks:          17      17
+		Final blocks:             2       2
+		Cont. assignments:     1950    1265
+		Pseudo assignments:     885       -
+		Process Clocks:         151       6
+		Simulation timescale:   1ps
+	Writing initial simulation snapshot: worklib.masked_core_tb:sv
+Loading snapshot worklib.masked_core_tb:sv .................... Done
+xcelium> source /home/net/cadence/installs/XCELIUM2309/tools/xcelium/files/xmsimrc
+xcelium> source /home/net/cadence/installs/XCELIUM2309/tools/xcelium/files/xmsimrc
+xcelium> run
+[TB] Loaded 183528 bytes from /home/net/al663069/ws/irq_comparisons/riscv_single_interrupt_test.5000/test.bin at 0x80000000
+masked_core_tb.u_dut.u_ibex_tracer.unmblk2.unmblk1: Writing execution trace to /home/net/al663069/ws/irq_comparisons/riscv_single_interrupt_test.5000/trace_00000000.log
+[IRQ-INJ] #1: Assert irq_external at cycle 500
+[IRQ-LAT] #1: Assert@500 -> Handler@521  Latency = 21 cycles  PC=0x8000252c
+[IRQ-INJ] #1: Deassert irq_external at cycle 521
+[IRQ-INJ] #2: Assert irq_external at cycle 821
+[IRQ-LAT] #2: Assert@821 -> Handler@828  Latency = 7 cycles  PC=0x8000252c
+[IRQ-INJ] #2: Deassert irq_external at cycle 828
+[IRQ-INJ] #3: Assert irq_external at cycle 1128
+[IRQ-LAT] #3: Assert@1128 -> Handler@1135  Latency = 7 cycles  PC=0x8000252c
+[IRQ-INJ] #3: Deassert irq_external at cycle 1135
+[IRQ-INJ] #4: Assert irq_external at cycle 1435
+[IRQ-LAT] #4: Assert@1435 -> Handler@1442  Latency = 7 cycles  PC=0x8000252c
+[IRQ-INJ] #4: Deassert irq_external at cycle 1442
+[IRQ-INJ] #5: Assert irq_external at cycle 1742
+[IRQ-LAT] #5: Assert@1742 -> Handler@1750  Latency = 8 cycles  PC=0x8000252c
+[IRQ-INJ] #5: Deassert irq_external at cycle 1750
+[IRQ-INJ] #6: Assert irq_external at cycle 2050
+[IRQ-LAT] #6: Assert@2050 -> Handler@2057  Latency = 7 cycles  PC=0x8000252c
+[IRQ-INJ] #6: Deassert irq_external at cycle 2057
+[IRQ-INJ] #7: Assert irq_external at cycle 2357
+[IRQ-LAT] #7: Assert@2357 -> Handler@2365  Latency = 8 cycles  PC=0x8000252c
+[IRQ-INJ] #7: Deassert irq_external at cycle 2365
+[IRQ-INJ] #8: Assert irq_external at cycle 2665
+[IRQ-LAT] #8: Assert@2665 -> Handler@2683  Latency = 18 cycles  PC=0x8000252c
+[IRQ-INJ] #8: Deassert irq_external at cycle 2683
+[IRQ-INJ] #9: Assert irq_external at cycle 2983
+[IRQ-LAT] #9: Assert@2983 -> Handler@3001  Latency = 18 cycles  PC=0x8000252c
+[IRQ-INJ] #9: Deassert irq_external at cycle 3001
+[IRQ-INJ] #10: Assert irq_external at cycle 3301
+[IRQ-LAT] #10: Assert@3301 -> Handler@3319  Latency = 18 cycles  PC=0x8000252c
+[IRQ-INJ] #10: Deassert irq_external at cycle 3319
+[IRQ-INJ] #11: Assert irq_external at cycle 3619
+[IRQ-LAT] #11: Assert@3619 -> Handler@3637  Latency = 18 cycles  PC=0x8000252c
+[IRQ-INJ] #11: Deassert irq_external at cycle 3637
+[IRQ-INJ] #12: Assert irq_external at cycle 3937
+[IRQ-LAT] #12: Assert@3937 -> Handler@3955  Latency = 18 cycles  PC=0x8000252c
+[IRQ-INJ] #12: Deassert irq_external at cycle 3955
+[IRQ-INJ] #13: Assert irq_external at cycle 4255
+[IRQ-LAT] #13: Assert@4255 -> Handler@4273  Latency = 18 cycles  PC=0x8000252c
+[IRQ-INJ] #13: Deassert irq_external at cycle 4273
+[IRQ-INJ] #14: Assert irq_external at cycle 4573
+[IRQ-LAT] #14: Assert@4573 -> Handler@4616  Latency = 43 cycles  PC=0x8000252c
+[IRQ-INJ] #14: Deassert irq_external at cycle 4616
+[IRQ-INJ] #15: Assert irq_external at cycle 4916
+[IRQ-LAT] #15: Assert@4916 -> Handler@4923  Latency = 7 cycles  PC=0x8000252c
+[IRQ-INJ] #15: Deassert irq_external at cycle 4923
+[IRQ-INJ] #16: Assert irq_external at cycle 5223
+[IRQ-LAT] #16: Assert@5223 -> Handler@5260  Latency = 37 cycles  PC=0x8000252c
+[IRQ-INJ] #16: Deassert irq_external at cycle 5260
+[IRQ-INJ] #17: Assert irq_external at cycle 5560
+[IRQ-LAT] #17: Assert@5560 -> Handler@5588  Latency = 28 cycles  PC=0x8000252c
+[IRQ-INJ] #17: Deassert irq_external at cycle 5588
+[IRQ-INJ] #18: Assert irq_external at cycle 5888
+[IRQ-LAT] #18: Assert@5888 -> Handler@5898  Latency = 10 cycles  PC=0x8000252c
+[IRQ-INJ] #18: Deassert irq_external at cycle 5898
+[IRQ-INJ] #19: Assert irq_external at cycle 6198
+[IRQ-LAT] #19: Assert@6198 -> Handler@6222  Latency = 24 cycles  PC=0x8000252c
+[IRQ-INJ] #19: Deassert irq_external at cycle 6222
+[IRQ-INJ] #20: Assert irq_external at cycle 6522
+[IRQ-LAT] #20: Assert@6522 -> Handler@6546  Latency = 24 cycles  PC=0x8000252c
+[IRQ-INJ] #20: Deassert irq_external at cycle 6546
+[TB] *** TEST PASSED at 392475000 ***
+
+[IRQ-LAT] ============ LATENCY SUMMARY ============
+[IRQ-LAT]   Interrupts measured : 20
+[IRQ-LAT]   Min latency         : 7 cycles
+[IRQ-LAT]   Max latency         : 43 cycles
+[IRQ-LAT]   Avg latency         : 17 cycles
+[IRQ-LAT] ==========================================
+Simulation complete via $finish(1) at time 392575 NS + 0
+./masked_core_tb_interrupt.sv:232       $finish;
+xcelium> exit
+TOOL:	xrun(64)	23.09-s006: Exiting on Mar 06, 2026 at 17:08:18 EST  (total: 00:00:09)
+    Simulation complete
+
+>>> Step 3: Parsing latency results ...
+  >> PASS — 20 interrupts measured
+     Min=7  Max=43  Avg=17 cycles
+
+
+===== [6] riscv_multiple_interrupt_test  seed=1000 =====
+>>> Step 1: Generating test binary via Ibex DV ...
+Building RTL testbench
+Generating core configuration file
+Building randomized test generator
+Running randomized test generator to create assembly file /home/net/al663069/ws/ibex/dv/uvm/core_ibex/out/run/tests/riscv_multiple_interrupt_test.1000/test.S
+Compiling riscvdv test assembly to create binary at /home/net/al663069/ws/ibex/dv/uvm/core_ibex/out/run/tests/riscv_multiple_interrupt_test.1000/test.bin
+Running RTL simulation at /home/net/al663069/ws/ibex/dv/uvm/core_ibex/out/run/tests/riscv_multiple_interrupt_test.1000
+Collecting simulation results and checking logs of testcase at /home/net/al663069/ws/ibex/dv/uvm/core_ibex/out/run/tests/riscv_multiple_interrupt_test.1000/trr.yaml
+Collecting up results of tests into report regr.log
+100.00% PASS 1 PASSED, 0 FAILED
+    Binary copied to /home/net/al663069/ws/irq_comparisons/riscv_multiple_interrupt_test.1000/
+
+>>> Step 2: Running interrupt testbench ...
+TOOL:	xrun(64)	23.09-s006: Started on Mar 06, 2026 at 17:22:58 EST
+xrun(64): 23.09-s006: (c) Copyright 1995-2024 Cadence Design Systems, Inc.
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_assert.sv
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_pkg.sv
+	package worklib.ibex_pkg:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_tracer_pkg.sv
+	package worklib.ibex_tracer_pkg:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_ram_1p_pkg.sv
+	package worklib.prim_ram_1p_pkg:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_secded_pkg.sv
+	package worklib.prim_secded_pkg:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_pkg.sv
+	package worklib.prim_pkg:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/gng.v
+	module worklib.gng:v
+		errors: 0, warnings: 0
+	module worklib.gng_coef:v
+		errors: 0, warnings: 0
+	module worklib.gng_ctg:v
+		errors: 0, warnings: 0
+	module worklib.gng_interp:v
+		errors: 0, warnings: 0
+	module worklib.gng_lzd:v
+		errors: 0, warnings: 0
+	module worklib.gng_smul_16_18:v
+		errors: 0, warnings: 0
+	module worklib.gng_smul_16_18_sadd_37:v
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_alu.sv
+	module worklib.ibex_alu:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_compressed_decoder.sv
+	module worklib.ibex_compressed_decoder:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_controller.sv
+	module worklib.ibex_controller:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_counter.sv
+	module worklib.ibex_counter:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_csr.sv
+	module worklib.ibex_csr:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_cs_registers.sv
+	module worklib.ibex_cs_registers:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_decoder.sv
+	module worklib.ibex_decoder:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_dummy_instr.sv
+	module worklib.ibex_dummy_instr:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_ex_block.sv
+	module worklib.ibex_ex_block:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_fetch_fifo.sv
+	module worklib.ibex_fetch_fifo:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_icache.sv
+	module worklib.ibex_icache:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_id_stage.sv
+	module worklib.ibex_id_stage:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_if_stage.sv
+	module worklib.ibex_if_stage:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_load_store_unit.sv
+	module worklib.ibex_load_store_unit:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_lockstep.sv
+	module worklib.ibex_lockstep:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_multdiv_fast.sv
+	module worklib.ibex_multdiv_fast:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_multdiv_slow.sv
+	module worklib.ibex_multdiv_slow:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_prefetch_buffer.sv
+	module worklib.ibex_prefetch_buffer:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_pmp.sv
+	module worklib.ibex_pmp:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_register_file_ff.sv
+	module worklib.ibex_register_file_ff:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_wb_stage.sv
+	module worklib.ibex_wb_stage:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_branch_predict.sv
+	module worklib.ibex_branch_predict:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_core.sv
+	module worklib.ibex_core:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_top.sv
+	module worklib.ibex_top:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_top_tracing.sv
+	module worklib.ibex_top_tracing:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_tracer.sv
+	module worklib.ibex_tracer:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_buf.sv
+	module worklib.prim_buf:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_generic_buf.sv
+	module worklib.prim_generic_buf:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_clock_gating.sv
+	module worklib.prim_clock_gating:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_generic_clock_gating.sv
+	module worklib.prim_generic_clock_gating:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_flop_macros.sv
+file: masked_core_tb_interrupt.sv
+	module worklib.masked_core_tb:sv
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		ibex_pkg
+		prim_ram_1p_pkg
+		prim_secded_pkg
+		prim_pkg
+		ibex_tracer_pkg
+		masked_core_tb
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.ibex_tracer:sv <0x0caf524c>
+			streams:  54, words: 168030
+		worklib.ibex_csr:sv <0x60925401>
+			streams:   4, words:   981
+		worklib.ibex_csr:sv <0x2b3c60ab>
+			streams:   4, words:   927
+		worklib.ibex_counter:sv <0x7dcd1ceb>
+			streams:   9, words:  5929
+		worklib.ibex_counter:sv <0x43dbcdd6>
+			streams:   9, words:  5774
+		worklib.ibex_counter:sv <0x148dddae>
+			streams:   6, words:  3970
+		worklib.ibex_csr:sv <0x5cc91402>
+			streams:   4, words:   975
+		worklib.ibex_csr:sv <0x7747b744>
+			streams:   4, words:   963
+		worklib.ibex_csr:sv <0x414931de>
+			streams:   4, words:   975
+		worklib.ibex_csr:sv <0x399f25b4>
+			streams:   4, words:   923
+		worklib.ibex_csr:sv <0x64919a45>
+			streams:   4, words:   904
+		worklib.ibex_csr:sv <0x74be4f27>
+			streams:   4, words:   976
+		worklib.ibex_csr:sv <0x260d775b>
+			streams:   4, words:   907
+		worklib.ibex_csr:sv <0x50525780>
+			streams:   4, words:   925
+		worklib.ibex_csr:sv <0x2c10d7ec>
+			streams:   4, words:   895
+		worklib.ibex_csr:sv <0x7ed6b7ee>
+			streams:   4, words:   988
+		worklib.ibex_wb_stage:sv <0x46bdbef6>
+			streams:  31, words:  8678
+		worklib.ibex_load_store_unit:sv <0x6badb48b>
+			streams:  36, words: 25798
+		worklib.ibex_multdiv_fast:sv <0x63449840>
+			streams:  35, words: 35045
+		worklib.ibex_ex_block:sv <0x65c54abd>
+			streams:  31, words: 15361
+		worklib.ibex_decoder:sv <0x78497b65>
+			streams:  19, words: 51900
+		worklib.ibex_compressed_decoder:sv <0x10b24dc9>
+			streams:   3, words: 10294
+		worklib.prim_generic_buf:sv <0x100a5a28>
+			streams:   2, words:   397
+		worklib.prim_buf:sv <0x5a7b5f37>
+			streams:   1, words:   375
+		worklib.prim_generic_buf:sv <0x39a3c22b>
+			streams:   2, words:   407
+		worklib.prim_buf:sv <0x1f5e1654>
+			streams:   1, words:   384
+		worklib.prim_generic_clock_gating:sv <0x08a28a85>
+			streams:   2, words:   577
+		worklib.prim_clock_gating:sv <0x44690828>
+			streams:   1, words:   404
+		worklib.ibex_top:sv <0x467b5a88>
+			streams: 123, words: 45059
+		worklib.gng_smul_16_18:v <0x16b3a698>
+			streams:   5, words:  1301
+		worklib.gng_smul_16_18_sadd_37:v <0x36116fae>
+			streams:   9, words:  2414
+		worklib.gng_coef:v <0x570eb596>
+			streams:   3, words: 14463
+		worklib.gng_lzd:v <0x130f33d6>
+			streams:  65, words: 15690
+		worklib.gng_interp:v <0x7d32c6e0>
+			streams:  30, words: 11127
+		worklib.gng_ctg:v <0x092f2558>
+			streams:  10, words:  4341
+		worklib.masked_core_tb:sv <0x40707048>
+			streams:  59, words: 54654
+		worklib.prim_secded_pkg:sv <0x20bf3998>
+			streams:  38, words: 206599
+		worklib.ibex_alu:sv <0x4bcbe894>
+			streams:  47, words: 32653
+		worklib.ibex_core:sv <0x1cf07689>
+			streams: 535, words: 241927
+		worklib.ibex_id_stage:sv <0x6c76aa53>
+			streams: 170, words: 67433
+		worklib.ibex_cs_registers:sv <0x4a5e4e51>
+			streams: 248, words: 148098
+		worklib.ibex_fetch_fifo:sv <0x0e28d196>
+			streams:  42, words: 20142
+		worklib.ibex_prefetch_buffer:sv <0x17c9a102>
+			streams:  40, words: 14242
+		worklib.ibex_pmp:sv <0x66d26228>
+			streams:  81, words: 73730
+		worklib.ibex_register_file_ff:sv <0x45596e58>
+			streams:  14, words:  5507
+		worklib.ibex_top_tracing:sv <0x230bff17>
+			streams:  85, words: 24732
+		worklib.ibex_controller:sv <0x5377bf6c>
+			streams:  49, words: 41938
+		worklib.ibex_if_stage:sv <0x2f46adf1>
+			streams:  88, words: 26193
+		worklib.ibex_pkg:sv <0x0ea50bd6>
+			streams:   0, words:     0
+		worklib.ibex_counter:sv <0x7d2f9678>
+			streams:   6, words:  3832
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                  Instances  Unique
+		Modules:                 98      38
+		Verilog packages:         5       5
+		Registers:             2176    2257
+		Scalar wires:          2262       -
+		Expanded wires:          64       1
+		Vectored wires:        1258       -
+		Always blocks:          295     218
+		Initial blocks:          17      17
+		Final blocks:             2       2
+		Cont. assignments:     1950    1265
+		Pseudo assignments:     885       -
+		Process Clocks:         151       6
+		Simulation timescale:   1ps
+	Writing initial simulation snapshot: worklib.masked_core_tb:sv
+Loading snapshot worklib.masked_core_tb:sv .................... Done
+xcelium> source /home/net/cadence/installs/XCELIUM2309/tools/xcelium/files/xmsimrc
+xcelium> source /home/net/cadence/installs/XCELIUM2309/tools/xcelium/files/xmsimrc
+xcelium> run
+[TB] Loaded 183528 bytes from /home/net/al663069/ws/irq_comparisons/riscv_multiple_interrupt_test.1000/test.bin at 0x80000000
+masked_core_tb.u_dut.u_ibex_tracer.unmblk2.unmblk1: Writing execution trace to /home/net/al663069/ws/irq_comparisons/riscv_multiple_interrupt_test.1000/trace_00000000.log
+[IRQ-INJ] #1: Assert irq_external at cycle 500
+[IRQ-LAT] #1: Assert@500 -> Handler@542  Latency = 42 cycles  PC=0x8000272c
+[IRQ-INJ] #1: Deassert irq_external at cycle 542
+[IRQ-INJ] #2: Assert irq_external at cycle 842
+[IRQ-LAT] #2: Assert@842 -> Handler@871  Latency = 29 cycles  PC=0x8000272c
+[IRQ-INJ] #2: Deassert irq_external at cycle 871
+[IRQ-INJ] #3: Assert irq_external at cycle 1171
+[IRQ-LAT] #3: Assert@1171 -> Handler@1178  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #3: Deassert irq_external at cycle 1178
+[IRQ-INJ] #4: Assert irq_external at cycle 1478
+[IRQ-LAT] #4: Assert@1478 -> Handler@1485  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #4: Deassert irq_external at cycle 1485
+[IRQ-INJ] #5: Assert irq_external at cycle 1785
+[IRQ-LAT] #5: Assert@1785 -> Handler@1820  Latency = 35 cycles  PC=0x8000272c
+[IRQ-INJ] #5: Deassert irq_external at cycle 1820
+[IRQ-INJ] #6: Assert irq_external at cycle 2120
+[IRQ-LAT] #6: Assert@2120 -> Handler@2127  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #6: Deassert irq_external at cycle 2127
+[IRQ-INJ] #7: Assert irq_external at cycle 2427
+[IRQ-LAT] #7: Assert@2427 -> Handler@2435  Latency = 8 cycles  PC=0x8000272c
+[IRQ-INJ] #7: Deassert irq_external at cycle 2435
+[IRQ-INJ] #8: Assert irq_external at cycle 2735
+[IRQ-LAT] #8: Assert@2735 -> Handler@2770  Latency = 35 cycles  PC=0x8000272c
+[IRQ-INJ] #8: Deassert irq_external at cycle 2770
+[IRQ-INJ] #9: Assert irq_external at cycle 3070
+[IRQ-LAT] #9: Assert@3070 -> Handler@3077  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #9: Deassert irq_external at cycle 3077
+[IRQ-INJ] #10: Assert irq_external at cycle 3377
+[IRQ-LAT] #10: Assert@3377 -> Handler@3384  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #10: Deassert irq_external at cycle 3384
+[IRQ-INJ] #11: Assert irq_external at cycle 3684
+[IRQ-LAT] #11: Assert@3684 -> Handler@3726  Latency = 42 cycles  PC=0x8000272c
+[IRQ-INJ] #11: Deassert irq_external at cycle 3726
+[IRQ-INJ] #12: Assert irq_external at cycle 4026
+[IRQ-LAT] #12: Assert@4026 -> Handler@4033  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #12: Deassert irq_external at cycle 4033
+[IRQ-INJ] #13: Assert irq_external at cycle 4333
+[IRQ-LAT] #13: Assert@4333 -> Handler@4340  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #13: Deassert irq_external at cycle 4340
+[IRQ-INJ] #14: Assert irq_external at cycle 4640
+[IRQ-LAT] #14: Assert@4640 -> Handler@4663  Latency = 23 cycles  PC=0x8000272c
+[IRQ-INJ] #14: Deassert irq_external at cycle 4663
+[IRQ-INJ] #15: Assert irq_external at cycle 4963
+[IRQ-LAT] #15: Assert@4963 -> Handler@5000  Latency = 37 cycles  PC=0x8000272c
+[IRQ-INJ] #15: Deassert irq_external at cycle 5000
+[IRQ-INJ] #16: Assert irq_external at cycle 5300
+[IRQ-LAT] #16: Assert@5300 -> Handler@5307  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #16: Deassert irq_external at cycle 5307
+[IRQ-INJ] #17: Assert irq_external at cycle 5607
+[IRQ-LAT] #17: Assert@5607 -> Handler@5614  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #17: Deassert irq_external at cycle 5614
+[IRQ-INJ] #18: Assert irq_external at cycle 5914
+[IRQ-LAT] #18: Assert@5914 -> Handler@5952  Latency = 38 cycles  PC=0x8000272c
+[IRQ-INJ] #18: Deassert irq_external at cycle 5952
+[IRQ-INJ] #19: Assert irq_external at cycle 6252
+[IRQ-LAT] #19: Assert@6252 -> Handler@6259  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #19: Deassert irq_external at cycle 6259
+[IRQ-INJ] #20: Assert irq_external at cycle 6559
+[IRQ-LAT] #20: Assert@6559 -> Handler@6594  Latency = 35 cycles  PC=0x8000272c
+[IRQ-INJ] #20: Deassert irq_external at cycle 6594
+[TB] *** TEST PASSED at 527515000 ***
+
+[IRQ-LAT] ============ LATENCY SUMMARY ============
+[IRQ-LAT]   Interrupts measured : 20
+[IRQ-LAT]   Min latency         : 7 cycles
+[IRQ-LAT]   Max latency         : 42 cycles
+[IRQ-LAT]   Avg latency         : 19 cycles
+[IRQ-LAT] ==========================================
+Simulation complete via $finish(1) at time 527615 NS + 0
+./masked_core_tb_interrupt.sv:232       $finish;
+xcelium> exit
+TOOL:	xrun(64)	23.09-s006: Exiting on Mar 06, 2026 at 17:23:08 EST  (total: 00:00:10)
+    Simulation complete
+
+>>> Step 3: Parsing latency results ...
+  >> PASS — 20 interrupts measured
+     Min=7  Max=42  Avg=19 cycles
+
+
+===== [7] riscv_multiple_interrupt_test  seed=2000 =====
+>>> Step 1: Generating test binary via Ibex DV ...
+Building RTL testbench
+Generating core configuration file
+Building randomized test generator
+Running randomized test generator to create assembly file /home/net/al663069/ws/ibex/dv/uvm/core_ibex/out/run/tests/riscv_multiple_interrupt_test.2000/test.S
+Compiling riscvdv test assembly to create binary at /home/net/al663069/ws/ibex/dv/uvm/core_ibex/out/run/tests/riscv_multiple_interrupt_test.2000/test.bin
+Running RTL simulation at /home/net/al663069/ws/ibex/dv/uvm/core_ibex/out/run/tests/riscv_multiple_interrupt_test.2000
+Collecting simulation results and checking logs of testcase at /home/net/al663069/ws/ibex/dv/uvm/core_ibex/out/run/tests/riscv_multiple_interrupt_test.2000/trr.yaml
+Collecting up results of tests into report regr.log
+100.00% PASS 1 PASSED, 0 FAILED
+    Binary copied to /home/net/al663069/ws/irq_comparisons/riscv_multiple_interrupt_test.2000/
+
+>>> Step 2: Running interrupt testbench ...
+TOOL:	xrun(64)	23.09-s006: Started on Mar 06, 2026 at 17:24:05 EST
+xrun(64): 23.09-s006: (c) Copyright 1995-2024 Cadence Design Systems, Inc.
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_assert.sv
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_pkg.sv
+	package worklib.ibex_pkg:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_tracer_pkg.sv
+	package worklib.ibex_tracer_pkg:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_ram_1p_pkg.sv
+	package worklib.prim_ram_1p_pkg:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_secded_pkg.sv
+	package worklib.prim_secded_pkg:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_pkg.sv
+	package worklib.prim_pkg:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/gng.v
+	module worklib.gng:v
+		errors: 0, warnings: 0
+	module worklib.gng_coef:v
+		errors: 0, warnings: 0
+	module worklib.gng_ctg:v
+		errors: 0, warnings: 0
+	module worklib.gng_interp:v
+		errors: 0, warnings: 0
+	module worklib.gng_lzd:v
+		errors: 0, warnings: 0
+	module worklib.gng_smul_16_18:v
+		errors: 0, warnings: 0
+	module worklib.gng_smul_16_18_sadd_37:v
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_alu.sv
+	module worklib.ibex_alu:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_compressed_decoder.sv
+	module worklib.ibex_compressed_decoder:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_controller.sv
+	module worklib.ibex_controller:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_counter.sv
+	module worklib.ibex_counter:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_csr.sv
+	module worklib.ibex_csr:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_cs_registers.sv
+	module worklib.ibex_cs_registers:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_decoder.sv
+	module worklib.ibex_decoder:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_dummy_instr.sv
+	module worklib.ibex_dummy_instr:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_ex_block.sv
+	module worklib.ibex_ex_block:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_fetch_fifo.sv
+	module worklib.ibex_fetch_fifo:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_icache.sv
+	module worklib.ibex_icache:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_id_stage.sv
+	module worklib.ibex_id_stage:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_if_stage.sv
+	module worklib.ibex_if_stage:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_load_store_unit.sv
+	module worklib.ibex_load_store_unit:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_lockstep.sv
+	module worklib.ibex_lockstep:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_multdiv_fast.sv
+	module worklib.ibex_multdiv_fast:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_multdiv_slow.sv
+	module worklib.ibex_multdiv_slow:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_prefetch_buffer.sv
+	module worklib.ibex_prefetch_buffer:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_pmp.sv
+	module worklib.ibex_pmp:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_register_file_ff.sv
+	module worklib.ibex_register_file_ff:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_wb_stage.sv
+	module worklib.ibex_wb_stage:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_branch_predict.sv
+	module worklib.ibex_branch_predict:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_core.sv
+	module worklib.ibex_core:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_top.sv
+	module worklib.ibex_top:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_top_tracing.sv
+	module worklib.ibex_top_tracing:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_tracer.sv
+	module worklib.ibex_tracer:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_buf.sv
+	module worklib.prim_buf:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_generic_buf.sv
+	module worklib.prim_generic_buf:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_clock_gating.sv
+	module worklib.prim_clock_gating:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_generic_clock_gating.sv
+	module worklib.prim_generic_clock_gating:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_flop_macros.sv
+file: masked_core_tb_interrupt.sv
+	module worklib.masked_core_tb:sv
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		ibex_pkg
+		prim_ram_1p_pkg
+		prim_secded_pkg
+		prim_pkg
+		ibex_tracer_pkg
+		masked_core_tb
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.ibex_tracer:sv <0x0caf524c>
+			streams:  54, words: 168030
+		worklib.ibex_csr:sv <0x60925401>
+			streams:   4, words:   981
+		worklib.ibex_csr:sv <0x2b3c60ab>
+			streams:   4, words:   927
+		worklib.ibex_counter:sv <0x7dcd1ceb>
+			streams:   9, words:  5929
+		worklib.ibex_counter:sv <0x43dbcdd6>
+			streams:   9, words:  5774
+		worklib.ibex_counter:sv <0x148dddae>
+			streams:   6, words:  3970
+		worklib.ibex_csr:sv <0x5cc91402>
+			streams:   4, words:   975
+		worklib.ibex_csr:sv <0x7747b744>
+			streams:   4, words:   963
+		worklib.ibex_csr:sv <0x414931de>
+			streams:   4, words:   975
+		worklib.ibex_csr:sv <0x399f25b4>
+			streams:   4, words:   923
+		worklib.ibex_csr:sv <0x64919a45>
+			streams:   4, words:   904
+		worklib.ibex_csr:sv <0x74be4f27>
+			streams:   4, words:   976
+		worklib.ibex_csr:sv <0x260d775b>
+			streams:   4, words:   907
+		worklib.ibex_csr:sv <0x50525780>
+			streams:   4, words:   925
+		worklib.ibex_csr:sv <0x2c10d7ec>
+			streams:   4, words:   895
+		worklib.ibex_csr:sv <0x7ed6b7ee>
+			streams:   4, words:   988
+		worklib.ibex_wb_stage:sv <0x46bdbef6>
+			streams:  31, words:  8678
+		worklib.ibex_load_store_unit:sv <0x6badb48b>
+			streams:  36, words: 25798
+		worklib.ibex_multdiv_fast:sv <0x63449840>
+			streams:  35, words: 35045
+		worklib.ibex_ex_block:sv <0x65c54abd>
+			streams:  31, words: 15361
+		worklib.ibex_decoder:sv <0x78497b65>
+			streams:  19, words: 51900
+		worklib.ibex_compressed_decoder:sv <0x10b24dc9>
+			streams:   3, words: 10294
+		worklib.prim_generic_buf:sv <0x100a5a28>
+			streams:   2, words:   397
+		worklib.prim_buf:sv <0x5a7b5f37>
+			streams:   1, words:   375
+		worklib.prim_generic_buf:sv <0x39a3c22b>
+			streams:   2, words:   407
+		worklib.prim_buf:sv <0x1f5e1654>
+			streams:   1, words:   384
+		worklib.prim_generic_clock_gating:sv <0x08a28a85>
+			streams:   2, words:   577
+		worklib.prim_clock_gating:sv <0x44690828>
+			streams:   1, words:   404
+		worklib.ibex_top:sv <0x467b5a88>
+			streams: 123, words: 45059
+		worklib.gng_smul_16_18:v <0x16b3a698>
+			streams:   5, words:  1301
+		worklib.gng_smul_16_18_sadd_37:v <0x36116fae>
+			streams:   9, words:  2414
+		worklib.gng_coef:v <0x570eb596>
+			streams:   3, words: 14463
+		worklib.gng_lzd:v <0x130f33d6>
+			streams:  65, words: 15690
+		worklib.gng_interp:v <0x7d32c6e0>
+			streams:  30, words: 11127
+		worklib.gng_ctg:v <0x092f2558>
+			streams:  10, words:  4341
+		worklib.masked_core_tb:sv <0x40707048>
+			streams:  59, words: 54654
+		worklib.prim_secded_pkg:sv <0x20bf3998>
+			streams:  38, words: 206599
+		worklib.ibex_alu:sv <0x4bcbe894>
+			streams:  47, words: 32653
+		worklib.ibex_core:sv <0x1cf07689>
+			streams: 535, words: 241927
+		worklib.ibex_id_stage:sv <0x6c76aa53>
+			streams: 170, words: 67433
+		worklib.ibex_cs_registers:sv <0x4a5e4e51>
+			streams: 248, words: 148098
+		worklib.ibex_fetch_fifo:sv <0x0e28d196>
+			streams:  42, words: 20142
+		worklib.ibex_prefetch_buffer:sv <0x17c9a102>
+			streams:  40, words: 14242
+		worklib.ibex_pmp:sv <0x66d26228>
+			streams:  81, words: 73730
+		worklib.ibex_register_file_ff:sv <0x45596e58>
+			streams:  14, words:  5507
+		worklib.ibex_top_tracing:sv <0x230bff17>
+			streams:  85, words: 24732
+		worklib.ibex_controller:sv <0x5377bf6c>
+			streams:  49, words: 41938
+		worklib.ibex_if_stage:sv <0x2f46adf1>
+			streams:  88, words: 26193
+		worklib.ibex_pkg:sv <0x0ea50bd6>
+			streams:   0, words:     0
+		worklib.ibex_counter:sv <0x7d2f9678>
+			streams:   6, words:  3832
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                  Instances  Unique
+		Modules:                 98      38
+		Verilog packages:         5       5
+		Registers:             2176    2257
+		Scalar wires:          2262       -
+		Expanded wires:          64       1
+		Vectored wires:        1258       -
+		Always blocks:          295     218
+		Initial blocks:          17      17
+		Final blocks:             2       2
+		Cont. assignments:     1950    1265
+		Pseudo assignments:     885       -
+		Process Clocks:         151       6
+		Simulation timescale:   1ps
+	Writing initial simulation snapshot: worklib.masked_core_tb:sv
+Loading snapshot worklib.masked_core_tb:sv .................... Done
+xcelium> source /home/net/cadence/installs/XCELIUM2309/tools/xcelium/files/xmsimrc
+xcelium> source /home/net/cadence/installs/XCELIUM2309/tools/xcelium/files/xmsimrc
+xcelium> run
+[TB] Loaded 183528 bytes from /home/net/al663069/ws/irq_comparisons/riscv_multiple_interrupt_test.2000/test.bin at 0x80000000
+masked_core_tb.u_dut.u_ibex_tracer.unmblk2.unmblk1: Writing execution trace to /home/net/al663069/ws/irq_comparisons/riscv_multiple_interrupt_test.2000/trace_00000000.log
+[IRQ-INJ] #1: Assert irq_external at cycle 500
+[IRQ-LAT] #1: Assert@500 -> Handler@536  Latency = 36 cycles  PC=0x8000272c
+[IRQ-INJ] #1: Deassert irq_external at cycle 536
+[IRQ-INJ] #2: Assert irq_external at cycle 836
+[IRQ-LAT] #2: Assert@836 -> Handler@843  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #2: Deassert irq_external at cycle 843
+[IRQ-INJ] #3: Assert irq_external at cycle 1143
+[IRQ-LAT] #3: Assert@1143 -> Handler@1162  Latency = 19 cycles  PC=0x8000272c
+[IRQ-INJ] #3: Deassert irq_external at cycle 1162
+[TB] *** TEST PASSED at 14825000 ***
+
+[IRQ-LAT] ============ LATENCY SUMMARY ============
+[IRQ-LAT]   Interrupts measured : 3
+[IRQ-LAT]   Min latency         : 7 cycles
+[IRQ-LAT]   Max latency         : 36 cycles
+[IRQ-LAT]   Avg latency         : 20 cycles
+[IRQ-LAT] ==========================================
+Simulation complete via $finish(1) at time 14925 NS + 0
+./masked_core_tb_interrupt.sv:232       $finish;
+xcelium> exit
+TOOL:	xrun(64)	23.09-s006: Exiting on Mar 06, 2026 at 17:24:08 EST  (total: 00:00:03)
+    Simulation complete
+
+>>> Step 3: Parsing latency results ...
+  >> PASS — 3 interrupts measured
+     Min=7  Max=36  Avg=20 cycles
+
+
+===== [8] riscv_multiple_interrupt_test  seed=3000 =====
+>>> Step 1: Generating test binary via Ibex DV ...
+Building RTL testbench
+Generating core configuration file
+Building randomized test generator
+Running randomized test generator to create assembly file /home/net/al663069/ws/ibex/dv/uvm/core_ibex/out/run/tests/riscv_multiple_interrupt_test.3000/test.S
+Compiling riscvdv test assembly to create binary at /home/net/al663069/ws/ibex/dv/uvm/core_ibex/out/run/tests/riscv_multiple_interrupt_test.3000/test.bin
+Running RTL simulation at /home/net/al663069/ws/ibex/dv/uvm/core_ibex/out/run/tests/riscv_multiple_interrupt_test.3000
+Collecting simulation results and checking logs of testcase at /home/net/al663069/ws/ibex/dv/uvm/core_ibex/out/run/tests/riscv_multiple_interrupt_test.3000/trr.yaml
+Collecting up results of tests into report regr.log
+100.00% PASS 1 PASSED, 0 FAILED
+    Binary copied to /home/net/al663069/ws/irq_comparisons/riscv_multiple_interrupt_test.3000/
+
+>>> Step 2: Running interrupt testbench ...
+TOOL:	xrun(64)	23.09-s006: Started on Mar 06, 2026 at 17:33:30 EST
+xrun(64): 23.09-s006: (c) Copyright 1995-2024 Cadence Design Systems, Inc.
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_assert.sv
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_pkg.sv
+	package worklib.ibex_pkg:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_tracer_pkg.sv
+	package worklib.ibex_tracer_pkg:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_ram_1p_pkg.sv
+	package worklib.prim_ram_1p_pkg:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_secded_pkg.sv
+	package worklib.prim_secded_pkg:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_pkg.sv
+	package worklib.prim_pkg:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/gng.v
+	module worklib.gng:v
+		errors: 0, warnings: 0
+	module worklib.gng_coef:v
+		errors: 0, warnings: 0
+	module worklib.gng_ctg:v
+		errors: 0, warnings: 0
+	module worklib.gng_interp:v
+		errors: 0, warnings: 0
+	module worklib.gng_lzd:v
+		errors: 0, warnings: 0
+	module worklib.gng_smul_16_18:v
+		errors: 0, warnings: 0
+	module worklib.gng_smul_16_18_sadd_37:v
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_alu.sv
+	module worklib.ibex_alu:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_compressed_decoder.sv
+	module worklib.ibex_compressed_decoder:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_controller.sv
+	module worklib.ibex_controller:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_counter.sv
+	module worklib.ibex_counter:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_csr.sv
+	module worklib.ibex_csr:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_cs_registers.sv
+	module worklib.ibex_cs_registers:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_decoder.sv
+	module worklib.ibex_decoder:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_dummy_instr.sv
+	module worklib.ibex_dummy_instr:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_ex_block.sv
+	module worklib.ibex_ex_block:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_fetch_fifo.sv
+	module worklib.ibex_fetch_fifo:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_icache.sv
+	module worklib.ibex_icache:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_id_stage.sv
+	module worklib.ibex_id_stage:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_if_stage.sv
+	module worklib.ibex_if_stage:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_load_store_unit.sv
+	module worklib.ibex_load_store_unit:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_lockstep.sv
+	module worklib.ibex_lockstep:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_multdiv_fast.sv
+	module worklib.ibex_multdiv_fast:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_multdiv_slow.sv
+	module worklib.ibex_multdiv_slow:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_prefetch_buffer.sv
+	module worklib.ibex_prefetch_buffer:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_pmp.sv
+	module worklib.ibex_pmp:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_register_file_ff.sv
+	module worklib.ibex_register_file_ff:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_wb_stage.sv
+	module worklib.ibex_wb_stage:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_branch_predict.sv
+	module worklib.ibex_branch_predict:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_core.sv
+	module worklib.ibex_core:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_top.sv
+	module worklib.ibex_top:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_top_tracing.sv
+	module worklib.ibex_top_tracing:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_tracer.sv
+	module worklib.ibex_tracer:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_buf.sv
+	module worklib.prim_buf:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_generic_buf.sv
+	module worklib.prim_generic_buf:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_clock_gating.sv
+	module worklib.prim_clock_gating:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_generic_clock_gating.sv
+	module worklib.prim_generic_clock_gating:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_flop_macros.sv
+file: masked_core_tb_interrupt.sv
+	module worklib.masked_core_tb:sv
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		ibex_pkg
+		prim_ram_1p_pkg
+		prim_secded_pkg
+		prim_pkg
+		ibex_tracer_pkg
+		masked_core_tb
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.ibex_tracer:sv <0x0caf524c>
+			streams:  54, words: 168030
+		worklib.ibex_csr:sv <0x60925401>
+			streams:   4, words:   981
+		worklib.ibex_csr:sv <0x2b3c60ab>
+			streams:   4, words:   927
+		worklib.ibex_counter:sv <0x7dcd1ceb>
+			streams:   9, words:  5929
+		worklib.ibex_counter:sv <0x43dbcdd6>
+			streams:   9, words:  5774
+		worklib.ibex_counter:sv <0x148dddae>
+			streams:   6, words:  3970
+		worklib.ibex_csr:sv <0x5cc91402>
+			streams:   4, words:   975
+		worklib.ibex_csr:sv <0x7747b744>
+			streams:   4, words:   963
+		worklib.ibex_csr:sv <0x414931de>
+			streams:   4, words:   975
+		worklib.ibex_csr:sv <0x399f25b4>
+			streams:   4, words:   923
+		worklib.ibex_csr:sv <0x64919a45>
+			streams:   4, words:   904
+		worklib.ibex_csr:sv <0x74be4f27>
+			streams:   4, words:   976
+		worklib.ibex_csr:sv <0x260d775b>
+			streams:   4, words:   907
+		worklib.ibex_csr:sv <0x50525780>
+			streams:   4, words:   925
+		worklib.ibex_csr:sv <0x2c10d7ec>
+			streams:   4, words:   895
+		worklib.ibex_csr:sv <0x7ed6b7ee>
+			streams:   4, words:   988
+		worklib.ibex_wb_stage:sv <0x46bdbef6>
+			streams:  31, words:  8678
+		worklib.ibex_load_store_unit:sv <0x6badb48b>
+			streams:  36, words: 25798
+		worklib.ibex_multdiv_fast:sv <0x63449840>
+			streams:  35, words: 35045
+		worklib.ibex_ex_block:sv <0x65c54abd>
+			streams:  31, words: 15361
+		worklib.ibex_decoder:sv <0x78497b65>
+			streams:  19, words: 51900
+		worklib.ibex_compressed_decoder:sv <0x10b24dc9>
+			streams:   3, words: 10294
+		worklib.prim_generic_buf:sv <0x100a5a28>
+			streams:   2, words:   397
+		worklib.prim_buf:sv <0x5a7b5f37>
+			streams:   1, words:   375
+		worklib.prim_generic_buf:sv <0x39a3c22b>
+			streams:   2, words:   407
+		worklib.prim_buf:sv <0x1f5e1654>
+			streams:   1, words:   384
+		worklib.prim_generic_clock_gating:sv <0x08a28a85>
+			streams:   2, words:   577
+		worklib.prim_clock_gating:sv <0x44690828>
+			streams:   1, words:   404
+		worklib.ibex_top:sv <0x467b5a88>
+			streams: 123, words: 45059
+		worklib.gng_smul_16_18:v <0x16b3a698>
+			streams:   5, words:  1301
+		worklib.gng_smul_16_18_sadd_37:v <0x36116fae>
+			streams:   9, words:  2414
+		worklib.gng_coef:v <0x570eb596>
+			streams:   3, words: 14463
+		worklib.gng_lzd:v <0x130f33d6>
+			streams:  65, words: 15690
+		worklib.gng_interp:v <0x7d32c6e0>
+			streams:  30, words: 11127
+		worklib.gng_ctg:v <0x092f2558>
+			streams:  10, words:  4341
+		worklib.masked_core_tb:sv <0x40707048>
+			streams:  59, words: 54654
+		worklib.prim_secded_pkg:sv <0x20bf3998>
+			streams:  38, words: 206599
+		worklib.ibex_alu:sv <0x4bcbe894>
+			streams:  47, words: 32653
+		worklib.ibex_core:sv <0x1cf07689>
+			streams: 535, words: 241927
+		worklib.ibex_id_stage:sv <0x6c76aa53>
+			streams: 170, words: 67433
+		worklib.ibex_cs_registers:sv <0x4a5e4e51>
+			streams: 248, words: 148098
+		worklib.ibex_fetch_fifo:sv <0x0e28d196>
+			streams:  42, words: 20142
+		worklib.ibex_prefetch_buffer:sv <0x17c9a102>
+			streams:  40, words: 14242
+		worklib.ibex_pmp:sv <0x66d26228>
+			streams:  81, words: 73730
+		worklib.ibex_register_file_ff:sv <0x45596e58>
+			streams:  14, words:  5507
+		worklib.ibex_top_tracing:sv <0x230bff17>
+			streams:  85, words: 24732
+		worklib.ibex_controller:sv <0x5377bf6c>
+			streams:  49, words: 41938
+		worklib.ibex_if_stage:sv <0x2f46adf1>
+			streams:  88, words: 26193
+		worklib.ibex_pkg:sv <0x0ea50bd6>
+			streams:   0, words:     0
+		worklib.ibex_counter:sv <0x7d2f9678>
+			streams:   6, words:  3832
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                  Instances  Unique
+		Modules:                 98      38
+		Verilog packages:         5       5
+		Registers:             2176    2257
+		Scalar wires:          2262       -
+		Expanded wires:          64       1
+		Vectored wires:        1258       -
+		Always blocks:          295     218
+		Initial blocks:          17      17
+		Final blocks:             2       2
+		Cont. assignments:     1950    1265
+		Pseudo assignments:     885       -
+		Process Clocks:         151       6
+		Simulation timescale:   1ps
+	Writing initial simulation snapshot: worklib.masked_core_tb:sv
+Loading snapshot worklib.masked_core_tb:sv .................... Done
+xcelium> source /home/net/cadence/installs/XCELIUM2309/tools/xcelium/files/xmsimrc
+xcelium> source /home/net/cadence/installs/XCELIUM2309/tools/xcelium/files/xmsimrc
+xcelium> run
+[TB] Loaded 183528 bytes from /home/net/al663069/ws/irq_comparisons/riscv_multiple_interrupt_test.3000/test.bin at 0x80000000
+masked_core_tb.u_dut.u_ibex_tracer.unmblk2.unmblk1: Writing execution trace to /home/net/al663069/ws/irq_comparisons/riscv_multiple_interrupt_test.3000/trace_00000000.log
+[IRQ-INJ] #1: Assert irq_external at cycle 500
+[IRQ-LAT] #1: Assert@500 -> Handler@507  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #1: Deassert irq_external at cycle 507
+[IRQ-INJ] #2: Assert irq_external at cycle 807
+[IRQ-LAT] #2: Assert@807 -> Handler@814  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #2: Deassert irq_external at cycle 814
+[IRQ-INJ] #3: Assert irq_external at cycle 1114
+[IRQ-LAT] #3: Assert@1114 -> Handler@1121  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #3: Deassert irq_external at cycle 1121
+[IRQ-INJ] #4: Assert irq_external at cycle 1421
+[IRQ-LAT] #4: Assert@1421 -> Handler@1428  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #4: Deassert irq_external at cycle 1428
+[IRQ-INJ] #5: Assert irq_external at cycle 1728
+[IRQ-LAT] #5: Assert@1728 -> Handler@1735  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #5: Deassert irq_external at cycle 1735
+[IRQ-INJ] #6: Assert irq_external at cycle 2035
+[IRQ-LAT] #6: Assert@2035 -> Handler@2042  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #6: Deassert irq_external at cycle 2042
+[IRQ-INJ] #7: Assert irq_external at cycle 2342
+[IRQ-LAT] #7: Assert@2342 -> Handler@2349  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #7: Deassert irq_external at cycle 2349
+[IRQ-INJ] #8: Assert irq_external at cycle 2649
+[IRQ-LAT] #8: Assert@2649 -> Handler@2656  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #8: Deassert irq_external at cycle 2656
+[IRQ-INJ] #9: Assert irq_external at cycle 2956
+[IRQ-LAT] #9: Assert@2956 -> Handler@2963  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #9: Deassert irq_external at cycle 2963
+[IRQ-INJ] #10: Assert irq_external at cycle 3263
+[IRQ-LAT] #10: Assert@3263 -> Handler@3270  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #10: Deassert irq_external at cycle 3270
+[IRQ-INJ] #11: Assert irq_external at cycle 3570
+[IRQ-LAT] #11: Assert@3570 -> Handler@3577  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #11: Deassert irq_external at cycle 3577
+[IRQ-INJ] #12: Assert irq_external at cycle 3877
+[IRQ-LAT] #12: Assert@3877 -> Handler@3884  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #12: Deassert irq_external at cycle 3884
+[IRQ-INJ] #13: Assert irq_external at cycle 4184
+[IRQ-LAT] #13: Assert@4184 -> Handler@4215  Latency = 31 cycles  PC=0x8000272c
+[IRQ-INJ] #13: Deassert irq_external at cycle 4215
+[IRQ-INJ] #14: Assert irq_external at cycle 4515
+[IRQ-LAT] #14: Assert@4515 -> Handler@4522  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #14: Deassert irq_external at cycle 4522
+[IRQ-INJ] #15: Assert irq_external at cycle 4822
+[IRQ-LAT] #15: Assert@4822 -> Handler@4857  Latency = 35 cycles  PC=0x8000272c
+[IRQ-INJ] #15: Deassert irq_external at cycle 4857
+[IRQ-INJ] #16: Assert irq_external at cycle 5157
+[IRQ-LAT] #16: Assert@5157 -> Handler@5191  Latency = 34 cycles  PC=0x8000272c
+[IRQ-INJ] #16: Deassert irq_external at cycle 5191
+[IRQ-INJ] #17: Assert irq_external at cycle 5491
+[IRQ-LAT] #17: Assert@5491 -> Handler@5498  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #17: Deassert irq_external at cycle 5498
+[IRQ-INJ] #18: Assert irq_external at cycle 5798
+[IRQ-LAT] #18: Assert@5798 -> Handler@5804  Latency = 6 cycles  PC=0x8000272c
+[IRQ-INJ] #18: Deassert irq_external at cycle 5804
+[IRQ-INJ] #19: Assert irq_external at cycle 6104
+[IRQ-LAT] #19: Assert@6104 -> Handler@6111  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #19: Deassert irq_external at cycle 6111
+[IRQ-INJ] #20: Assert irq_external at cycle 6411
+[IRQ-LAT] #20: Assert@6411 -> Handler@6417  Latency = 6 cycles  PC=0x8000272c
+[IRQ-INJ] #20: Deassert irq_external at cycle 6417
+[TB] *** TEST PASSED at 486625000 ***
+
+[IRQ-LAT] ============ LATENCY SUMMARY ============
+[IRQ-LAT]   Interrupts measured : 20
+[IRQ-LAT]   Min latency         : 6 cycles
+[IRQ-LAT]   Max latency         : 35 cycles
+[IRQ-LAT]   Avg latency         : 10 cycles
+[IRQ-LAT] ==========================================
+Simulation complete via $finish(1) at time 486725 NS + 0
+./masked_core_tb_interrupt.sv:232       $finish;
+xcelium> exit
+TOOL:	xrun(64)	23.09-s006: Exiting on Mar 06, 2026 at 17:33:37 EST  (total: 00:00:07)
+    Simulation complete
+
+>>> Step 3: Parsing latency results ...
+  >> PASS — 20 interrupts measured
+     Min=6  Max=35  Avg=10 cycles
+
+
+===== [9] riscv_multiple_interrupt_test  seed=4000 =====
+>>> Step 1: Generating test binary via Ibex DV ...
+Building RTL testbench
+Generating core configuration file
+Building randomized test generator
+Running randomized test generator to create assembly file /home/net/al663069/ws/ibex/dv/uvm/core_ibex/out/run/tests/riscv_multiple_interrupt_test.4000/test.S
+Compiling riscvdv test assembly to create binary at /home/net/al663069/ws/ibex/dv/uvm/core_ibex/out/run/tests/riscv_multiple_interrupt_test.4000/test.bin
+Running RTL simulation at /home/net/al663069/ws/ibex/dv/uvm/core_ibex/out/run/tests/riscv_multiple_interrupt_test.4000
+Collecting simulation results and checking logs of testcase at /home/net/al663069/ws/ibex/dv/uvm/core_ibex/out/run/tests/riscv_multiple_interrupt_test.4000/trr.yaml
+Collecting up results of tests into report regr.log
+100.00% PASS 1 PASSED, 0 FAILED
+    Binary copied to /home/net/al663069/ws/irq_comparisons/riscv_multiple_interrupt_test.4000/
+
+>>> Step 2: Running interrupt testbench ...
+TOOL:	xrun(64)	23.09-s006: Started on Mar 06, 2026 at 17:40:45 EST
+xrun(64): 23.09-s006: (c) Copyright 1995-2024 Cadence Design Systems, Inc.
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_assert.sv
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_pkg.sv
+	package worklib.ibex_pkg:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_tracer_pkg.sv
+	package worklib.ibex_tracer_pkg:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_ram_1p_pkg.sv
+	package worklib.prim_ram_1p_pkg:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_secded_pkg.sv
+	package worklib.prim_secded_pkg:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_pkg.sv
+	package worklib.prim_pkg:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/gng.v
+	module worklib.gng:v
+		errors: 0, warnings: 0
+	module worklib.gng_coef:v
+		errors: 0, warnings: 0
+	module worklib.gng_ctg:v
+		errors: 0, warnings: 0
+	module worklib.gng_interp:v
+		errors: 0, warnings: 0
+	module worklib.gng_lzd:v
+		errors: 0, warnings: 0
+	module worklib.gng_smul_16_18:v
+		errors: 0, warnings: 0
+	module worklib.gng_smul_16_18_sadd_37:v
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_alu.sv
+	module worklib.ibex_alu:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_compressed_decoder.sv
+	module worklib.ibex_compressed_decoder:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_controller.sv
+	module worklib.ibex_controller:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_counter.sv
+	module worklib.ibex_counter:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_csr.sv
+	module worklib.ibex_csr:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_cs_registers.sv
+	module worklib.ibex_cs_registers:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_decoder.sv
+	module worklib.ibex_decoder:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_dummy_instr.sv
+	module worklib.ibex_dummy_instr:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_ex_block.sv
+	module worklib.ibex_ex_block:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_fetch_fifo.sv
+	module worklib.ibex_fetch_fifo:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_icache.sv
+	module worklib.ibex_icache:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_id_stage.sv
+	module worklib.ibex_id_stage:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_if_stage.sv
+	module worklib.ibex_if_stage:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_load_store_unit.sv
+	module worklib.ibex_load_store_unit:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_lockstep.sv
+	module worklib.ibex_lockstep:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_multdiv_fast.sv
+	module worklib.ibex_multdiv_fast:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_multdiv_slow.sv
+	module worklib.ibex_multdiv_slow:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_prefetch_buffer.sv
+	module worklib.ibex_prefetch_buffer:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_pmp.sv
+	module worklib.ibex_pmp:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_register_file_ff.sv
+	module worklib.ibex_register_file_ff:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_wb_stage.sv
+	module worklib.ibex_wb_stage:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_branch_predict.sv
+	module worklib.ibex_branch_predict:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_core.sv
+	module worklib.ibex_core:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_top.sv
+	module worklib.ibex_top:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_top_tracing.sv
+	module worklib.ibex_top_tracing:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_tracer.sv
+	module worklib.ibex_tracer:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_buf.sv
+	module worklib.prim_buf:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_generic_buf.sv
+	module worklib.prim_generic_buf:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_clock_gating.sv
+	module worklib.prim_clock_gating:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_generic_clock_gating.sv
+	module worklib.prim_generic_clock_gating:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_flop_macros.sv
+file: masked_core_tb_interrupt.sv
+	module worklib.masked_core_tb:sv
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		ibex_pkg
+		prim_ram_1p_pkg
+		prim_secded_pkg
+		prim_pkg
+		ibex_tracer_pkg
+		masked_core_tb
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.ibex_tracer:sv <0x0caf524c>
+			streams:  54, words: 168030
+		worklib.ibex_csr:sv <0x60925401>
+			streams:   4, words:   981
+		worklib.ibex_csr:sv <0x2b3c60ab>
+			streams:   4, words:   927
+		worklib.ibex_counter:sv <0x7dcd1ceb>
+			streams:   9, words:  5929
+		worklib.ibex_counter:sv <0x43dbcdd6>
+			streams:   9, words:  5774
+		worklib.ibex_counter:sv <0x148dddae>
+			streams:   6, words:  3970
+		worklib.ibex_csr:sv <0x5cc91402>
+			streams:   4, words:   975
+		worklib.ibex_csr:sv <0x7747b744>
+			streams:   4, words:   963
+		worklib.ibex_csr:sv <0x414931de>
+			streams:   4, words:   975
+		worklib.ibex_csr:sv <0x399f25b4>
+			streams:   4, words:   923
+		worklib.ibex_csr:sv <0x64919a45>
+			streams:   4, words:   904
+		worklib.ibex_csr:sv <0x74be4f27>
+			streams:   4, words:   976
+		worklib.ibex_csr:sv <0x260d775b>
+			streams:   4, words:   907
+		worklib.ibex_csr:sv <0x50525780>
+			streams:   4, words:   925
+		worklib.ibex_csr:sv <0x2c10d7ec>
+			streams:   4, words:   895
+		worklib.ibex_csr:sv <0x7ed6b7ee>
+			streams:   4, words:   988
+		worklib.ibex_wb_stage:sv <0x46bdbef6>
+			streams:  31, words:  8678
+		worklib.ibex_load_store_unit:sv <0x6badb48b>
+			streams:  36, words: 25798
+		worklib.ibex_multdiv_fast:sv <0x63449840>
+			streams:  35, words: 35045
+		worklib.ibex_ex_block:sv <0x65c54abd>
+			streams:  31, words: 15361
+		worklib.ibex_decoder:sv <0x78497b65>
+			streams:  19, words: 51900
+		worklib.ibex_compressed_decoder:sv <0x10b24dc9>
+			streams:   3, words: 10294
+		worklib.prim_generic_buf:sv <0x100a5a28>
+			streams:   2, words:   397
+		worklib.prim_buf:sv <0x5a7b5f37>
+			streams:   1, words:   375
+		worklib.prim_generic_buf:sv <0x39a3c22b>
+			streams:   2, words:   407
+		worklib.prim_buf:sv <0x1f5e1654>
+			streams:   1, words:   384
+		worklib.prim_generic_clock_gating:sv <0x08a28a85>
+			streams:   2, words:   577
+		worklib.prim_clock_gating:sv <0x44690828>
+			streams:   1, words:   404
+		worklib.ibex_top:sv <0x467b5a88>
+			streams: 123, words: 45059
+		worklib.gng_smul_16_18:v <0x16b3a698>
+			streams:   5, words:  1301
+		worklib.gng_smul_16_18_sadd_37:v <0x36116fae>
+			streams:   9, words:  2414
+		worklib.gng_coef:v <0x570eb596>
+			streams:   3, words: 14463
+		worklib.gng_lzd:v <0x130f33d6>
+			streams:  65, words: 15690
+		worklib.gng_interp:v <0x7d32c6e0>
+			streams:  30, words: 11127
+		worklib.gng_ctg:v <0x092f2558>
+			streams:  10, words:  4341
+		worklib.masked_core_tb:sv <0x40707048>
+			streams:  59, words: 54654
+		worklib.prim_secded_pkg:sv <0x20bf3998>
+			streams:  38, words: 206599
+		worklib.ibex_alu:sv <0x4bcbe894>
+			streams:  47, words: 32653
+		worklib.ibex_core:sv <0x1cf07689>
+			streams: 535, words: 241927
+		worklib.ibex_id_stage:sv <0x6c76aa53>
+			streams: 170, words: 67433
+		worklib.ibex_cs_registers:sv <0x4a5e4e51>
+			streams: 248, words: 148098
+		worklib.ibex_fetch_fifo:sv <0x0e28d196>
+			streams:  42, words: 20142
+		worklib.ibex_prefetch_buffer:sv <0x17c9a102>
+			streams:  40, words: 14242
+		worklib.ibex_pmp:sv <0x66d26228>
+			streams:  81, words: 73730
+		worklib.ibex_register_file_ff:sv <0x45596e58>
+			streams:  14, words:  5507
+		worklib.ibex_top_tracing:sv <0x230bff17>
+			streams:  85, words: 24732
+		worklib.ibex_controller:sv <0x5377bf6c>
+			streams:  49, words: 41938
+		worklib.ibex_if_stage:sv <0x2f46adf1>
+			streams:  88, words: 26193
+		worklib.ibex_pkg:sv <0x0ea50bd6>
+			streams:   0, words:     0
+		worklib.ibex_counter:sv <0x7d2f9678>
+			streams:   6, words:  3832
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                  Instances  Unique
+		Modules:                 98      38
+		Verilog packages:         5       5
+		Registers:             2176    2257
+		Scalar wires:          2262       -
+		Expanded wires:          64       1
+		Vectored wires:        1258       -
+		Always blocks:          295     218
+		Initial blocks:          17      17
+		Final blocks:             2       2
+		Cont. assignments:     1950    1265
+		Pseudo assignments:     885       -
+		Process Clocks:         151       6
+		Simulation timescale:   1ps
+	Writing initial simulation snapshot: worklib.masked_core_tb:sv
+Loading snapshot worklib.masked_core_tb:sv .................... Done
+xcelium> source /home/net/cadence/installs/XCELIUM2309/tools/xcelium/files/xmsimrc
+xcelium> source /home/net/cadence/installs/XCELIUM2309/tools/xcelium/files/xmsimrc
+xcelium> run
+[TB] Loaded 179432 bytes from /home/net/al663069/ws/irq_comparisons/riscv_multiple_interrupt_test.4000/test.bin at 0x80000000
+masked_core_tb.u_dut.u_ibex_tracer.unmblk2.unmblk1: Writing execution trace to /home/net/al663069/ws/irq_comparisons/riscv_multiple_interrupt_test.4000/trace_00000000.log
+[IRQ-INJ] #1: Assert irq_external at cycle 500
+[IRQ-LAT] #1: Assert@500 -> Handler@507  Latency = 7 cycles  PC=0x8000252c
+[IRQ-INJ] #1: Deassert irq_external at cycle 507
+[IRQ-INJ] #2: Assert irq_external at cycle 807
+[IRQ-LAT] #2: Assert@807 -> Handler@814  Latency = 7 cycles  PC=0x8000252c
+[IRQ-INJ] #2: Deassert irq_external at cycle 814
+[IRQ-INJ] #3: Assert irq_external at cycle 1114
+[IRQ-LAT] #3: Assert@1114 -> Handler@1121  Latency = 7 cycles  PC=0x8000252c
+[IRQ-INJ] #3: Deassert irq_external at cycle 1121
+[IRQ-INJ] #4: Assert irq_external at cycle 1421
+[IRQ-LAT] #4: Assert@1421 -> Handler@1427  Latency = 6 cycles  PC=0x8000252c
+[IRQ-INJ] #4: Deassert irq_external at cycle 1427
+[IRQ-INJ] #5: Assert irq_external at cycle 1727
+[IRQ-LAT] #5: Assert@1727 -> Handler@1734  Latency = 7 cycles  PC=0x8000252c
+[IRQ-INJ] #5: Deassert irq_external at cycle 1734
+[IRQ-INJ] #6: Assert irq_external at cycle 2034
+[IRQ-LAT] #6: Assert@2034 -> Handler@2041  Latency = 7 cycles  PC=0x8000252c
+[IRQ-INJ] #6: Deassert irq_external at cycle 2041
+[IRQ-INJ] #7: Assert irq_external at cycle 2341
+[IRQ-LAT] #7: Assert@2341 -> Handler@2357  Latency = 16 cycles  PC=0x8000252c
+[IRQ-INJ] #7: Deassert irq_external at cycle 2357
+[IRQ-INJ] #8: Assert irq_external at cycle 2657
+[IRQ-LAT] #8: Assert@2657 -> Handler@2665  Latency = 8 cycles  PC=0x8000252c
+[IRQ-INJ] #8: Deassert irq_external at cycle 2665
+[IRQ-INJ] #9: Assert irq_external at cycle 2965
+[IRQ-LAT] #9: Assert@2965 -> Handler@2972  Latency = 7 cycles  PC=0x8000252c
+[IRQ-INJ] #9: Deassert irq_external at cycle 2972
+[IRQ-INJ] #10: Assert irq_external at cycle 3272
+[IRQ-LAT] #10: Assert@3272 -> Handler@3279  Latency = 7 cycles  PC=0x8000252c
+[IRQ-INJ] #10: Deassert irq_external at cycle 3279
+[IRQ-INJ] #11: Assert irq_external at cycle 3579
+[IRQ-LAT] #11: Assert@3579 -> Handler@3586  Latency = 7 cycles  PC=0x8000252c
+[IRQ-INJ] #11: Deassert irq_external at cycle 3586
+[IRQ-INJ] #12: Assert irq_external at cycle 3886
+[IRQ-LAT] #12: Assert@3886 -> Handler@3893  Latency = 7 cycles  PC=0x8000252c
+[IRQ-INJ] #12: Deassert irq_external at cycle 3893
+[IRQ-INJ] #13: Assert irq_external at cycle 4193
+[IRQ-LAT] #13: Assert@4193 -> Handler@4200  Latency = 7 cycles  PC=0x8000252c
+[IRQ-INJ] #13: Deassert irq_external at cycle 4200
+[IRQ-INJ] #14: Assert irq_external at cycle 4500
+[IRQ-LAT] #14: Assert@4500 -> Handler@4507  Latency = 7 cycles  PC=0x8000252c
+[IRQ-INJ] #14: Deassert irq_external at cycle 4507
+[IRQ-INJ] #15: Assert irq_external at cycle 4807
+[IRQ-LAT] #15: Assert@4807 -> Handler@4822  Latency = 15 cycles  PC=0x8000252c
+[IRQ-INJ] #15: Deassert irq_external at cycle 4822
+[IRQ-INJ] #16: Assert irq_external at cycle 5122
+[IRQ-LAT] #16: Assert@5122 -> Handler@5129  Latency = 7 cycles  PC=0x8000252c
+[IRQ-INJ] #16: Deassert irq_external at cycle 5129
+[IRQ-INJ] #17: Assert irq_external at cycle 5429
+[IRQ-LAT] #17: Assert@5429 -> Handler@5438  Latency = 9 cycles  PC=0x8000252c
+[IRQ-INJ] #17: Deassert irq_external at cycle 5438
+[IRQ-INJ] #18: Assert irq_external at cycle 5738
+[IRQ-LAT] #18: Assert@5738 -> Handler@5745  Latency = 7 cycles  PC=0x8000252c
+[IRQ-INJ] #18: Deassert irq_external at cycle 5745
+[IRQ-INJ] #19: Assert irq_external at cycle 6045
+[IRQ-LAT] #19: Assert@6045 -> Handler@6053  Latency = 8 cycles  PC=0x8000252c
+[IRQ-INJ] #19: Deassert irq_external at cycle 6053
+[IRQ-INJ] #20: Assert irq_external at cycle 6353
+[IRQ-LAT] #20: Assert@6353 -> Handler@6360  Latency = 7 cycles  PC=0x8000252c
+[IRQ-INJ] #20: Deassert irq_external at cycle 6360
+[TB] *** TEST PASSED at 354205000 ***
+
+[IRQ-LAT] ============ LATENCY SUMMARY ============
+[IRQ-LAT]   Interrupts measured : 20
+[IRQ-LAT]   Min latency         : 6 cycles
+[IRQ-LAT]   Max latency         : 16 cycles
+[IRQ-LAT]   Avg latency         : 8 cycles
+[IRQ-LAT] ==========================================
+Simulation complete via $finish(1) at time 354305 NS + 0
+./masked_core_tb_interrupt.sv:232       $finish;
+xcelium> exit
+TOOL:	xrun(64)	23.09-s006: Exiting on Mar 06, 2026 at 17:40:51 EST  (total: 00:00:06)
+    Simulation complete
+
+>>> Step 3: Parsing latency results ...
+  >> PASS — 20 interrupts measured
+     Min=6  Max=16  Avg=8 cycles
+
+
+===== [10] riscv_multiple_interrupt_test  seed=5000 =====
+>>> Step 1: Generating test binary via Ibex DV ...
+Building RTL testbench
+Generating core configuration file
+Building randomized test generator
+Running randomized test generator to create assembly file /home/net/al663069/ws/ibex/dv/uvm/core_ibex/out/run/tests/riscv_multiple_interrupt_test.5000/test.S
+Compiling riscvdv test assembly to create binary at /home/net/al663069/ws/ibex/dv/uvm/core_ibex/out/run/tests/riscv_multiple_interrupt_test.5000/test.bin
+Running RTL simulation at /home/net/al663069/ws/ibex/dv/uvm/core_ibex/out/run/tests/riscv_multiple_interrupt_test.5000
+  >> FAIL (DV run error)
+
+===== [11] riscv_interrupt_wfi_test  seed=1000 =====
+>>> Step 1: Generating test binary via Ibex DV ...
+  >> FAIL (DV run error)

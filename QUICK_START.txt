@@ -1,0 +1,82 @@
+================================================================================
+QUICK START - Ibex Gate-Level Verification
+================================================================================
+
+SETUP
+-----
+Location: /home/net/al663069/ws/scaler_asic_design
+Baseline: /home/net/al663069/ws/ibex
+
+FIXED FILES
+-----------
+✓ gate_level_wrapper.sv    - Fixed syntax errors
+✓ masked_core_tb.sv         - Made compatible with gate-level
+✓ modified_rtl_tb.sv        - Fixed illegal always_ff
+
+RUN A TEST
+----------
+Gate-level:
+  ./run_comparison_gatelevel.sh riscv_arithmetic_basic_test 1000
+
+Modified RTL (currently broken - port mismatches):
+  ./run_comparison_modified_rtl.sh riscv_arithmetic_basic_test 1000
+
+CHECK RESULTS
+-------------
+cd verification_results/gatelevel/riscv_arithmetic_basic_test.1000/
+ls -la                          # See all files
+cat gatelevel_sim.log | less    # View simulation log
+cat trace_baseline.log          # View baseline trace
+cat trace_gatelevel_00000000.log # View gate-level trace (if generated)
+
+CURRENT STATUS
+--------------
+Gate-Level:
+  ✓ Compiles
+  ✓ Loads binary
+  ✗ Times out (doesn't execute)
+  ✗ No trace generated
+
+Modified RTL:
+  ✗ Compilation fails (port mismatches)
+
+WHAT TESTS DO
+-------------
+1. Generate random RISC-V program
+2. Run on baseline Ibex + Spike
+3. Run same binary on your design
+4. Compare instruction traces
+5. Report PASS/FAIL
+
+NEXT STEPS
+----------
+1. Debug why gate-level times out:
+   - Add debug prints to see if instructions fetch
+   - Check reset behavior
+   - Verify clock/reset connectivity
+
+2. For interrupt latency, use:
+   ./run_comparison_gatelevel.sh riscv_rand_interrupt_test 2000
+   Then parse trace for cycles from IRQ to handler
+
+READ MORE
+---------
+- SCRIPTS_TESTS_EXPLAINED.md    # Simple explanation
+- STATUS_AND_NEXT_STEPS.md      # Current status & what to do
+- COMPREHENSIVE_GUIDE.md        # Full details
+
+COMMON COMMANDS
+---------------
+# Check if sim ran
+grep "Loaded.*bytes" verification_results/gatelevel/*/gatelevel_sim.log
+
+# Find errors
+grep -i "error" verification_results/gatelevel/*/gatelevel_sim.log
+
+# See what happened
+tail -100 verification_results/gatelevel/<test>.<seed>/gatelevel_sim.log
+
+# Run multiple tests
+./run_batch_comparison.sh gatelevel 10
+
+================================================================================

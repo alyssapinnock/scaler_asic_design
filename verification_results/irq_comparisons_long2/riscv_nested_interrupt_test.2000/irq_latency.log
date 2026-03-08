@@ -1,0 +1,11 @@
+# Interrupt Latency Measurements (closed-loop)
+# IRQ#, Assert_Cycle, Handler_Cycle, Latency_Cycles, Handler_PC
+1, 500, 536, 36, 0x8000272c
+2, 836, 843, 7, 0x8000272c
+3, 1143, 1176, 33, 0x8000272c
+
+# ---- Summary ----
+# Measurements : 3
+# Min latency  : 7 cycles
+# Max latency  : 36 cycles
+# Avg latency  : 25 cycles

@@ -1,5 +1,7 @@
 `timescale 1ns/1ps
+`ifndef GATE_LEVEL
 `include "prim_assert.sv"
+`endif
 
 module masked_core_tb;
   import ibex_pkg::*;
@@ -41,10 +43,14 @@ module masked_core_tb;
   logic [6:0]  data_rdata_intg, data_wdata_intg;
 
   // ===========================
-  // DUT: ibex_top_tracing
+  // DUT: ibex_top_tracing (RTL) or ibex_core_gatelevel_wrapper (Gate-level)
   // (includes ibex_tracer for automatic trace generation)
   // ===========================
+`ifdef GATE_LEVEL
+  ibex_core_gatelevel_wrapper #(
+`else
   ibex_top_tracing #(
+`endif
     .PMPEnable        (1'b0),
     .PMPGranularity   (0),
     .PMPNumRegions    (4),
@@ -59,16 +65,20 @@ module masked_core_tb;
     .ICache           (1'b0),
     .ICacheECC        (1'b0),
     .SecureIbex       (1'b0),
+`ifndef GATE_LEVEL
     .ICacheScramble   (1'b0),
+`endif
     .BranchPredictor  (1'b0),
     .DbgTriggerEn     (1'b0)
   ) u_dut (
     .clk_i                  (clk),
     .rst_ni                 (rst_n),
 
+`ifndef GATE_LEVEL
     .test_en_i              (1'b0),
     .scan_rst_ni            (1'b1),
     .ram_cfg_i              ('0),
+`endif
 
     .hart_id_i              (32'b0),
     .boot_addr_i            (32'h80000000),
@@ -78,7 +88,9 @@ module masked_core_tb;
     .instr_rvalid_i         (instr_rvalid),
     .instr_addr_o           (instr_addr),
     .instr_rdata_i          (instr_rdata),
+`ifndef GATE_LEVEL
     .instr_rdata_intg_i     (7'b0),
+`endif
     .instr_err_i            (1'b0),
 
     .data_req_o             (data_req),
@@ -88,33 +100,79 @@ module masked_core_tb;
     .data_be_o              (data_be),
     .data_addr_o            (data_addr),
     .data_wdata_o           (data_wdata),
+`ifndef GATE_LEVEL
     .data_wdata_intg_o      (data_wdata_intg),
+`endif
     .data_rdata_i           (data_rdata),
+`ifndef GATE_LEVEL
     .data_rdata_intg_i      (7'b0),
+`endif
     .data_err_i             (1'b0),
+
+`ifdef GATE_LEVEL
+    // Gate-level specific signals
+    .dummy_instr_id_o       (),
+    .dummy_instr_wb_o       (),
+    .rf_raddr_a_o           (),
+    .rf_raddr_b_o           (),
+    .rf_waddr_wb_o          (),
+    .rf_we_wb_o             (),
+    .rf_wdata_wb_ecc_o      (),
+    .rf_rdata_a_ecc_i       (32'b0),
+    .rf_rdata_b_ecc_i       (32'b0),
+    .ic_tag_req_o           (),
+    .ic_tag_write_o         (),
+    .ic_tag_addr_o          (),
+    .ic_tag_wdata_o         (),
+    .ic_tag_rdata_i         ('{default: 22'b0}),
+    .ic_data_req_o          (),
+    .ic_data_write_o        (),
+    .ic_data_addr_o         (),
+    .ic_data_wdata_o        (),
+    .ic_data_rdata_i        ('{default: 64'b0}),
+    .ic_scr_key_valid_i     (1'b0),
+    .ic_scr_key_req_o       (),
+`endif
 
     .irq_software_i         (1'b0),
     .irq_timer_i            (1'b0),
     .irq_external_i         (1'b0),
     .irq_fast_i             (15'b0),
     .irq_nm_i               (1'b0),
+`ifdef GATE_LEVEL
+    .irq_pending_o          (),
+`endif
 
+`ifndef GATE_LEVEL
     .scramble_key_valid_i   (1'b0),
     .scramble_key_i         ('0),
     .scramble_nonce_i       ('0),
     .scramble_req_o         (),
+`endif
 
     .debug_req_i            (1'b0),
+`ifdef GATE_LEVEL
+    .crash_dump_o_current_pc      (),
+    .crash_dump_o_next_pc         (),
+    .crash_dump_o_last_data_addr  (),
+    .crash_dump_o_exception_pc    (),
+    .crash_dump_o_exception_addr  (),
+`else
     .crash_dump_o           (),
     .double_fault_seen_o    (),
+`endif
 
     .fetch_enable_i         (ibex_pkg::IbexMuBiOn),
     .alert_minor_o          (),
     .alert_major_internal_o (),
     .alert_major_bus_o      (),
-    .core_sleep_o           (),
-
-    .randbits               (randbits)
+`ifdef GATE_LEVEL
+    .core_busy_o            (),
+    .scan_rst_ni            (1'b1),
+    .double_fault_seen_o    ()
+`else
+    .core_sleep_o           ()
+`endif
   );
 
   // ===========================
@@ -234,7 +292,7 @@ module masked_core_tb;
       sig_addr = 32'h8ffffffc;
   end
 
-  always_ff @(posedge clk) begin
+  always @(posedge clk) begin
     if (rst_n && data_gnt && data_we_lat &&
         {data_addr_lat[31:2], 2'b00} == sig_addr) begin
       $display("[TB] *** Signature write detected at %0t — test complete ***", $time);

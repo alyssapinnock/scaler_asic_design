@@ -1,0 +1,53 @@
+TEST                                            SEED STATUS      COUNT    MIN    MAX    AVG
+----                                            ---- ------      -----    ---    ---    ---
+riscv_single_interrupt_test                     1000 PASS          200      6     43     14
+riscv_single_interrupt_test                     2000 PASS          200      6     44     12
+riscv_single_interrupt_test                     3000 PASS          200      6     43     17
+riscv_single_interrupt_test                     4000 PASS          200      6     42     10
+riscv_single_interrupt_test                     5000 PASS          200      6     43     17
+riscv_single_interrupt_test                     6000 PASS          200      6     42     12
+riscv_single_interrupt_test                     7000 PASS          200      6     43     15
+riscv_single_interrupt_test                     8000 PASS          200      6     43     15
+riscv_single_interrupt_test                     9000 PASS          200      6     43     13
+riscv_multiple_interrupt_test                   1000 PASS          200      6     43     15
+riscv_multiple_interrupt_test                   2000 PASS           14      7     43     20
+riscv_multiple_interrupt_test                   3000 PASS          200      6     43     17
+riscv_multiple_interrupt_test                   4000 PASS          200      6     42     10
+riscv_multiple_interrupt_test                   5000 PASS          200      6     42     14
+riscv_multiple_interrupt_test                   6000 PASS          200      6     43     13
+riscv_multiple_interrupt_test                   7000 PASS          200      6     43     19
+riscv_multiple_interrupt_test                   8000 PASS          200      6     42     14
+riscv_multiple_interrupt_test                   9000 PASS          200      6     43     15
+riscv_interrupt_wfi_test                        1000 UNKNOWN       200      6     43     15
+riscv_interrupt_wfi_test                        2000 UNKNOWN       200      6     43     16
+riscv_interrupt_wfi_test                        3000 UNKNOWN       200      6     43     15
+riscv_interrupt_wfi_test                        4000 UNKNOWN       200      6     42     10
+riscv_interrupt_wfi_test                        5000 UNKNOWN       200      6     44     15
+riscv_interrupt_wfi_test                        6000 UNKNOWN       200      6     43     13
+riscv_interrupt_wfi_test                        7000 UNKNOWN       200      6     43     16
+riscv_interrupt_wfi_test                        8000 UNKNOWN       200      6     43     15
+riscv_interrupt_wfi_test                        9000 UNKNOWN       200      6     43     13
+riscv_nested_interrupt_test                     1000 PASS          200      6     43     14
+riscv_nested_interrupt_test                     2000 PASS           19      6     39     18
+riscv_nested_interrupt_test                     3000 PASS          200      6     43     12
+riscv_nested_interrupt_test                     4000 PASS          200      6     42      9
+riscv_nested_interrupt_test                     5000 PASS          200      6     43     14
+riscv_nested_interrupt_test                     6000 PASS          200      6     43     14
+riscv_nested_interrupt_test                     7000 PASS          200      6     43     16
+riscv_nested_interrupt_test                     8000 PASS          200      6     43     13
+riscv_nested_interrupt_test                     9000 PASS          200      6     43     12
+riscv_interrupt_csr_test                        1000 PASS          200      6     43     15
+riscv_interrupt_csr_test                        2000 PASS          200      6     43     12
+riscv_interrupt_csr_test                        3000 PASS          200      6     43     16
+riscv_interrupt_csr_test                        4000 PASS          200      6     43     13
+riscv_interrupt_csr_test                        5000 PASS          200      6     43     10
+riscv_interrupt_csr_test                        6000 PASS          200      6     43     13
+riscv_interrupt_csr_test                        7000 PASS          200      6     43     16
+riscv_interrupt_csr_test                        8000 PASS          200      6     43     10
+riscv_interrupt_csr_test                        9000 PASS          200      6     43     15
+
+==========================================
+ 36 passed, 9 failed out of 45 total
+ Seeds: 1000 2000 3000 4000 5000 6000 7000 8000 9000
+ IRQ: interval=150 first_delay=500 pulse=10 max=200
+ Sat Mar  7 16:48:54 EST 2026

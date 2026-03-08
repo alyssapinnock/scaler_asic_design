@@ -1,0 +1,17 @@
+TEST                                                 SEED RESULT
+----                                                 ---- ------
+riscv_arithmetic_basic_test                          1000 PASS
+riscv_arithmetic_basic_test                          2000 PASS
+riscv_arithmetic_basic_test                          3000 PASS
+riscv_arithmetic_basic_test                          4000 PASS
+riscv_arithmetic_basic_test                          5000 PASS
+riscv_arithmetic_basic_test                          6000 PASS
+riscv_arithmetic_basic_test                          7000 PASS
+riscv_arithmetic_basic_test                          8000 PASS
+riscv_rv32im_instr_test                              1000 PASS
+riscv_rv32im_instr_test                              2000 PASS
+riscv_rv32im_instr_test                              3000 PASS
+riscv_rv32im_instr_test                              4000 PASS
+riscv_rv32im_instr_test                              5000 PASS
+riscv_rv32im_instr_test                              6000 FAIL (run error)
+riscv_rv32im_instr_test                              7000 FAIL (run error)

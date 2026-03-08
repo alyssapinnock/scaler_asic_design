@@ -197,6 +197,7 @@ module masked_core_tb;
   logic [31:0] data_addr_lat, data_wdata_lat;
   logic [3:0]  data_be_lat;
   logic        data_we_lat;
+  logic        sig_write_detected;
 
   always_ff @(posedge clk or negedge rst_n) begin
     if (!rst_n) begin
@@ -234,9 +235,18 @@ module masked_core_tb;
       sig_addr = 32'h8ffffffc;
   end
 
-  always_ff @(posedge clk) begin
-    if (rst_n && data_gnt && data_we_lat &&
+  always_ff @(posedge clk or negedge rst_n) begin
+    if (!rst_n) begin
+      sig_write_detected <= 1'b0;
+    end else if (data_gnt && data_we_lat &&
         {data_addr_lat[31:2], 2'b00} == sig_addr) begin
+      sig_write_detected <= 1'b1;
+    end
+  end
+
+  // Detect test completion and finish simulation
+  always @(posedge clk) begin
+    if (sig_write_detected) begin
       $display("[TB] *** Signature write detected at %0t — test complete ***", $time);
       repeat (10) @(posedge clk);
       $finish;

@@ -1,0 +1,8 @@
+TEST                                                 SEED RESULT
+----                                                 ---- ------
+riscv_rand_jump_test                                 5000 PASS
+
+==========================================
+ 1 passed, 0 failed out of 1 total
+ Seeds: 5000
+ Fri Mar  6 11:44:19 EST 2026

@@ -1,0 +1,170 @@
+================================================================================
+                    IBEX VERIFICATION QUICK REFERENCE
+================================================================================
+
+SCRIPTS CHEAT SHEET:
+--------------------
+
+1. setup_verification.sh        | Run ONCE to set up environment
+2. test_setup.sh               | Verify setup is correct
+3. run_modified_rtl_sim.sh     | Run pre-synthesis RTL (Goal 2)
+4. run_gatelevel_sim.sh        | Run gate-level netlist (Goal 1)
+
+COMMON COMMANDS:
+----------------
+
+Basic Tests:
+  ./run_modified_rtl_sim.sh                     # RTL, default test
+  ./run_gatelevel_sim.sh                        # Gate-level, default test
+
+With GUI:
+  ./run_modified_rtl_sim.sh -gui
+  ./run_gatelevel_sim.sh -gui
+
+With Waveforms:
+  ./run_modified_rtl_sim.sh -gui -input "@database -open waves -default"
+
+Specific Test:
+  ./run_modified_rtl_sim.sh +UVM_TESTNAME=core_ibex_irq_wfi_test
+
+High Verbosity:
+  ./run_modified_rtl_sim.sh +UVM_VERBOSITY=UVM_HIGH
+
+AVAILABLE TESTS:
+----------------
+
+FOR GOAL 1 (Gate-Level Functional Verification):
+  ✓ core_ibex_base_test              - Basic functionality (START HERE)
+  ✓ core_ibex_irq_wfi_test            - Interrupt with WFI
+  ✓ core_ibex_nested_irq_test         - Nested interrupts
+  ✓ core_ibex_irq_csr_test            - Interrupt with CSR
+  ✓ core_ibex_interrupt_instr_test    - Interrupt during instruction
+  ✗ core_ibex_pc_intg_test            - Skip (RTL-only)
+  ✗ core_ibex_rf_intg_test            - Skip (RTL-only)
+
+FOR GOAL 2 (Pre-Synthesis RTL + Interrupt Latency):
+  ★ core_ibex_irq_wfi_test            - Best for latency measurement
+  ★ core_ibex_interrupt_instr_test    - Latency during instructions
+  ★ core_ibex_nested_irq_test         - Nested interrupt latency
+  ★ core_ibex_irq_csr_test            - Latency with CSR operations
+
+MEASURING INTERRUPT LATENCY:
+-----------------------------
+
+Step 1: Run test
+  ./run_modified_rtl_sim.sh +UVM_TESTNAME=core_ibex_irq_wfi_test
+
+Step 2: Find trace file
+  ls trace_core_*.log
+
+Step 3: Search for interrupt events
+  grep -E "irq|interrupt|mtvec" trace_core_*.log
+
+Step 4: Calculate latency
+  Look for: IRQ assertion time → Handler entry time
+  Latency = Handler entry time - IRQ assertion time
+
+TYPICAL OUTPUT FILES:
+---------------------
+
+After simulation, check:
+  xrun.log              - Main simulator log (check for errors)
+  trace_core_*.log      - Instruction trace (for verification)
+  waves.shm/            - Waveform database (if -input used)
+  UVM report            - Test pass/fail summary
+
+TROUBLESHOOTING:
+----------------
+
+Issue: "Unknown module XYZ"
+  → Add missing module to stdcell_models.v
+
+Issue: Simulation hangs
+  → Check xrun.log for errors
+  → Verify clock and reset in waves
+  → Add timeout: +UVM_TIMEOUT=10000000
+
+Issue: X propagation in gate-level
+  → Normal at time 0
+  → Check if it clears after reset
+  → Verify all inputs are driven
+
+Issue: Test fails
+  → Check xrun.log for UVM errors
+  → Look for "UVM_ERROR" or "UVM_FATAL"
+  → Compare with RTL simulation
+
+RECOMMENDED TEST SEQUENCE:
+--------------------------
+
+First Time (Modified RTL):
+  1. ./test_setup.sh                    # Verify setup
+  2. ./run_modified_rtl_sim.sh          # Basic test
+  3. ./run_modified_rtl_sim.sh -gui +UVM_TESTNAME=core_ibex_irq_wfi_test
+
+First Time (Gate-Level):
+  1. ./test_setup.sh                    # Verify setup
+  2. ./run_gatelevel_sim.sh             # Basic test
+  3. ./run_gatelevel_sim.sh -gui +UVM_TESTNAME=core_ibex_irq_wfi_test
+
+Interrupt Latency Measurement:
+  1. ./run_modified_rtl_sim.sh +UVM_TESTNAME=core_ibex_irq_wfi_test
+  2. grep "irq" trace_core_*.log
+  3. Calculate latency from trace
+  4. Repeat with other interrupt tests
+
+FILE LOCATIONS:
+---------------
+
+Your Files:
+  /home/net/al663069/ws/scaler_asic_design/
+    ├── gate_level_wrapper.sv         (Dual-rail adapter)
+    ├── stdcell_models.v              (Standard cell models)
+    ├── ibex_dv_gatelevel.f           (Gate-level file list)
+    ├── ibex_dv_modified_rtl.f        (Modified RTL file list)
+    ├── run_modified_rtl_sim.sh       (Run RTL script)
+    ├── run_gatelevel_sim.sh          (Run gate-level script)
+    ├── modifiedCoreRTL/              (Pre-synthesis RTL)
+    └── Synthesis/outputs/            (Gate-level netlist)
+
+External:
+  /home/net/al663069/ws/ibex/         (Ibex DV environment)
+  /home/net/al663069/ws/new_ibex_files/gng.v  (Random number gen)
+
+DOCUMENTATION:
+--------------
+
+  README.md                          - Quick start guide
+  SETUP_SUMMARY.md                   - Detailed setup info
+  VERIFICATION_GUIDE.md              - Comprehensive guide
+  SCRIPTS_AND_TESTS_EXPLAINED.md     - This detailed explanation
+  QUICK_REFERENCE.txt                - This file
+
+GETTING HELP:
+-------------
+
+  1. Read SCRIPTS_AND_TESTS_EXPLAINED.md for detailed info
+  2. Check xrun.log for error messages
+  3. Run test_setup.sh to diagnose issues
+  4. Use -gui to visually debug
+
+SUCCESS CRITERIA:
+-----------------
+
+Goal 1 (Gate-Level):
+  [✓] Simulation completes without errors
+  [✓] No X propagation after reset
+  [✓] Trace matches RTL simulation
+  [✓] UVM tests pass
+
+Goal 2 (Modified RTL):
+  [✓] Simulation completes without errors
+  [✓] Interrupt tests pass
+  [✓] Latency measurements collected
+  [✓] Results documented
+
+================================================================================
+                         READY TO START!
+              Run: ./test_setup.sh to verify setup
+       Then: ./run_modified_rtl_sim.sh -gui to begin!
+================================================================================

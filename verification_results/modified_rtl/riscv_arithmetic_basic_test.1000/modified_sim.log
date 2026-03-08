@@ -1,0 +1,396 @@
+xrun(64): 23.09-s006: (c) Copyright 1995-2024 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	23.09-s006: Started on Mar 07, 2026 at 22:03:49 EST
+xrun
+	-64bit
+	-sv
+	-define RVFI
+	-define SYNTHESIS
+	-access rwc
+	-timescale 1ns/1ps
+	+incdir+/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL
+	/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_assert.sv
+	/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_pkg.sv
+	/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_tracer_pkg.sv
+	/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_ram_1p_pkg.sv
+	/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_secded_pkg.sv
+	/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_pkg.sv
+	/home/net/al663069/ws/new_ibex_files/gng.v
+	/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_alu.sv
+	/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_compressed_decoder.sv
+	/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_controller.sv
+	/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_counter.sv
+	/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_csr.sv
+	/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_cs_registers.sv
+	/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_decoder.sv
+	/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_dummy_instr.sv
+	/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_ex_block.sv
+	/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_fetch_fifo.sv
+	/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_icache.sv
+	/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_id_stage.sv
+	/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_if_stage.sv
+	/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_load_store_unit.sv
+	/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_lockstep.sv
+	/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_multdiv_fast.sv
+	/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_multdiv_slow.sv
+	/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_prefetch_buffer.sv
+	/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_pmp.sv
+	/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_register_file_ff.sv
+	/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_wb_stage.sv
+	/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_branch_predict.sv
+	/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_core.sv
+	/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_core_wrapper.sv
+	/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_top.sv
+	/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_top_tracing.sv
+	/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_tracer.sv
+	/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_buf.sv
+	/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_generic_buf.sv
+	/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_clock_gating.sv
+	/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_generic_clock_gating.sv
+	/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_flop_macros.sv
+	/home/net/al663069/ws/scaler_asic_design/modified_rtl_tb.sv
+	+ibex_tracer_file_base=/home/net/al663069/ws/scaler_asic_design/verification_results/modified_rtl/riscv_arithmetic_basic_test.1000/trace_modified
+	+bin=/home/net/al663069/ws/scaler_asic_design/verification_results/modified_rtl/riscv_arithmetic_basic_test.1000/test.bin
+	+signature_addr=8ffffffc
+	-l /home/net/al663069/ws/scaler_asic_design/verification_results/modified_rtl/riscv_arithmetic_basic_test.1000/modified_sim.log
+
+   User defined plus("+") options:
+	+ibex_tracer_file_base=/home/net/al663069/ws/scaler_asic_design/verification_results/modified_rtl/riscv_arithmetic_basic_test.1000/trace_modified
+	+bin=/home/net/al663069/ws/scaler_asic_design/verification_results/modified_rtl/riscv_arithmetic_basic_test.1000/test.bin
+	+signature_addr=8ffffffc
+
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_assert.sv
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_pkg.sv
+	package worklib.ibex_pkg:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_tracer_pkg.sv
+	package worklib.ibex_tracer_pkg:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_ram_1p_pkg.sv
+	package worklib.prim_ram_1p_pkg:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_secded_pkg.sv
+	package worklib.prim_secded_pkg:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_pkg.sv
+	package worklib.prim_pkg:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/new_ibex_files/gng.v
+	module worklib.gng:v
+		errors: 0, warnings: 0
+	module worklib.gng_coef:v
+		errors: 0, warnings: 0
+	module worklib.gng_ctg:v
+		errors: 0, warnings: 0
+	module worklib.gng_interp:v
+		errors: 0, warnings: 0
+	module worklib.gng_lzd:v
+		errors: 0, warnings: 0
+	module worklib.gng_smul_16_18:v
+		errors: 0, warnings: 0
+	module worklib.gng_smul_16_18_sadd_37:v
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_alu.sv
+	module worklib.ibex_alu:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_compressed_decoder.sv
+	module worklib.ibex_compressed_decoder:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_controller.sv
+	module worklib.ibex_controller:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_counter.sv
+	module worklib.ibex_counter:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_csr.sv
+	module worklib.ibex_csr:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_cs_registers.sv
+	module worklib.ibex_cs_registers:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_decoder.sv
+	module worklib.ibex_decoder:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_dummy_instr.sv
+	module worklib.ibex_dummy_instr:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_ex_block.sv
+	module worklib.ibex_ex_block:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_fetch_fifo.sv
+	module worklib.ibex_fetch_fifo:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_icache.sv
+	module worklib.ibex_icache:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_id_stage.sv
+	module worklib.ibex_id_stage:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_if_stage.sv
+	module worklib.ibex_if_stage:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_load_store_unit.sv
+	module worklib.ibex_load_store_unit:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_lockstep.sv
+	module worklib.ibex_lockstep:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_multdiv_fast.sv
+	module worklib.ibex_multdiv_fast:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_multdiv_slow.sv
+	module worklib.ibex_multdiv_slow:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_prefetch_buffer.sv
+	module worklib.ibex_prefetch_buffer:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_pmp.sv
+	module worklib.ibex_pmp:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_register_file_ff.sv
+	module worklib.ibex_register_file_ff:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_wb_stage.sv
+	module worklib.ibex_wb_stage:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_branch_predict.sv
+	module worklib.ibex_branch_predict:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_core.sv
+	module worklib.ibex_core:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_core_wrapper.sv
+	module worklib.ibex_core_wrapper:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_top.sv
+	module worklib.ibex_top:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_top_tracing.sv
+	module worklib.ibex_top_tracing:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_tracer.sv
+	module worklib.ibex_tracer:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_buf.sv
+	module worklib.prim_buf:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_generic_buf.sv
+	module worklib.prim_generic_buf:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_clock_gating.sv
+	module worklib.prim_clock_gating:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_generic_clock_gating.sv
+	module worklib.prim_generic_clock_gating:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_flop_macros.sv
+file: /home/net/al663069/ws/scaler_asic_design/modified_rtl_tb.sv
+	module worklib.masked_core_tb:sv
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+		.\ic_tag_rdata_i[1] (ic_tag_rdata_i_s0[1]),
+		                   |
+xmelab: *E,CUVPOM (./scaler_asic_design/modifiedCoreRTL/ibex_core_wrapper.sv,284|21): Port name 'ic_tag_rdata_i[1]' of instance 'masked_core_tb.u_dut.u_ibex_top.u_ibex_core.u_masked' is invalid or has multiple connections and the instantiated module is defined in file '/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_core.sv'.
+		.\ic_tag_rdata_i[0] (ic_tag_rdata_i_s0[0]),
+		                   |
+xmelab: *E,CUVPOM (./scaler_asic_design/modifiedCoreRTL/ibex_core_wrapper.sv,285|21): Port name 'ic_tag_rdata_i[0]' of instance 'masked_core_tb.u_dut.u_ibex_top.u_ibex_core.u_masked' is invalid or has multiple connections and the instantiated module is defined in file '/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_core.sv'.
+		.\ic_data_rdata_i[1] (ic_data_rdata_i_s0[1]),
+		                    |
+xmelab: *E,CUVPOM (./scaler_asic_design/modifiedCoreRTL/ibex_core_wrapper.sv,286|22): Port name 'ic_data_rdata_i[1]' of instance 'masked_core_tb.u_dut.u_ibex_top.u_ibex_core.u_masked' is invalid or has multiple connections and the instantiated module is defined in file '/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_core.sv'.
+		.\ic_data_rdata_i[0] (ic_data_rdata_i_s0[0]),
+		                    |
+xmelab: *E,CUVPOM (./scaler_asic_design/modifiedCoreRTL/ibex_core_wrapper.sv,287|22): Port name 'ic_data_rdata_i[0]' of instance 'masked_core_tb.u_dut.u_ibex_top.u_ibex_core.u_masked' is invalid or has multiple connections and the instantiated module is defined in file '/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_core.sv'.
+		.\crash_dump_o[current_pc] (crash_dump_current_pc_s0),
+		                          |
+xmelab: *E,CUVPOM (./scaler_asic_design/modifiedCoreRTL/ibex_core_wrapper.sv,322|28): Port name 'crash_dump_o[current_pc]' of instance 'masked_core_tb.u_dut.u_ibex_top.u_ibex_core.u_masked' is invalid or has multiple connections and the instantiated module is defined in file '/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_core.sv'.
+		.\crash_dump_o[next_pc] (crash_dump_next_pc_s0),
+		                       |
+xmelab: *E,CUVPOM (./scaler_asic_design/modifiedCoreRTL/ibex_core_wrapper.sv,323|25): Port name 'crash_dump_o[next_pc]' of instance 'masked_core_tb.u_dut.u_ibex_top.u_ibex_core.u_masked' is invalid or has multiple connections and the instantiated module is defined in file '/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_core.sv'.
+		.\crash_dump_o[last_data_addr] (crash_dump_last_data_addr_s0),
+		                              |
+xmelab: *E,CUVPOM (./scaler_asic_design/modifiedCoreRTL/ibex_core_wrapper.sv,324|32): Port name 'crash_dump_o[last_data_addr]' of instance 'masked_core_tb.u_dut.u_ibex_top.u_ibex_core.u_masked' is invalid or has multiple connections and the instantiated module is defined in file '/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_core.sv'.
+		.\crash_dump_o[exception_pc] (crash_dump_exception_pc_s0),
+		                            |
+xmelab: *E,CUVPOM (./scaler_asic_design/modifiedCoreRTL/ibex_core_wrapper.sv,325|30): Port name 'crash_dump_o[exception_pc]' of instance 'masked_core_tb.u_dut.u_ibex_top.u_ibex_core.u_masked' is invalid or has multiple connections and the instantiated module is defined in file '/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_core.sv'.
+		.\crash_dump_o[exception_addr] (crash_dump_exception_addr_s0),
+		                              |
+xmelab: *E,CUVPOM (./scaler_asic_design/modifiedCoreRTL/ibex_core_wrapper.sv,326|32): Port name 'crash_dump_o[exception_addr]' of instance 'masked_core_tb.u_dut.u_ibex_top.u_ibex_core.u_masked' is invalid or has multiple connections and the instantiated module is defined in file '/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_core.sv'.
+		.hart_id_i_s1(hart_id_i_s1),
+		            |
+xmelab: *E,CUVPOM (./scaler_asic_design/modifiedCoreRTL/ibex_core_wrapper.sv,334|14): Port name 'hart_id_i_s1' of instance 'masked_core_tb.u_dut.u_ibex_top.u_ibex_core.u_masked' is invalid or has multiple connections and the instantiated module is defined in file '/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_core.sv'.
+		.boot_addr_i_s1(boot_addr_i_s1),
+		              |
+xmelab: *E,CUVPOM (./scaler_asic_design/modifiedCoreRTL/ibex_core_wrapper.sv,335|16): Port name 'boot_addr_i_s1' of instance 'masked_core_tb.u_dut.u_ibex_top.u_ibex_core.u_masked' is invalid or has multiple connections and the instantiated module is defined in file '/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_core.sv'.
+		.instr_gnt_i_s1(instr_gnt_i_s1),
+		              |
+xmelab: *E,CUVPOM (./scaler_asic_design/modifiedCoreRTL/ibex_core_wrapper.sv,336|16): Port name 'instr_gnt_i_s1' of instance 'masked_core_tb.u_dut.u_ibex_top.u_ibex_core.u_masked' is invalid or has multiple connections and the instantiated module is defined in file '/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_core.sv'.
+		.instr_rvalid_i_s1(instr_rvalid_i_s1),
+		                 |
+xmelab: *E,CUVPOM (./scaler_asic_design/modifiedCoreRTL/ibex_core_wrapper.sv,337|19): Port name 'instr_rvalid_i_s1' of instance 'masked_core_tb.u_dut.u_ibex_top.u_ibex_core.u_masked' is invalid or has multiple connections and the instantiated module is defined in file '/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_core.sv'.
+		.instr_rdata_i_s1(instr_rdata_i_s1),
+		                |
+xmelab: *E,CUVPOM (./scaler_asic_design/modifiedCoreRTL/ibex_core_wrapper.sv,338|18): Port name 'instr_rdata_i_s1' of instance 'masked_core_tb.u_dut.u_ibex_top.u_ibex_core.u_masked' is invalid or has multiple connections and the instantiated module is defined in file '/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_core.sv'.
+		.instr_err_i_s1(instr_err_i_s1),
+		              |
+xmelab: *E,CUVPOM (./scaler_asic_design/modifiedCoreRTL/ibex_core_wrapper.sv,339|16): Port name 'instr_err_i_s1' of instance 'masked_core_tb.u_dut.u_ibex_top.u_ibex_core.u_masked' is invalid or has multiple connections and the instantiated module is defined in file '/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_core.sv'.
+		.data_gnt_i_s1(data_gnt_i_s1),
+		             |
+xmelab: *E,CUVPOM (./scaler_asic_design/modifiedCoreRTL/ibex_core_wrapper.sv,340|15): Port name 'data_gnt_i_s1' of instance 'masked_core_tb.u_dut.u_ibex_top.u_ibex_core.u_masked' is invalid or has multiple connections and the instantiated module is defined in file '/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_core.sv'.
+		.data_rvalid_i_s1(data_rvalid_i_s1),
+		                |
+xmelab: *E,CUVPOM (./scaler_asic_design/modifiedCoreRTL/ibex_core_wrapper.sv,341|18): Port name 'data_rvalid_i_s1' of instance 'masked_core_tb.u_dut.u_ibex_top.u_ibex_core.u_masked' is invalid or has multiple connections and the instantiated module is defined in file '/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_core.sv'.
+		.data_rdata_i_s1(data_rdata_i_s1),
+		               |
+xmelab: *E,CUVPOM (./scaler_asic_design/modifiedCoreRTL/ibex_core_wrapper.sv,342|17): Port name 'data_rdata_i_s1' of instance 'masked_core_tb.u_dut.u_ibex_top.u_ibex_core.u_masked' is invalid or has multiple connections and the instantiated module is defined in file '/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_core.sv'.
+		.data_err_i_s1(data_err_i_s1),
+		             |
+xmelab: *E,CUVPOM (./scaler_asic_design/modifiedCoreRTL/ibex_core_wrapper.sv,343|15): Port name 'data_err_i_s1' of instance 'masked_core_tb.u_dut.u_ibex_top.u_ibex_core.u_masked' is invalid or has multiple connections and the instantiated module is defined in file '/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_core.sv'.
+		.rf_rdata_a_ecc_i_s1(rf_rdata_a_ecc_i_s1),
+		                   |
+xmelab: *E,CUVPOM (./scaler_asic_design/modifiedCoreRTL/ibex_core_wrapper.sv,344|21): Port name 'rf_rdata_a_ecc_i_s1' of instance 'masked_core_tb.u_dut.u_ibex_top.u_ibex_core.u_masked' is invalid or has multiple connections and the instantiated module is defined in file '/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_core.sv'.
+		.rf_rdata_b_ecc_i_s1(rf_rdata_b_ecc_i_s1),
+		                   |
+xmelab: *E,CUVPOM (./scaler_asic_design/modifiedCoreRTL/ibex_core_wrapper.sv,345|21): Port name 'rf_rdata_b_ecc_i_s1' of instance 'masked_core_tb.u_dut.u_ibex_top.u_ibex_core.u_masked' is invalid or has multiple connections and the instantiated module is defined in file '/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_core.sv'.
+		.\ic_tag_rdata_i_s1[1] (ic_tag_rdata_i_s1[1]),
+		                      |
+xmelab: *E,CUVPOM (./scaler_asic_design/modifiedCoreRTL/ibex_core_wrapper.sv,346|24): Port name 'ic_tag_rdata_i_s1[1]' of instance 'masked_core_tb.u_dut.u_ibex_top.u_ibex_core.u_masked' is invalid or has multiple connections and the instantiated module is defined in file '/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_core.sv'.
+		.\ic_tag_rdata_i_s1[0] (ic_tag_rdata_i_s1[0]),
+		                      |
+xmelab: *E,CUVPOM (./scaler_asic_design/modifiedCoreRTL/ibex_core_wrapper.sv,347|24): Port name 'ic_tag_rdata_i_s1[0]' of instance 'masked_core_tb.u_dut.u_ibex_top.u_ibex_core.u_masked' is invalid or has multiple connections and the instantiated module is defined in file '/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_core.sv'.
+		.\ic_data_rdata_i_s1[1] (ic_data_rdata_i_s1[1]),
+		                       |
+xmelab: *E,CUVPOM (./scaler_asic_design/modifiedCoreRTL/ibex_core_wrapper.sv,348|25): Port name 'ic_data_rdata_i_s1[1]' of instance 'masked_core_tb.u_dut.u_ibex_top.u_ibex_core.u_masked' is invalid or has multiple connections and the instantiated module is defined in file '/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_core.sv'.
+		.\ic_data_rdata_i_s1[0] (ic_data_rdata_i_s1[0]),
+		                       |
+xmelab: *E,CUVPOM (./scaler_asic_design/modifiedCoreRTL/ibex_core_wrapper.sv,349|25): Port name 'ic_data_rdata_i_s1[0]' of instance 'masked_core_tb.u_dut.u_ibex_top.u_ibex_core.u_masked' is invalid or has multiple connections and the instantiated module is defined in file '/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_core.sv'.
+		.ic_scr_key_valid_i_s1(ic_scr_key_valid_i_s1),
+		                     |
+xmelab: *E,CUVPOM (./scaler_asic_design/modifiedCoreRTL/ibex_core_wrapper.sv,350|23): Port name 'ic_scr_key_valid_i_s1' of instance 'masked_core_tb.u_dut.u_ibex_top.u_ibex_core.u_masked' is invalid or has multiple connections and the instantiated module is defined in file '/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_core.sv'.
+		.irq_software_i_s1(irq_software_i_s1),
+		                 |
+xmelab: *E,CUVPOM (./scaler_asic_design/modifiedCoreRTL/ibex_core_wrapper.sv,351|19): Port name 'irq_software_i_s1' of instance 'masked_core_tb.u_dut.u_ibex_top.u_ibex_core.u_masked' is invalid or has multiple connections and the instantiated module is defined in file '/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_core.sv'.
+		.irq_timer_i_s1(irq_timer_i_s1),
+		              |
+xmelab: *E,CUVPOM (./scaler_asic_design/modifiedCoreRTL/ibex_core_wrapper.sv,352|16): Port name 'irq_timer_i_s1' of instance 'masked_core_tb.u_dut.u_ibex_top.u_ibex_core.u_masked' is invalid or has multiple connections and the instantiated module is defined in file '/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_core.sv'.
+		.irq_external_i_s1(irq_external_i_s1),
+		                 |
+xmelab: *E,CUVPOM (./scaler_asic_design/modifiedCoreRTL/ibex_core_wrapper.sv,353|19): Port name 'irq_external_i_s1' of instance 'masked_core_tb.u_dut.u_ibex_top.u_ibex_core.u_masked' is invalid or has multiple connections and the instantiated module is defined in file '/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_core.sv'.
+		.irq_fast_i_s1(irq_fast_i_s1),
+		             |
+xmelab: *E,CUVPOM (./scaler_asic_design/modifiedCoreRTL/ibex_core_wrapper.sv,354|15): Port name 'irq_fast_i_s1' of instance 'masked_core_tb.u_dut.u_ibex_top.u_ibex_core.u_masked' is invalid or has multiple connections and the instantiated module is defined in file '/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_core.sv'.
+		.irq_nm_i_s1(irq_nm_i_s1),
+		           |
+xmelab: *E,CUVPOM (./scaler_asic_design/modifiedCoreRTL/ibex_core_wrapper.sv,355|13): Port name 'irq_nm_i_s1' of instance 'masked_core_tb.u_dut.u_ibex_top.u_ibex_core.u_masked' is invalid or has multiple connections and the instantiated module is defined in file '/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_core.sv'.
+		.debug_req_i_s1(debug_req_i_s1),
+		              |
+xmelab: *E,CUVPOM (./scaler_asic_design/modifiedCoreRTL/ibex_core_wrapper.sv,356|16): Port name 'debug_req_i_s1' of instance 'masked_core_tb.u_dut.u_ibex_top.u_ibex_core.u_masked' is invalid or has multiple connections and the instantiated module is defined in file '/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_core.sv'.
+		.fetch_enable_i_s1(fetch_enable_i_s1),
+		                 |
+xmelab: *E,CUVPOM (./scaler_asic_design/modifiedCoreRTL/ibex_core_wrapper.sv,357|19): Port name 'fetch_enable_i_s1' of instance 'masked_core_tb.u_dut.u_ibex_top.u_ibex_core.u_masked' is invalid or has multiple connections and the instantiated module is defined in file '/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_core.sv'.
+		.instr_req_o_s1(instr_req_o_s1),
+		              |
+xmelab: *E,CUVPOM (./scaler_asic_design/modifiedCoreRTL/ibex_core_wrapper.sv,360|16): Port name 'instr_req_o_s1' of instance 'masked_core_tb.u_dut.u_ibex_top.u_ibex_core.u_masked' is invalid or has multiple connections and the instantiated module is defined in file '/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_core.sv'.
+		.instr_addr_o_s1(instr_addr_o_s1),
+		               |
+xmelab: *E,CUVPOM (./scaler_asic_design/modifiedCoreRTL/ibex_core_wrapper.sv,361|17): Port name 'instr_addr_o_s1' of instance 'masked_core_tb.u_dut.u_ibex_top.u_ibex_core.u_masked' is invalid or has multiple connections and the instantiated module is defined in file '/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_core.sv'.
+		.data_req_o_s1(data_req_o_s1),
+		             |
+xmelab: *E,CUVPOM (./scaler_asic_design/modifiedCoreRTL/ibex_core_wrapper.sv,362|15): Port name 'data_req_o_s1' of instance 'masked_core_tb.u_dut.u_ibex_top.u_ibex_core.u_masked' is invalid or has multiple connections and the instantiated module is defined in file '/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_core.sv'.
+		.data_we_o_s1(data_we_o_s1),
+		            |
+xmelab: *E,CUVPOM (./scaler_asic_design/modifiedCoreRTL/ibex_core_wrapper.sv,363|14): Port name 'data_we_o_s1' of instance 'masked_core_tb.u_dut.u_ibex_top.u_ibex_core.u_masked' is invalid or has multiple connections and the instantiated module is defined in file '/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_core.sv'.
+		.data_be_o_s1(data_be_o_s1),
+		            |
+xmelab: *E,CUVPOM (./scaler_asic_design/modifiedCoreRTL/ibex_core_wrapper.sv,364|14): Port name 'data_be_o_s1' of instance 'masked_core_tb.u_dut.u_ibex_top.u_ibex_core.u_masked' is invalid or has multiple connections and the instantiated module is defined in file '/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_core.sv'.
+		.data_addr_o_s1(data_addr_o_s1),
+		              |
+xmelab: *E,CUVPOM (./scaler_asic_design/modifiedCoreRTL/ibex_core_wrapper.sv,365|16): Port name 'data_addr_o_s1' of instance 'masked_core_tb.u_dut.u_ibex_top.u_ibex_core.u_masked' is invalid or has multiple connections and the instantiated module is defined in file '/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_core.sv'.
+		.data_wdata_o_s1(data_wdata_o_s1),
+		               |
+xmelab: *E,CUVPOM (./scaler_asic_design/modifiedCoreRTL/ibex_core_wrapper.sv,366|17): Port name 'data_wdata_o_s1' of instance 'masked_core_tb.u_dut.u_ibex_top.u_ibex_core.u_masked' is invalid or has multiple connections and the instantiated module is defined in file '/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_core.sv'.
+		.dummy_instr_id_o_s1(dummy_instr_id_o_s1),
+		                   |
+xmelab: *E,CUVPOM (./scaler_asic_design/modifiedCoreRTL/ibex_core_wrapper.sv,367|21): Port name 'dummy_instr_id_o_s1' of instance 'masked_core_tb.u_dut.u_ibex_top.u_ibex_core.u_masked' is invalid or has multiple connections and the instantiated module is defined in file '/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_core.sv'.
+		.dummy_instr_wb_o_s1(dummy_instr_wb_o_s1),
+		                   |
+xmelab: *E,CUVPOM (./scaler_asic_design/modifiedCoreRTL/ibex_core_wrapper.sv,368|21): Port name 'dummy_instr_wb_o_s1' of instance 'masked_core_tb.u_dut.u_ibex_top.u_ibex_core.u_masked' is invalid or has multiple connections and the instantiated module is defined in file '/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_core.sv'.
+		.rf_raddr_a_o_s1(rf_raddr_a_o_s1),
+		               |
+xmelab: *E,CUVPOM (./scaler_asic_design/modifiedCoreRTL/ibex_core_wrapper.sv,369|17): Port name 'rf_raddr_a_o_s1' of instance 'masked_core_tb.u_dut.u_ibex_top.u_ibex_core.u_masked' is invalid or has multiple connections and the instantiated module is defined in file '/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_core.sv'.
+		.rf_raddr_b_o_s1(rf_raddr_b_o_s1),
+		               |
+xmelab: *E,CUVPOM (./scaler_asic_design/modifiedCoreRTL/ibex_core_wrapper.sv,370|17): Port name 'rf_raddr_b_o_s1' of instance 'masked_core_tb.u_dut.u_ibex_top.u_ibex_core.u_masked' is invalid or has multiple connections and the instantiated module is defined in file '/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_core.sv'.
+		.rf_waddr_wb_o_s1(rf_waddr_wb_o_s1),
+		                |
+xmelab: *E,CUVPOM (./scaler_asic_design/modifiedCoreRTL/ibex_core_wrapper.sv,371|18): Port name 'rf_waddr_wb_o_s1' of instance 'masked_core_tb.u_dut.u_ibex_top.u_ibex_core.u_masked' is invalid or has multiple connections and the instantiated module is defined in file '/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_core.sv'.
+		.rf_we_wb_o_s1(rf_we_wb_o_s1),
+		             |
+xmelab: *E,CUVPOM (./scaler_asic_design/modifiedCoreRTL/ibex_core_wrapper.sv,372|15): Port name 'rf_we_wb_o_s1' of instance 'masked_core_tb.u_dut.u_ibex_top.u_ibex_core.u_masked' is invalid or has multiple connections and the instantiated module is defined in file '/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_core.sv'.
+		.rf_wdata_wb_ecc_o_s1(rf_wdata_wb_ecc_o_s1),
+		                    |
+xmelab: *E,CUVPOM (./scaler_asic_design/modifiedCoreRTL/ibex_core_wrapper.sv,373|22): Port name 'rf_wdata_wb_ecc_o_s1' of instance 'masked_core_tb.u_dut.u_ibex_top.u_ibex_core.u_masked' is invalid or has multiple connections and the instantiated module is defined in file '/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_core.sv'.
+		.ic_tag_req_o_s1(ic_tag_req_o_s1),
+		               |
+xmelab: *E,CUVPOM (./scaler_asic_design/modifiedCoreRTL/ibex_core_wrapper.sv,374|17): Port name 'ic_tag_req_o_s1' of instance 'masked_core_tb.u_dut.u_ibex_top.u_ibex_core.u_masked' is invalid or has multiple connections and the instantiated module is defined in file '/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_core.sv'.
+		.ic_tag_write_o_s1(ic_tag_write_o_s1),
+		                 |
+xmelab: *E,CUVPOM (./scaler_asic_design/modifiedCoreRTL/ibex_core_wrapper.sv,375|19): Port name 'ic_tag_write_o_s1' of instance 'masked_core_tb.u_dut.u_ibex_top.u_ibex_core.u_masked' is invalid or has multiple connections and the instantiated module is defined in file '/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_core.sv'.
+		.ic_tag_addr_o_s1(ic_tag_addr_o_s1),
+		                |
+xmelab: *E,CUVPOM (./scaler_asic_design/modifiedCoreRTL/ibex_core_wrapper.sv,376|18): Port name 'ic_tag_addr_o_s1' of instance 'masked_core_tb.u_dut.u_ibex_top.u_ibex_core.u_masked' is invalid or has multiple connections and the instantiated module is defined in file '/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_core.sv'.
+		.ic_tag_wdata_o_s1(ic_tag_wdata_o_s1),
+		                 |
+xmelab: *E,CUVPOM (./scaler_asic_design/modifiedCoreRTL/ibex_core_wrapper.sv,377|19): Port name 'ic_tag_wdata_o_s1' of instance 'masked_core_tb.u_dut.u_ibex_top.u_ibex_core.u_masked' is invalid or has multiple connections and the instantiated module is defined in file '/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_core.sv'.
+		.ic_data_req_o_s1(ic_data_req_o_s1),
+		                |
+xmelab: *E,CUVPOM (./scaler_asic_design/modifiedCoreRTL/ibex_core_wrapper.sv,378|18): Port name 'ic_data_req_o_s1' of instance 'masked_core_tb.u_dut.u_ibex_top.u_ibex_core.u_masked' is invalid or has multiple connections and the instantiated module is defined in file '/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_core.sv'.
+		.ic_data_write_o_s1(ic_data_write_o_s1),
+		                  |
+xmelab: *E,CUVPOM (./scaler_asic_design/modifiedCoreRTL/ibex_core_wrapper.sv,379|20): Port name 'ic_data_write_o_s1' of instance 'masked_core_tb.u_dut.u_ibex_top.u_ibex_core.u_masked' is invalid or has multiple connections and the instantiated module is defined in file '/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_core.sv'.
+		.ic_data_addr_o_s1(ic_data_addr_o_s1),
+		                 |
+xmelab: *E,CUVPOM (./scaler_asic_design/modifiedCoreRTL/ibex_core_wrapper.sv,380|19): Port name 'ic_data_addr_o_s1' of instance 'masked_core_tb.u_dut.u_ibex_top.u_ibex_core.u_masked' is invalid or has multiple connections and the instantiated module is defined in file '/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_core.sv'.
+		.ic_data_wdata_o_s1(ic_data_wdata_o_s1),
+		                  |
+xmelab: *E,CUVPOM (./scaler_asic_design/modifiedCoreRTL/ibex_core_wrapper.sv,381|20): Port name 'ic_data_wdata_o_s1' of instance 'masked_core_tb.u_dut.u_ibex_top.u_ibex_core.u_masked' is invalid or has multiple connections and the instantiated module is defined in file '/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_core.sv'.
+		.ic_scr_key_req_o_s1(ic_scr_key_req_o_s1),
+		                   |
+xmelab: *E,CUVPOM (./scaler_asic_design/modifiedCoreRTL/ibex_core_wrapper.sv,382|21): Port name 'ic_scr_key_req_o_s1' of instance 'masked_core_tb.u_dut.u_ibex_top.u_ibex_core.u_masked' is invalid or has multiple connections and the instantiated module is defined in file '/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_core.sv'.
+		.irq_pending_o_s1(irq_pending_o_s1),
+		                |
+xmelab: *E,CUVPOM (./scaler_asic_design/modifiedCoreRTL/ibex_core_wrapper.sv,383|18): Port name 'irq_pending_o_s1' of instance 'masked_core_tb.u_dut.u_ibex_top.u_ibex_core.u_masked' is invalid or has multiple connections and the instantiated module is defined in file '/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_core.sv'.
+		.\crash_dump_o_s1[current_pc] (crash_dump_current_pc_s1),
+		                             |
+xmelab: *E,CUVPOM (./scaler_asic_design/modifiedCoreRTL/ibex_core_wrapper.sv,384|31): Port name 'crash_dump_o_s1[current_pc]' of instance 'masked_core_tb.u_dut.u_ibex_top.u_ibex_core.u_masked' is invalid or has multiple connections and the instantiated module is defined in file '/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_core.sv'.
+		.\crash_dump_o_s1[next_pc] (crash_dump_next_pc_s1),
+		                          |
+xmelab: *E,CUVPOM (./scaler_asic_design/modifiedCoreRTL/ibex_core_wrapper.sv,385|28): Port name 'crash_dump_o_s1[next_pc]' of instance 'masked_core_tb.u_dut.u_ibex_top.u_ibex_core.u_masked' is invalid or has multiple connections and the instantiated module is defined in file '/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_core.sv'.
+		.\crash_dump_o_s1[last_data_addr] (crash_dump_last_data_addr_s1),
+		                                 |
+xmelab: *E,CUVPOM (./scaler_asic_design/modifiedCoreRTL/ibex_core_wrapper.sv,386|35): Port name 'crash_dump_o_s1[last_data_addr]' of instance 'masked_core_tb.u_dut.u_ibex_top.u_ibex_core.u_masked' is invalid or has multiple connections and the instantiated module is defined in file '/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_core.sv'.
+		.\crash_dump_o_s1[exception_pc] (crash_dump_exception_pc_s1),
+		                               |
+xmelab: *E,CUVPOM (./scaler_asic_design/modifiedCoreRTL/ibex_core_wrapper.sv,387|33): Port name 'crash_dump_o_s1[exception_pc]' of instance 'masked_core_tb.u_dut.u_ibex_top.u_ibex_core.u_masked' is invalid or has multiple connections and the instantiated module is defined in file '/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_core.sv'.
+		.\crash_dump_o_s1[exception_addr] (crash_dump_exception_addr_s1),
+		                                 |
+xmelab: *E,CUVPOM (./scaler_asic_design/modifiedCoreRTL/ibex_core_wrapper.sv,388|35): Port name 'crash_dump_o_s1[exception_addr]' of instance 'masked_core_tb.u_dut.u_ibex_top.u_ibex_core.u_masked' is invalid or has multiple connections and the instantiated module is defined in file '/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_core.sv'.
+		.double_fault_seen_o_s1(double_fault_seen_o_s1),
+		                      |
+xmelab: *E,CUVPOM (./scaler_asic_design/modifiedCoreRTL/ibex_core_wrapper.sv,389|24): Port name 'double_fault_seen_o_s1' of instance 'masked_core_tb.u_dut.u_ibex_top.u_ibex_core.u_masked' is invalid or has multiple connections and the instantiated module is defined in file '/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_core.sv'.
+		.alert_minor_o_s1(alert_minor_o_s1),
+		                |
+xmelab: *E,CUVPOM (./scaler_asic_design/modifiedCoreRTL/ibex_core_wrapper.sv,390|18): Port name 'alert_minor_o_s1' of instance 'masked_core_tb.u_dut.u_ibex_top.u_ibex_core.u_masked' is invalid or has multiple connections and the instantiated module is defined in file '/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_core.sv'.
+		.alert_major_internal_o_s1(alert_major_internal_o_s1),
+		                         |
+xmelab: *E,CUVPOM (./scaler_asic_design/modifiedCoreRTL/ibex_core_wrapper.sv,391|27): Port name 'alert_major_internal_o_s1' of instance 'masked_core_tb.u_dut.u_ibex_top.u_ibex_core.u_masked' is invalid or has multiple connections and the instantiated module is defined in file '/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_core.sv'.
+		.alert_major_bus_o_s1(alert_major_bus_o_s1),
+		                    |
+xmelab: *E,CUVPOM (./scaler_asic_design/modifiedCoreRTL/ibex_core_wrapper.sv,392|22): Port name 'alert_major_bus_o_s1' of instance 'masked_core_tb.u_dut.u_ibex_top.u_ibex_core.u_masked' is invalid or has multiple connections and the instantiated module is defined in file '/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_core.sv'.
+		.core_busy_o_s1(core_busy_o_s1),
+		              |
+xmelab: *E,CUVPOM (./scaler_asic_design/modifiedCoreRTL/ibex_core_wrapper.sv,393|16): Port name 'core_busy_o_s1' of instance 'masked_core_tb.u_dut.u_ibex_top.u_ibex_core.u_masked' is invalid or has multiple connections and the instantiated module is defined in file '/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_core.sv'.
+		.randbits(randbits)
+		        |
+xmelab: *E,CUVPOM (./scaler_asic_design/modifiedCoreRTL/ibex_core_wrapper.sv,396|10): Port name 'randbits' of instance 'masked_core_tb.u_dut.u_ibex_top.u_ibex_core.u_masked' is invalid or has multiple connections and the instantiated module is defined in file '/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_core.sv'.
+xrun: *E,ELBERR: Error (*E) or soft error (*SE) occurred during elaboration (status 1), exiting.
+TOOL:	xrun(64)	23.09-s006: Exiting on Mar 07, 2026 at 22:03:49 EST  (total: 00:00:00)

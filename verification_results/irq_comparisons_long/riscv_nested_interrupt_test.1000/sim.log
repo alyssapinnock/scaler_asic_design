@@ -1,0 +1,944 @@
+xrun(64): 23.09-s006: (c) Copyright 1995-2024 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	23.09-s006: Started on Mar 07, 2026 at 01:11:24 EST
+xrun
+	-64bit
+	-sv
+	-define RVFI
+	-define SYNTHESIS
+	-access rwc
+	-timescale 1ns/1ps
+	+incdir+/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL
+	/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_assert.sv
+	/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_pkg.sv
+	/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_tracer_pkg.sv
+	/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_ram_1p_pkg.sv
+	/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_secded_pkg.sv
+	/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_pkg.sv
+	/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/gng.v
+	/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_alu.sv
+	/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_compressed_decoder.sv
+	/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_controller.sv
+	/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_counter.sv
+	/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_csr.sv
+	/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_cs_registers.sv
+	/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_decoder.sv
+	/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_dummy_instr.sv
+	/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_ex_block.sv
+	/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_fetch_fifo.sv
+	/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_icache.sv
+	/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_id_stage.sv
+	/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_if_stage.sv
+	/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_load_store_unit.sv
+	/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_lockstep.sv
+	/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_multdiv_fast.sv
+	/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_multdiv_slow.sv
+	/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_prefetch_buffer.sv
+	/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_pmp.sv
+	/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_register_file_ff.sv
+	/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_wb_stage.sv
+	/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_branch_predict.sv
+	/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_core.sv
+	/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_top.sv
+	/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_top_tracing.sv
+	/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_tracer.sv
+	/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_buf.sv
+	/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_generic_buf.sv
+	/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_clock_gating.sv
+	/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_generic_clock_gating.sv
+	/home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_flop_macros.sv
+	masked_core_tb_interrupt.sv
+	+ibex_tracer_file_base=/home/net/al663069/ws/irq_comparisons/riscv_nested_interrupt_test.1000/trace
+	+bin=/home/net/al663069/ws/irq_comparisons/riscv_nested_interrupt_test.1000/test.bin
+	+signature_addr=8ffffffc
+	+irq_enable=1
+	+irq_interval=300
+	+irq_first_delay=500
+	+irq_pulse_width=10
+	+irq_max_count=200
+	+latency_log=/home/net/al663069/ws/irq_comparisons/riscv_nested_interrupt_test.1000/irq_latency.log
+	-input /home/net/al663069/ws/irq_comparisons/riscv_nested_interrupt_test.1000/xrun_cmds.tcl
+	-l /home/net/al663069/ws/irq_comparisons/riscv_nested_interrupt_test.1000/sim.log
+
+   User defined plus("+") options:
+	+ibex_tracer_file_base=/home/net/al663069/ws/irq_comparisons/riscv_nested_interrupt_test.1000/trace
+	+bin=/home/net/al663069/ws/irq_comparisons/riscv_nested_interrupt_test.1000/test.bin
+	+signature_addr=8ffffffc
+	+irq_enable=1
+	+irq_interval=300
+	+irq_first_delay=500
+	+irq_pulse_width=10
+	+irq_max_count=200
+	+latency_log=/home/net/al663069/ws/irq_comparisons/riscv_nested_interrupt_test.1000/irq_latency.log
+
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_assert.sv
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_pkg.sv
+	package worklib.ibex_pkg:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_tracer_pkg.sv
+	package worklib.ibex_tracer_pkg:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_ram_1p_pkg.sv
+	package worklib.prim_ram_1p_pkg:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_secded_pkg.sv
+	package worklib.prim_secded_pkg:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_pkg.sv
+	package worklib.prim_pkg:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/gng.v
+	module worklib.gng:v
+		errors: 0, warnings: 0
+	module worklib.gng_coef:v
+		errors: 0, warnings: 0
+	module worklib.gng_ctg:v
+		errors: 0, warnings: 0
+	module worklib.gng_interp:v
+		errors: 0, warnings: 0
+	module worklib.gng_lzd:v
+		errors: 0, warnings: 0
+	module worklib.gng_smul_16_18:v
+		errors: 0, warnings: 0
+	module worklib.gng_smul_16_18_sadd_37:v
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_alu.sv
+	module worklib.ibex_alu:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_compressed_decoder.sv
+	module worklib.ibex_compressed_decoder:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_controller.sv
+	module worklib.ibex_controller:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_counter.sv
+	module worklib.ibex_counter:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_csr.sv
+	module worklib.ibex_csr:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_cs_registers.sv
+	module worklib.ibex_cs_registers:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_decoder.sv
+	module worklib.ibex_decoder:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_dummy_instr.sv
+	module worklib.ibex_dummy_instr:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_ex_block.sv
+	module worklib.ibex_ex_block:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_fetch_fifo.sv
+	module worklib.ibex_fetch_fifo:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_icache.sv
+	module worklib.ibex_icache:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_id_stage.sv
+	module worklib.ibex_id_stage:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_if_stage.sv
+	module worklib.ibex_if_stage:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_load_store_unit.sv
+	module worklib.ibex_load_store_unit:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_lockstep.sv
+	module worklib.ibex_lockstep:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_multdiv_fast.sv
+	module worklib.ibex_multdiv_fast:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_multdiv_slow.sv
+	module worklib.ibex_multdiv_slow:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_prefetch_buffer.sv
+	module worklib.ibex_prefetch_buffer:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_pmp.sv
+	module worklib.ibex_pmp:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_register_file_ff.sv
+	module worklib.ibex_register_file_ff:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_wb_stage.sv
+	module worklib.ibex_wb_stage:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_branch_predict.sv
+	module worklib.ibex_branch_predict:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_core.sv
+	module worklib.ibex_core:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_top.sv
+	module worklib.ibex_top:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_top_tracing.sv
+	module worklib.ibex_top_tracing:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/ibex_tracer.sv
+	module worklib.ibex_tracer:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_buf.sv
+	module worklib.prim_buf:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_generic_buf.sv
+	module worklib.prim_generic_buf:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_clock_gating.sv
+	module worklib.prim_clock_gating:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_generic_clock_gating.sv
+	module worklib.prim_generic_clock_gating:sv
+		errors: 0, warnings: 0
+file: /home/net/al663069/ws/scaler_asic_design/modifiedCoreRTL/prim_flop_macros.sv
+file: masked_core_tb_interrupt.sv
+	module worklib.masked_core_tb:sv
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		ibex_pkg
+		prim_ram_1p_pkg
+		prim_secded_pkg
+		prim_pkg
+		ibex_tracer_pkg
+		masked_core_tb
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.ibex_tracer:sv <0x0caf524c>
+			streams:  54, words: 168030
+		worklib.ibex_csr:sv <0x60925401>
+			streams:   4, words:   981
+		worklib.ibex_csr:sv <0x2b3c60ab>
+			streams:   4, words:   927
+		worklib.ibex_counter:sv <0x7dcd1ceb>
+			streams:   9, words:  5929
+		worklib.ibex_counter:sv <0x43dbcdd6>
+			streams:   9, words:  5774
+		worklib.ibex_counter:sv <0x148dddae>
+			streams:   6, words:  3970
+		worklib.ibex_csr:sv <0x5cc91402>
+			streams:   4, words:   975
+		worklib.ibex_csr:sv <0x7747b744>
+			streams:   4, words:   963
+		worklib.ibex_csr:sv <0x414931de>
+			streams:   4, words:   975
+		worklib.ibex_csr:sv <0x399f25b4>
+			streams:   4, words:   923
+		worklib.ibex_csr:sv <0x64919a45>
+			streams:   4, words:   904
+		worklib.ibex_csr:sv <0x74be4f27>
+			streams:   4, words:   976
+		worklib.ibex_csr:sv <0x260d775b>
+			streams:   4, words:   907
+		worklib.ibex_csr:sv <0x50525780>
+			streams:   4, words:   925
+		worklib.ibex_csr:sv <0x2c10d7ec>
+			streams:   4, words:   895
+		worklib.ibex_csr:sv <0x7ed6b7ee>
+			streams:   4, words:   988
+		worklib.ibex_wb_stage:sv <0x46bdbef6>
+			streams:  31, words:  8678
+		worklib.ibex_load_store_unit:sv <0x6badb48b>
+			streams:  36, words: 25798
+		worklib.ibex_multdiv_fast:sv <0x63449840>
+			streams:  35, words: 35045
+		worklib.ibex_ex_block:sv <0x65c54abd>
+			streams:  31, words: 15361
+		worklib.ibex_decoder:sv <0x78497b65>
+			streams:  19, words: 51900
+		worklib.ibex_compressed_decoder:sv <0x10b24dc9>
+			streams:   3, words: 10294
+		worklib.prim_generic_buf:sv <0x100a5a28>
+			streams:   2, words:   397
+		worklib.prim_buf:sv <0x5a7b5f37>
+			streams:   1, words:   375
+		worklib.prim_generic_buf:sv <0x39a3c22b>
+			streams:   2, words:   407
+		worklib.prim_buf:sv <0x1f5e1654>
+			streams:   1, words:   384
+		worklib.prim_generic_clock_gating:sv <0x08a28a85>
+			streams:   2, words:   577
+		worklib.prim_clock_gating:sv <0x44690828>
+			streams:   1, words:   404
+		worklib.ibex_top:sv <0x467b5a88>
+			streams: 123, words: 45059
+		worklib.gng_smul_16_18:v <0x16b3a698>
+			streams:   5, words:  1301
+		worklib.gng_smul_16_18_sadd_37:v <0x36116fae>
+			streams:   9, words:  2414
+		worklib.gng_coef:v <0x570eb596>
+			streams:   3, words: 14463
+		worklib.gng_lzd:v <0x130f33d6>
+			streams:  65, words: 15690
+		worklib.gng_interp:v <0x7d32c6e0>
+			streams:  30, words: 11127
+		worklib.gng_ctg:v <0x092f2558>
+			streams:  10, words:  4341
+		worklib.masked_core_tb:sv <0x40707048>
+			streams:  59, words: 54654
+		worklib.prim_secded_pkg:sv <0x20bf3998>
+			streams:  38, words: 206599
+		worklib.ibex_alu:sv <0x4bcbe894>
+			streams:  47, words: 32653
+		worklib.ibex_core:sv <0x1cf07689>
+			streams: 535, words: 241927
+		worklib.ibex_id_stage:sv <0x6c76aa53>
+			streams: 170, words: 67433
+		worklib.ibex_cs_registers:sv <0x4a5e4e51>
+			streams: 248, words: 148098
+		worklib.ibex_fetch_fifo:sv <0x0e28d196>
+			streams:  42, words: 20142
+		worklib.ibex_prefetch_buffer:sv <0x17c9a102>
+			streams:  40, words: 14242
+		worklib.ibex_pmp:sv <0x66d26228>
+			streams:  81, words: 73730
+		worklib.ibex_register_file_ff:sv <0x45596e58>
+			streams:  14, words:  5507
+		worklib.ibex_top_tracing:sv <0x230bff17>
+			streams:  85, words: 24732
+		worklib.ibex_controller:sv <0x5377bf6c>
+			streams:  49, words: 41938
+		worklib.ibex_if_stage:sv <0x2f46adf1>
+			streams:  88, words: 26193
+		worklib.ibex_pkg:sv <0x0ea50bd6>
+			streams:   0, words:     0
+		worklib.ibex_counter:sv <0x7d2f9678>
+			streams:   6, words:  3832
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                  Instances  Unique
+		Modules:                 98      38
+		Verilog packages:         5       5
+		Registers:             2176    2257
+		Scalar wires:          2262       -
+		Expanded wires:          64       1
+		Vectored wires:        1258       -
+		Always blocks:          295     218
+		Initial blocks:          17      17
+		Final blocks:             2       2
+		Cont. assignments:     1950    1265
+		Pseudo assignments:     885       -
+		Process Clocks:         151       6
+		Simulation timescale:   1ps
+	Writing initial simulation snapshot: worklib.masked_core_tb:sv
+Loading snapshot worklib.masked_core_tb:sv .................... Done
+xcelium> source /home/net/cadence/installs/XCELIUM2309/tools/xcelium/files/xmsimrc
+xcelium> source /home/net/cadence/installs/XCELIUM2309/tools/xcelium/files/xmsimrc
+xcelium> run
+[TB] Loaded 183528 bytes from /home/net/al663069/ws/irq_comparisons/riscv_nested_interrupt_test.1000/test.bin at 0x80000000
+masked_core_tb.u_dut.u_ibex_tracer.unmblk2.unmblk1: Writing execution trace to /home/net/al663069/ws/irq_comparisons/riscv_nested_interrupt_test.1000/trace_00000000.log
+[IRQ-INJ] #1: Assert irq_external at cycle 500
+[IRQ-LAT] #1: Assert@500 -> Handler@522  Latency = 22 cycles  PC=0x8000272c
+[IRQ-INJ] #1: Deassert irq_external at cycle 522
+[IRQ-INJ] #2: Assert irq_external at cycle 822
+[IRQ-LAT] #2: Assert@822 -> Handler@835  Latency = 13 cycles  PC=0x8000272c
+[IRQ-INJ] #2: Deassert irq_external at cycle 835
+[IRQ-INJ] #3: Assert irq_external at cycle 1135
+[IRQ-LAT] #3: Assert@1135 -> Handler@1156  Latency = 21 cycles  PC=0x8000272c
+[IRQ-INJ] #3: Deassert irq_external at cycle 1156
+[IRQ-INJ] #4: Assert irq_external at cycle 1456
+[IRQ-LAT] #4: Assert@1456 -> Handler@1472  Latency = 16 cycles  PC=0x8000272c
+[IRQ-INJ] #4: Deassert irq_external at cycle 1472
+[IRQ-INJ] #5: Assert irq_external at cycle 1772
+[IRQ-LAT] #5: Assert@1772 -> Handler@1780  Latency = 8 cycles  PC=0x8000272c
+[IRQ-INJ] #5: Deassert irq_external at cycle 1780
+[IRQ-INJ] #6: Assert irq_external at cycle 2080
+[IRQ-LAT] #6: Assert@2080 -> Handler@2116  Latency = 36 cycles  PC=0x8000272c
+[IRQ-INJ] #6: Deassert irq_external at cycle 2116
+[IRQ-INJ] #7: Assert irq_external at cycle 2416
+[IRQ-LAT] #7: Assert@2416 -> Handler@2431  Latency = 15 cycles  PC=0x8000272c
+[IRQ-INJ] #7: Deassert irq_external at cycle 2431
+[IRQ-INJ] #8: Assert irq_external at cycle 2731
+[IRQ-LAT] #8: Assert@2731 -> Handler@2737  Latency = 6 cycles  PC=0x8000272c
+[IRQ-INJ] #8: Deassert irq_external at cycle 2737
+[IRQ-INJ] #9: Assert irq_external at cycle 3037
+[IRQ-LAT] #9: Assert@3037 -> Handler@3044  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #9: Deassert irq_external at cycle 3044
+[IRQ-INJ] #10: Assert irq_external at cycle 3344
+[IRQ-LAT] #10: Assert@3344 -> Handler@3351  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #10: Deassert irq_external at cycle 3351
+[IRQ-INJ] #11: Assert irq_external at cycle 3651
+[IRQ-LAT] #11: Assert@3651 -> Handler@3689  Latency = 38 cycles  PC=0x8000272c
+[IRQ-INJ] #11: Deassert irq_external at cycle 3689
+[IRQ-INJ] #12: Assert irq_external at cycle 3989
+[IRQ-LAT] #12: Assert@3989 -> Handler@3996  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #12: Deassert irq_external at cycle 3996
+[IRQ-INJ] #13: Assert irq_external at cycle 4296
+[IRQ-LAT] #13: Assert@4296 -> Handler@4303  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #13: Deassert irq_external at cycle 4303
+[IRQ-INJ] #14: Assert irq_external at cycle 4603
+[IRQ-LAT] #14: Assert@4603 -> Handler@4640  Latency = 37 cycles  PC=0x8000272c
+[IRQ-INJ] #14: Deassert irq_external at cycle 4640
+[IRQ-INJ] #15: Assert irq_external at cycle 4940
+[IRQ-LAT] #15: Assert@4940 -> Handler@4979  Latency = 39 cycles  PC=0x8000272c
+[IRQ-INJ] #15: Deassert irq_external at cycle 4979
+[IRQ-INJ] #16: Assert irq_external at cycle 5279
+[IRQ-LAT] #16: Assert@5279 -> Handler@5286  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #16: Deassert irq_external at cycle 5286
+[IRQ-INJ] #17: Assert irq_external at cycle 5586
+[IRQ-LAT] #17: Assert@5586 -> Handler@5622  Latency = 36 cycles  PC=0x8000272c
+[IRQ-INJ] #17: Deassert irq_external at cycle 5622
+[IRQ-INJ] #18: Assert irq_external at cycle 5922
+[IRQ-LAT] #18: Assert@5922 -> Handler@5929  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #18: Deassert irq_external at cycle 5929
+[IRQ-INJ] #19: Assert irq_external at cycle 6229
+[IRQ-LAT] #19: Assert@6229 -> Handler@6236  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #19: Deassert irq_external at cycle 6236
+[IRQ-INJ] #20: Assert irq_external at cycle 6536
+[IRQ-LAT] #20: Assert@6536 -> Handler@6569  Latency = 33 cycles  PC=0x8000272c
+[IRQ-INJ] #20: Deassert irq_external at cycle 6569
+[IRQ-INJ] #21: Assert irq_external at cycle 6869
+[IRQ-LAT] #21: Assert@6869 -> Handler@6886  Latency = 17 cycles  PC=0x8000272c
+[IRQ-INJ] #21: Deassert irq_external at cycle 6886
+[IRQ-INJ] #22: Assert irq_external at cycle 7186
+[IRQ-LAT] #22: Assert@7186 -> Handler@7192  Latency = 6 cycles  PC=0x8000272c
+[IRQ-INJ] #22: Deassert irq_external at cycle 7192
+[IRQ-INJ] #23: Assert irq_external at cycle 7492
+[IRQ-LAT] #23: Assert@7492 -> Handler@7499  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #23: Deassert irq_external at cycle 7499
+[IRQ-INJ] #24: Assert irq_external at cycle 7799
+[IRQ-LAT] #24: Assert@7799 -> Handler@7806  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #24: Deassert irq_external at cycle 7806
+[IRQ-INJ] #25: Assert irq_external at cycle 8106
+[IRQ-LAT] #25: Assert@8106 -> Handler@8113  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #25: Deassert irq_external at cycle 8113
+[IRQ-INJ] #26: Assert irq_external at cycle 8413
+[IRQ-LAT] #26: Assert@8413 -> Handler@8420  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #26: Deassert irq_external at cycle 8420
+[IRQ-INJ] #27: Assert irq_external at cycle 8720
+[IRQ-LAT] #27: Assert@8720 -> Handler@8731  Latency = 11 cycles  PC=0x8000272c
+[IRQ-INJ] #27: Deassert irq_external at cycle 8731
+[IRQ-INJ] #28: Assert irq_external at cycle 9031
+[IRQ-LAT] #28: Assert@9031 -> Handler@9038  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #28: Deassert irq_external at cycle 9038
+[IRQ-INJ] #29: Assert irq_external at cycle 9338
+[IRQ-LAT] #29: Assert@9338 -> Handler@9345  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #29: Deassert irq_external at cycle 9345
+[IRQ-INJ] #30: Assert irq_external at cycle 9645
+[IRQ-LAT] #30: Assert@9645 -> Handler@9689  Latency = 44 cycles  PC=0x8000272c
+[IRQ-INJ] #30: Deassert irq_external at cycle 9689
+[IRQ-INJ] #31: Assert irq_external at cycle 9989
+[IRQ-LAT] #31: Assert@9989 -> Handler@10003  Latency = 14 cycles  PC=0x8000272c
+[IRQ-INJ] #31: Deassert irq_external at cycle 10003
+[IRQ-INJ] #32: Assert irq_external at cycle 10303
+[IRQ-LAT] #32: Assert@10303 -> Handler@10310  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #32: Deassert irq_external at cycle 10310
+[IRQ-INJ] #33: Assert irq_external at cycle 10610
+[IRQ-LAT] #33: Assert@10610 -> Handler@10639  Latency = 29 cycles  PC=0x8000272c
+[IRQ-INJ] #33: Deassert irq_external at cycle 10639
+[IRQ-INJ] #34: Assert irq_external at cycle 10939
+[IRQ-LAT] #34: Assert@10939 -> Handler@10979  Latency = 40 cycles  PC=0x8000272c
+[IRQ-INJ] #34: Deassert irq_external at cycle 10979
+[IRQ-INJ] #35: Assert irq_external at cycle 11279
+[IRQ-LAT] #35: Assert@11279 -> Handler@11286  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #35: Deassert irq_external at cycle 11286
+[IRQ-INJ] #36: Assert irq_external at cycle 11586
+[IRQ-LAT] #36: Assert@11586 -> Handler@11593  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #36: Deassert irq_external at cycle 11593
+[IRQ-INJ] #37: Assert irq_external at cycle 11893
+[IRQ-LAT] #37: Assert@11893 -> Handler@11900  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #37: Deassert irq_external at cycle 11900
+[IRQ-INJ] #38: Assert irq_external at cycle 12200
+[IRQ-LAT] #38: Assert@12200 -> Handler@12207  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #38: Deassert irq_external at cycle 12207
+[IRQ-INJ] #39: Assert irq_external at cycle 12507
+[IRQ-LAT] #39: Assert@12507 -> Handler@12542  Latency = 35 cycles  PC=0x8000272c
+[IRQ-INJ] #39: Deassert irq_external at cycle 12542
+[IRQ-INJ] #40: Assert irq_external at cycle 12842
+[IRQ-LAT] #40: Assert@12842 -> Handler@12849  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #40: Deassert irq_external at cycle 12849
+[IRQ-INJ] #41: Assert irq_external at cycle 13149
+[IRQ-LAT] #41: Assert@13149 -> Handler@13156  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #41: Deassert irq_external at cycle 13156
+[IRQ-INJ] #42: Assert irq_external at cycle 13456
+[IRQ-LAT] #42: Assert@13456 -> Handler@13496  Latency = 40 cycles  PC=0x8000272c
+[IRQ-INJ] #42: Deassert irq_external at cycle 13496
+[IRQ-INJ] #43: Assert irq_external at cycle 13796
+[IRQ-LAT] #43: Assert@13796 -> Handler@13803  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #43: Deassert irq_external at cycle 13803
+[IRQ-INJ] #44: Assert irq_external at cycle 14103
+[IRQ-LAT] #44: Assert@14103 -> Handler@14110  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #44: Deassert irq_external at cycle 14110
+[IRQ-INJ] #45: Assert irq_external at cycle 14410
+[IRQ-LAT] #45: Assert@14410 -> Handler@14417  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #45: Deassert irq_external at cycle 14417
+[IRQ-INJ] #46: Assert irq_external at cycle 14717
+[IRQ-LAT] #46: Assert@14717 -> Handler@14724  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #46: Deassert irq_external at cycle 14724
+[IRQ-INJ] #47: Assert irq_external at cycle 15024
+[IRQ-LAT] #47: Assert@15024 -> Handler@15031  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #47: Deassert irq_external at cycle 15031
+[IRQ-INJ] #48: Assert irq_external at cycle 15331
+[IRQ-LAT] #48: Assert@15331 -> Handler@15338  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #48: Deassert irq_external at cycle 15338
+[IRQ-INJ] #49: Assert irq_external at cycle 15638
+[IRQ-LAT] #49: Assert@15638 -> Handler@15647  Latency = 9 cycles  PC=0x8000272c
+[IRQ-INJ] #49: Deassert irq_external at cycle 15647
+[IRQ-INJ] #50: Assert irq_external at cycle 15947
+[IRQ-LAT] #50: Assert@15947 -> Handler@15953  Latency = 6 cycles  PC=0x8000272c
+[IRQ-INJ] #50: Deassert irq_external at cycle 15953
+[IRQ-INJ] #51: Assert irq_external at cycle 16253
+[IRQ-LAT] #51: Assert@16253 -> Handler@16260  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #51: Deassert irq_external at cycle 16260
+[IRQ-INJ] #52: Assert irq_external at cycle 16560
+[IRQ-LAT] #52: Assert@16560 -> Handler@16567  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #52: Deassert irq_external at cycle 16567
+[IRQ-INJ] #53: Assert irq_external at cycle 16867
+[IRQ-LAT] #53: Assert@16867 -> Handler@16875  Latency = 8 cycles  PC=0x8000272c
+[IRQ-INJ] #53: Deassert irq_external at cycle 16875
+[IRQ-INJ] #54: Assert irq_external at cycle 17175
+[IRQ-LAT] #54: Assert@17175 -> Handler@17182  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #54: Deassert irq_external at cycle 17182
+[IRQ-INJ] #55: Assert irq_external at cycle 17482
+[IRQ-LAT] #55: Assert@17482 -> Handler@17489  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #55: Deassert irq_external at cycle 17489
+[IRQ-INJ] #56: Assert irq_external at cycle 17789
+[IRQ-LAT] #56: Assert@17789 -> Handler@17796  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #56: Deassert irq_external at cycle 17796
+[IRQ-INJ] #57: Assert irq_external at cycle 18096
+[IRQ-LAT] #57: Assert@18096 -> Handler@18129  Latency = 33 cycles  PC=0x8000272c
+[IRQ-INJ] #57: Deassert irq_external at cycle 18129
+[IRQ-INJ] #58: Assert irq_external at cycle 18429
+[IRQ-LAT] #58: Assert@18429 -> Handler@18438  Latency = 9 cycles  PC=0x8000272c
+[IRQ-INJ] #58: Deassert irq_external at cycle 18438
+[IRQ-INJ] #59: Assert irq_external at cycle 18738
+[IRQ-LAT] #59: Assert@18738 -> Handler@18761  Latency = 23 cycles  PC=0x8000272c
+[IRQ-INJ] #59: Deassert irq_external at cycle 18761
+[IRQ-INJ] #60: Assert irq_external at cycle 19061
+[IRQ-LAT] #60: Assert@19061 -> Handler@19067  Latency = 6 cycles  PC=0x8000272c
+[IRQ-INJ] #60: Deassert irq_external at cycle 19067
+[IRQ-INJ] #61: Assert irq_external at cycle 19367
+[IRQ-LAT] #61: Assert@19367 -> Handler@19374  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #61: Deassert irq_external at cycle 19374
+[IRQ-INJ] #62: Assert irq_external at cycle 19674
+[IRQ-LAT] #62: Assert@19674 -> Handler@19681  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #62: Deassert irq_external at cycle 19681
+[IRQ-INJ] #63: Assert irq_external at cycle 19981
+[IRQ-LAT] #63: Assert@19981 -> Handler@20007  Latency = 26 cycles  PC=0x8000272c
+[IRQ-INJ] #63: Deassert irq_external at cycle 20007
+[IRQ-INJ] #64: Assert irq_external at cycle 20307
+[IRQ-LAT] #64: Assert@20307 -> Handler@20325  Latency = 18 cycles  PC=0x8000272c
+[IRQ-INJ] #64: Deassert irq_external at cycle 20325
+[IRQ-INJ] #65: Assert irq_external at cycle 20625
+[IRQ-LAT] #65: Assert@20625 -> Handler@20654  Latency = 29 cycles  PC=0x8000272c
+[IRQ-INJ] #65: Deassert irq_external at cycle 20654
+[IRQ-INJ] #66: Assert irq_external at cycle 20954
+[IRQ-LAT] #66: Assert@20954 -> Handler@20988  Latency = 34 cycles  PC=0x8000272c
+[IRQ-INJ] #66: Deassert irq_external at cycle 20988
+[IRQ-INJ] #67: Assert irq_external at cycle 21288
+[IRQ-LAT] #67: Assert@21288 -> Handler@21306  Latency = 18 cycles  PC=0x8000272c
+[IRQ-INJ] #67: Deassert irq_external at cycle 21306
+[IRQ-INJ] #68: Assert irq_external at cycle 21606
+[IRQ-LAT] #68: Assert@21606 -> Handler@21635  Latency = 29 cycles  PC=0x8000272c
+[IRQ-INJ] #68: Deassert irq_external at cycle 21635
+[IRQ-INJ] #69: Assert irq_external at cycle 21935
+[IRQ-LAT] #69: Assert@21935 -> Handler@21942  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #69: Deassert irq_external at cycle 21942
+[IRQ-INJ] #70: Assert irq_external at cycle 22242
+[IRQ-LAT] #70: Assert@22242 -> Handler@22249  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #70: Deassert irq_external at cycle 22249
+[IRQ-INJ] #71: Assert irq_external at cycle 22549
+[IRQ-LAT] #71: Assert@22549 -> Handler@22578  Latency = 29 cycles  PC=0x8000272c
+[IRQ-INJ] #71: Deassert irq_external at cycle 22578
+[IRQ-INJ] #72: Assert irq_external at cycle 22878
+[IRQ-LAT] #72: Assert@22878 -> Handler@22884  Latency = 6 cycles  PC=0x8000272c
+[IRQ-INJ] #72: Deassert irq_external at cycle 22884
+[IRQ-INJ] #73: Assert irq_external at cycle 23184
+[IRQ-LAT] #73: Assert@23184 -> Handler@23216  Latency = 32 cycles  PC=0x8000272c
+[IRQ-INJ] #73: Deassert irq_external at cycle 23216
+[IRQ-INJ] #74: Assert irq_external at cycle 23516
+[IRQ-LAT] #74: Assert@23516 -> Handler@23523  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #74: Deassert irq_external at cycle 23523
+[IRQ-INJ] #75: Assert irq_external at cycle 23823
+[IRQ-LAT] #75: Assert@23823 -> Handler@23854  Latency = 31 cycles  PC=0x8000272c
+[IRQ-INJ] #75: Deassert irq_external at cycle 23854
+[IRQ-INJ] #76: Assert irq_external at cycle 24154
+[IRQ-LAT] #76: Assert@24154 -> Handler@24161  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #76: Deassert irq_external at cycle 24161
+[IRQ-INJ] #77: Assert irq_external at cycle 24461
+[IRQ-LAT] #77: Assert@24461 -> Handler@24468  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #77: Deassert irq_external at cycle 24468
+[IRQ-INJ] #78: Assert irq_external at cycle 24768
+[IRQ-LAT] #78: Assert@24768 -> Handler@24776  Latency = 8 cycles  PC=0x8000272c
+[IRQ-INJ] #78: Deassert irq_external at cycle 24776
+[IRQ-INJ] #79: Assert irq_external at cycle 25076
+[IRQ-LAT] #79: Assert@25076 -> Handler@25110  Latency = 34 cycles  PC=0x8000272c
+[IRQ-INJ] #79: Deassert irq_external at cycle 25110
+[IRQ-INJ] #80: Assert irq_external at cycle 25410
+[IRQ-LAT] #80: Assert@25410 -> Handler@25426  Latency = 16 cycles  PC=0x8000272c
+[IRQ-INJ] #80: Deassert irq_external at cycle 25426
+[IRQ-INJ] #81: Assert irq_external at cycle 25726
+[IRQ-LAT] #81: Assert@25726 -> Handler@25767  Latency = 41 cycles  PC=0x8000272c
+[IRQ-INJ] #81: Deassert irq_external at cycle 25767
+[IRQ-INJ] #82: Assert irq_external at cycle 26067
+[IRQ-LAT] #82: Assert@26067 -> Handler@26075  Latency = 8 cycles  PC=0x8000272c
+[IRQ-INJ] #82: Deassert irq_external at cycle 26075
+[IRQ-INJ] #83: Assert irq_external at cycle 26375
+[IRQ-LAT] #83: Assert@26375 -> Handler@26415  Latency = 40 cycles  PC=0x8000272c
+[IRQ-INJ] #83: Deassert irq_external at cycle 26415
+[IRQ-INJ] #84: Assert irq_external at cycle 26715
+[IRQ-LAT] #84: Assert@26715 -> Handler@26722  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #84: Deassert irq_external at cycle 26722
+[IRQ-INJ] #85: Assert irq_external at cycle 27022
+[IRQ-LAT] #85: Assert@27022 -> Handler@27037  Latency = 15 cycles  PC=0x8000272c
+[IRQ-INJ] #85: Deassert irq_external at cycle 27037
+[IRQ-INJ] #86: Assert irq_external at cycle 27337
+[IRQ-LAT] #86: Assert@27337 -> Handler@27358  Latency = 21 cycles  PC=0x8000272c
+[IRQ-INJ] #86: Deassert irq_external at cycle 27358
+[IRQ-INJ] #87: Assert irq_external at cycle 27658
+[IRQ-LAT] #87: Assert@27658 -> Handler@27678  Latency = 20 cycles  PC=0x8000272c
+[IRQ-INJ] #87: Deassert irq_external at cycle 27678
+[IRQ-INJ] #88: Assert irq_external at cycle 27978
+[IRQ-LAT] #88: Assert@27978 -> Handler@27985  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #88: Deassert irq_external at cycle 27985
+[IRQ-INJ] #89: Assert irq_external at cycle 28285
+[IRQ-LAT] #89: Assert@28285 -> Handler@28327  Latency = 42 cycles  PC=0x8000272c
+[IRQ-INJ] #89: Deassert irq_external at cycle 28327
+[IRQ-INJ] #90: Assert irq_external at cycle 28627
+[IRQ-LAT] #90: Assert@28627 -> Handler@28643  Latency = 16 cycles  PC=0x8000272c
+[IRQ-INJ] #90: Deassert irq_external at cycle 28643
+[IRQ-INJ] #91: Assert irq_external at cycle 28943
+[IRQ-LAT] #91: Assert@28943 -> Handler@28950  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #91: Deassert irq_external at cycle 28950
+[IRQ-INJ] #92: Assert irq_external at cycle 29250
+[IRQ-LAT] #92: Assert@29250 -> Handler@29261  Latency = 11 cycles  PC=0x8000272c
+[IRQ-INJ] #92: Deassert irq_external at cycle 29261
+[IRQ-INJ] #93: Assert irq_external at cycle 29561
+[IRQ-LAT] #93: Assert@29561 -> Handler@29568  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #93: Deassert irq_external at cycle 29568
+[IRQ-INJ] #94: Assert irq_external at cycle 29868
+[IRQ-LAT] #94: Assert@29868 -> Handler@29907  Latency = 39 cycles  PC=0x8000272c
+[IRQ-INJ] #94: Deassert irq_external at cycle 29907
+[IRQ-INJ] #95: Assert irq_external at cycle 30207
+[IRQ-LAT] #95: Assert@30207 -> Handler@30214  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #95: Deassert irq_external at cycle 30214
+[IRQ-INJ] #96: Assert irq_external at cycle 30514
+[IRQ-LAT] #96: Assert@30514 -> Handler@30521  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #96: Deassert irq_external at cycle 30521
+[IRQ-INJ] #97: Assert irq_external at cycle 30821
+[IRQ-LAT] #97: Assert@30821 -> Handler@30860  Latency = 39 cycles  PC=0x8000272c
+[IRQ-INJ] #97: Deassert irq_external at cycle 30860
+[IRQ-INJ] #98: Assert irq_external at cycle 31160
+[IRQ-LAT] #98: Assert@31160 -> Handler@31170  Latency = 10 cycles  PC=0x8000272c
+[IRQ-INJ] #98: Deassert irq_external at cycle 31170
+[IRQ-INJ] #99: Assert irq_external at cycle 31470
+[IRQ-LAT] #99: Assert@31470 -> Handler@31493  Latency = 23 cycles  PC=0x8000272c
+[IRQ-INJ] #99: Deassert irq_external at cycle 31493
+[IRQ-INJ] #100: Assert irq_external at cycle 31793
+[IRQ-LAT] #100: Assert@31793 -> Handler@31833  Latency = 40 cycles  PC=0x8000272c
+[IRQ-INJ] #100: Deassert irq_external at cycle 31833
+[IRQ-INJ] #101: Assert irq_external at cycle 32133
+[IRQ-LAT] #101: Assert@32133 -> Handler@32140  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #101: Deassert irq_external at cycle 32140
+[IRQ-INJ] #102: Assert irq_external at cycle 32440
+[IRQ-LAT] #102: Assert@32440 -> Handler@32474  Latency = 34 cycles  PC=0x8000272c
+[IRQ-INJ] #102: Deassert irq_external at cycle 32474
+[IRQ-INJ] #103: Assert irq_external at cycle 32774
+[IRQ-LAT] #103: Assert@32774 -> Handler@32781  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #103: Deassert irq_external at cycle 32781
+[IRQ-INJ] #104: Assert irq_external at cycle 33081
+[IRQ-LAT] #104: Assert@33081 -> Handler@33123  Latency = 42 cycles  PC=0x8000272c
+[IRQ-INJ] #104: Deassert irq_external at cycle 33123
+[IRQ-INJ] #105: Assert irq_external at cycle 33423
+[IRQ-LAT] #105: Assert@33423 -> Handler@33430  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #105: Deassert irq_external at cycle 33430
+[IRQ-INJ] #106: Assert irq_external at cycle 33730
+[IRQ-LAT] #106: Assert@33730 -> Handler@33737  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #106: Deassert irq_external at cycle 33737
+[IRQ-INJ] #107: Assert irq_external at cycle 34037
+[IRQ-LAT] #107: Assert@34037 -> Handler@34061  Latency = 24 cycles  PC=0x8000272c
+[IRQ-INJ] #107: Deassert irq_external at cycle 34061
+[IRQ-INJ] #108: Assert irq_external at cycle 34361
+[IRQ-LAT] #108: Assert@34361 -> Handler@34367  Latency = 6 cycles  PC=0x8000272c
+[IRQ-INJ] #108: Deassert irq_external at cycle 34367
+[IRQ-INJ] #109: Assert irq_external at cycle 34667
+[IRQ-LAT] #109: Assert@34667 -> Handler@34674  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #109: Deassert irq_external at cycle 34674
+[IRQ-INJ] #110: Assert irq_external at cycle 34974
+[IRQ-LAT] #110: Assert@34974 -> Handler@34990  Latency = 16 cycles  PC=0x8000272c
+[IRQ-INJ] #110: Deassert irq_external at cycle 34990
+[IRQ-INJ] #111: Assert irq_external at cycle 35290
+[IRQ-LAT] #111: Assert@35290 -> Handler@35312  Latency = 22 cycles  PC=0x8000272c
+[IRQ-INJ] #111: Deassert irq_external at cycle 35312
+[IRQ-INJ] #112: Assert irq_external at cycle 35612
+[IRQ-LAT] #112: Assert@35612 -> Handler@35620  Latency = 8 cycles  PC=0x8000272c
+[IRQ-INJ] #112: Deassert irq_external at cycle 35620
+[IRQ-INJ] #113: Assert irq_external at cycle 35920
+[IRQ-LAT] #113: Assert@35920 -> Handler@35926  Latency = 6 cycles  PC=0x8000272c
+[IRQ-INJ] #113: Deassert irq_external at cycle 35926
+[IRQ-INJ] #114: Assert irq_external at cycle 36226
+[IRQ-LAT] #114: Assert@36226 -> Handler@36238  Latency = 12 cycles  PC=0x8000272c
+[IRQ-INJ] #114: Deassert irq_external at cycle 36238
+[IRQ-INJ] #115: Assert irq_external at cycle 36538
+[IRQ-LAT] #115: Assert@36538 -> Handler@36574  Latency = 36 cycles  PC=0x8000272c
+[IRQ-INJ] #115: Deassert irq_external at cycle 36574
+[IRQ-INJ] #116: Assert irq_external at cycle 36874
+[IRQ-LAT] #116: Assert@36874 -> Handler@36881  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #116: Deassert irq_external at cycle 36881
+[IRQ-INJ] #117: Assert irq_external at cycle 37181
+[IRQ-LAT] #117: Assert@37181 -> Handler@37188  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #117: Deassert irq_external at cycle 37188
+[IRQ-INJ] #118: Assert irq_external at cycle 37488
+[IRQ-LAT] #118: Assert@37488 -> Handler@37494  Latency = 6 cycles  PC=0x8000272c
+[IRQ-INJ] #118: Deassert irq_external at cycle 37494
+[IRQ-INJ] #119: Assert irq_external at cycle 37794
+[IRQ-LAT] #119: Assert@37794 -> Handler@37821  Latency = 27 cycles  PC=0x8000272c
+[IRQ-INJ] #119: Deassert irq_external at cycle 37821
+[IRQ-INJ] #120: Assert irq_external at cycle 38121
+[IRQ-LAT] #120: Assert@38121 -> Handler@38128  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #120: Deassert irq_external at cycle 38128
+[IRQ-INJ] #121: Assert irq_external at cycle 38428
+[IRQ-LAT] #121: Assert@38428 -> Handler@38455  Latency = 27 cycles  PC=0x8000272c
+[IRQ-INJ] #121: Deassert irq_external at cycle 38455
+[IRQ-INJ] #122: Assert irq_external at cycle 38755
+[IRQ-LAT] #122: Assert@38755 -> Handler@38798  Latency = 43 cycles  PC=0x8000272c
+[IRQ-INJ] #122: Deassert irq_external at cycle 38798
+[IRQ-INJ] #123: Assert irq_external at cycle 39098
+[IRQ-LAT] #123: Assert@39098 -> Handler@39107  Latency = 9 cycles  PC=0x8000272c
+[IRQ-INJ] #123: Deassert irq_external at cycle 39107
+[IRQ-INJ] #124: Assert irq_external at cycle 39407
+[IRQ-LAT] #124: Assert@39407 -> Handler@39414  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #124: Deassert irq_external at cycle 39414
+[IRQ-INJ] #125: Assert irq_external at cycle 39714
+[IRQ-LAT] #125: Assert@39714 -> Handler@39721  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #125: Deassert irq_external at cycle 39721
+[IRQ-INJ] #126: Assert irq_external at cycle 40021
+[IRQ-LAT] #126: Assert@40021 -> Handler@40027  Latency = 6 cycles  PC=0x8000272c
+[IRQ-INJ] #126: Deassert irq_external at cycle 40027
+[IRQ-INJ] #127: Assert irq_external at cycle 40327
+[IRQ-LAT] #127: Assert@40327 -> Handler@40334  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #127: Deassert irq_external at cycle 40334
+[IRQ-INJ] #128: Assert irq_external at cycle 40634
+[IRQ-LAT] #128: Assert@40634 -> Handler@40644  Latency = 10 cycles  PC=0x8000272c
+[IRQ-INJ] #128: Deassert irq_external at cycle 40644
+[IRQ-INJ] #129: Assert irq_external at cycle 40944
+[IRQ-LAT] #129: Assert@40944 -> Handler@40951  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #129: Deassert irq_external at cycle 40951
+[IRQ-INJ] #130: Assert irq_external at cycle 41251
+[IRQ-LAT] #130: Assert@41251 -> Handler@41258  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #130: Deassert irq_external at cycle 41258
+[IRQ-INJ] #131: Assert irq_external at cycle 41558
+[IRQ-LAT] #131: Assert@41558 -> Handler@41584  Latency = 26 cycles  PC=0x8000272c
+[IRQ-INJ] #131: Deassert irq_external at cycle 41584
+[IRQ-INJ] #132: Assert irq_external at cycle 41884
+[IRQ-LAT] #132: Assert@41884 -> Handler@41891  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #132: Deassert irq_external at cycle 41891
+[IRQ-INJ] #133: Assert irq_external at cycle 42191
+[IRQ-LAT] #133: Assert@42191 -> Handler@42198  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #133: Deassert irq_external at cycle 42198
+[IRQ-INJ] #134: Assert irq_external at cycle 42498
+[IRQ-LAT] #134: Assert@42498 -> Handler@42505  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #134: Deassert irq_external at cycle 42505
+[IRQ-INJ] #135: Assert irq_external at cycle 42805
+[IRQ-LAT] #135: Assert@42805 -> Handler@42824  Latency = 19 cycles  PC=0x8000272c
+[IRQ-INJ] #135: Deassert irq_external at cycle 42824
+[IRQ-INJ] #136: Assert irq_external at cycle 43124
+[IRQ-LAT] #136: Assert@43124 -> Handler@43130  Latency = 6 cycles  PC=0x8000272c
+[IRQ-INJ] #136: Deassert irq_external at cycle 43130
+[IRQ-INJ] #137: Assert irq_external at cycle 43430
+[IRQ-LAT] #137: Assert@43430 -> Handler@43437  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #137: Deassert irq_external at cycle 43437
+[IRQ-INJ] #138: Assert irq_external at cycle 43737
+[IRQ-LAT] #138: Assert@43737 -> Handler@43753  Latency = 16 cycles  PC=0x8000272c
+[IRQ-INJ] #138: Deassert irq_external at cycle 43753
+[IRQ-INJ] #139: Assert irq_external at cycle 44053
+[IRQ-LAT] #139: Assert@44053 -> Handler@44075  Latency = 22 cycles  PC=0x8000272c
+[IRQ-INJ] #139: Deassert irq_external at cycle 44075
+[IRQ-INJ] #140: Assert irq_external at cycle 44375
+[IRQ-LAT] #140: Assert@44375 -> Handler@44383  Latency = 8 cycles  PC=0x8000272c
+[IRQ-INJ] #140: Deassert irq_external at cycle 44383
+[IRQ-INJ] #141: Assert irq_external at cycle 44683
+[IRQ-LAT] #141: Assert@44683 -> Handler@44689  Latency = 6 cycles  PC=0x8000272c
+[IRQ-INJ] #141: Deassert irq_external at cycle 44689
+[IRQ-INJ] #142: Assert irq_external at cycle 44989
+[IRQ-LAT] #142: Assert@44989 -> Handler@45001  Latency = 12 cycles  PC=0x8000272c
+[IRQ-INJ] #142: Deassert irq_external at cycle 45001
+[IRQ-INJ] #143: Assert irq_external at cycle 45301
+[IRQ-LAT] #143: Assert@45301 -> Handler@45337  Latency = 36 cycles  PC=0x8000272c
+[IRQ-INJ] #143: Deassert irq_external at cycle 45337
+[IRQ-INJ] #144: Assert irq_external at cycle 45637
+[IRQ-LAT] #144: Assert@45637 -> Handler@45644  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #144: Deassert irq_external at cycle 45644
+[IRQ-INJ] #145: Assert irq_external at cycle 45944
+[IRQ-LAT] #145: Assert@45944 -> Handler@45951  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #145: Deassert irq_external at cycle 45951
+[IRQ-INJ] #146: Assert irq_external at cycle 46251
+[IRQ-LAT] #146: Assert@46251 -> Handler@46257  Latency = 6 cycles  PC=0x8000272c
+[IRQ-INJ] #146: Deassert irq_external at cycle 46257
+[IRQ-INJ] #147: Assert irq_external at cycle 46557
+[IRQ-LAT] #147: Assert@46557 -> Handler@46584  Latency = 27 cycles  PC=0x8000272c
+[IRQ-INJ] #147: Deassert irq_external at cycle 46584
+[IRQ-INJ] #148: Assert irq_external at cycle 46884
+[IRQ-LAT] #148: Assert@46884 -> Handler@46891  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #148: Deassert irq_external at cycle 46891
+[IRQ-INJ] #149: Assert irq_external at cycle 47191
+[IRQ-LAT] #149: Assert@47191 -> Handler@47218  Latency = 27 cycles  PC=0x8000272c
+[IRQ-INJ] #149: Deassert irq_external at cycle 47218
+[IRQ-INJ] #150: Assert irq_external at cycle 47518
+[IRQ-LAT] #150: Assert@47518 -> Handler@47561  Latency = 43 cycles  PC=0x8000272c
+[IRQ-INJ] #150: Deassert irq_external at cycle 47561
+[IRQ-INJ] #151: Assert irq_external at cycle 47861
+[IRQ-LAT] #151: Assert@47861 -> Handler@47870  Latency = 9 cycles  PC=0x8000272c
+[IRQ-INJ] #151: Deassert irq_external at cycle 47870
+[IRQ-INJ] #152: Assert irq_external at cycle 48170
+[IRQ-LAT] #152: Assert@48170 -> Handler@48177  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #152: Deassert irq_external at cycle 48177
+[IRQ-INJ] #153: Assert irq_external at cycle 48477
+[IRQ-LAT] #153: Assert@48477 -> Handler@48484  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #153: Deassert irq_external at cycle 48484
+[IRQ-INJ] #154: Assert irq_external at cycle 48784
+[IRQ-LAT] #154: Assert@48784 -> Handler@48790  Latency = 6 cycles  PC=0x8000272c
+[IRQ-INJ] #154: Deassert irq_external at cycle 48790
+[IRQ-INJ] #155: Assert irq_external at cycle 49090
+[IRQ-LAT] #155: Assert@49090 -> Handler@49108  Latency = 18 cycles  PC=0x8000272c
+[IRQ-INJ] #155: Deassert irq_external at cycle 49108
+[IRQ-INJ] #156: Assert irq_external at cycle 49408
+[IRQ-LAT] #156: Assert@49408 -> Handler@49440  Latency = 32 cycles  PC=0x8000272c
+[IRQ-INJ] #156: Deassert irq_external at cycle 49440
+[IRQ-INJ] #157: Assert irq_external at cycle 49740
+[IRQ-LAT] #157: Assert@49740 -> Handler@49777  Latency = 37 cycles  PC=0x8000272c
+[IRQ-INJ] #157: Deassert irq_external at cycle 49777
+[IRQ-INJ] #158: Assert irq_external at cycle 50077
+[IRQ-LAT] #158: Assert@50077 -> Handler@50083  Latency = 6 cycles  PC=0x8000272c
+[IRQ-INJ] #158: Deassert irq_external at cycle 50083
+[IRQ-INJ] #159: Assert irq_external at cycle 50383
+[IRQ-LAT] #159: Assert@50383 -> Handler@50393  Latency = 10 cycles  PC=0x8000272c
+[IRQ-INJ] #159: Deassert irq_external at cycle 50393
+[IRQ-INJ] #160: Assert irq_external at cycle 50693
+[IRQ-LAT] #160: Assert@50693 -> Handler@50714  Latency = 21 cycles  PC=0x8000272c
+[IRQ-INJ] #160: Deassert irq_external at cycle 50714
+[IRQ-INJ] #161: Assert irq_external at cycle 51014
+[IRQ-LAT] #161: Assert@51014 -> Handler@51021  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #161: Deassert irq_external at cycle 51021
+[IRQ-INJ] #162: Assert irq_external at cycle 51321
+[IRQ-LAT] #162: Assert@51321 -> Handler@51329  Latency = 8 cycles  PC=0x8000272c
+[IRQ-INJ] #162: Deassert irq_external at cycle 51329
+[IRQ-INJ] #163: Assert irq_external at cycle 51629
+[IRQ-LAT] #163: Assert@51629 -> Handler@51660  Latency = 31 cycles  PC=0x8000272c
+[IRQ-INJ] #163: Deassert irq_external at cycle 51660
+[IRQ-INJ] #164: Assert irq_external at cycle 51960
+[IRQ-LAT] #164: Assert@51960 -> Handler@51968  Latency = 8 cycles  PC=0x8000272c
+[IRQ-INJ] #164: Deassert irq_external at cycle 51968
+[IRQ-INJ] #165: Assert irq_external at cycle 52268
+[IRQ-LAT] #165: Assert@52268 -> Handler@52311  Latency = 43 cycles  PC=0x8000272c
+[IRQ-INJ] #165: Deassert irq_external at cycle 52311
+[IRQ-INJ] #166: Assert irq_external at cycle 52611
+[IRQ-LAT] #166: Assert@52611 -> Handler@52650  Latency = 39 cycles  PC=0x8000272c
+[IRQ-INJ] #166: Deassert irq_external at cycle 52650
+[IRQ-INJ] #167: Assert irq_external at cycle 52950
+[IRQ-LAT] #167: Assert@52950 -> Handler@52987  Latency = 37 cycles  PC=0x8000272c
+[IRQ-INJ] #167: Deassert irq_external at cycle 52987
+[IRQ-INJ] #168: Assert irq_external at cycle 53287
+[IRQ-LAT] #168: Assert@53287 -> Handler@53294  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #168: Deassert irq_external at cycle 53294
+[IRQ-INJ] #169: Assert irq_external at cycle 53594
+[IRQ-LAT] #169: Assert@53594 -> Handler@53601  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #169: Deassert irq_external at cycle 53601
+[IRQ-INJ] #170: Assert irq_external at cycle 53901
+[IRQ-LAT] #170: Assert@53901 -> Handler@53907  Latency = 6 cycles  PC=0x8000272c
+[IRQ-INJ] #170: Deassert irq_external at cycle 53907
+[IRQ-INJ] #171: Assert irq_external at cycle 54207
+[IRQ-LAT] #171: Assert@54207 -> Handler@54216  Latency = 9 cycles  PC=0x8000272c
+[IRQ-INJ] #171: Deassert irq_external at cycle 54216
+[IRQ-INJ] #172: Assert irq_external at cycle 54516
+[IRQ-LAT] #172: Assert@54516 -> Handler@54523  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #172: Deassert irq_external at cycle 54523
+[IRQ-INJ] #173: Assert irq_external at cycle 54823
+[IRQ-LAT] #173: Assert@54823 -> Handler@54830  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #173: Deassert irq_external at cycle 54830
+[IRQ-INJ] #174: Assert irq_external at cycle 55130
+[IRQ-LAT] #174: Assert@55130 -> Handler@55162  Latency = 32 cycles  PC=0x8000272c
+[IRQ-INJ] #174: Deassert irq_external at cycle 55162
+[IRQ-INJ] #175: Assert irq_external at cycle 55462
+[IRQ-LAT] #175: Assert@55462 -> Handler@55470  Latency = 8 cycles  PC=0x8000272c
+[IRQ-INJ] #175: Deassert irq_external at cycle 55470
+[IRQ-INJ] #176: Assert irq_external at cycle 55770
+[IRQ-LAT] #176: Assert@55770 -> Handler@55797  Latency = 27 cycles  PC=0x8000272c
+[IRQ-INJ] #176: Deassert irq_external at cycle 55797
+[IRQ-INJ] #177: Assert irq_external at cycle 56097
+[IRQ-LAT] #177: Assert@56097 -> Handler@56125  Latency = 28 cycles  PC=0x8000272c
+[IRQ-INJ] #177: Deassert irq_external at cycle 56125
+[IRQ-INJ] #178: Assert irq_external at cycle 56425
+[IRQ-LAT] #178: Assert@56425 -> Handler@56432  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #178: Deassert irq_external at cycle 56432
+[IRQ-INJ] #179: Assert irq_external at cycle 56732
+[IRQ-LAT] #179: Assert@56732 -> Handler@56770  Latency = 38 cycles  PC=0x8000272c
+[IRQ-INJ] #179: Deassert irq_external at cycle 56770
+[IRQ-INJ] #180: Assert irq_external at cycle 57070
+[IRQ-LAT] #180: Assert@57070 -> Handler@57105  Latency = 35 cycles  PC=0x8000272c
+[IRQ-INJ] #180: Deassert irq_external at cycle 57105
+[IRQ-INJ] #181: Assert irq_external at cycle 57405
+[IRQ-LAT] #181: Assert@57405 -> Handler@57434  Latency = 29 cycles  PC=0x8000272c
+[IRQ-INJ] #181: Deassert irq_external at cycle 57434
+[IRQ-INJ] #182: Assert irq_external at cycle 57734
+[IRQ-LAT] #182: Assert@57734 -> Handler@57766  Latency = 32 cycles  PC=0x8000272c
+[IRQ-INJ] #182: Deassert irq_external at cycle 57766
+[IRQ-INJ] #183: Assert irq_external at cycle 58066
+[IRQ-LAT] #183: Assert@58066 -> Handler@58076  Latency = 10 cycles  PC=0x8000272c
+[IRQ-INJ] #183: Deassert irq_external at cycle 58076
+[IRQ-INJ] #184: Assert irq_external at cycle 58376
+[IRQ-LAT] #184: Assert@58376 -> Handler@58383  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #184: Deassert irq_external at cycle 58383
+[IRQ-INJ] #185: Assert irq_external at cycle 58683
+[IRQ-LAT] #185: Assert@58683 -> Handler@58697  Latency = 14 cycles  PC=0x8000272c
+[IRQ-INJ] #185: Deassert irq_external at cycle 58697
+[IRQ-INJ] #186: Assert irq_external at cycle 58997
+[IRQ-LAT] #186: Assert@58997 -> Handler@59026  Latency = 29 cycles  PC=0x8000272c
+[IRQ-INJ] #186: Deassert irq_external at cycle 59026
+[IRQ-INJ] #187: Assert irq_external at cycle 59326
+[IRQ-LAT] #187: Assert@59326 -> Handler@59352  Latency = 26 cycles  PC=0x8000272c
+[IRQ-INJ] #187: Deassert irq_external at cycle 59352
+[IRQ-INJ] #188: Assert irq_external at cycle 59652
+[IRQ-LAT] #188: Assert@59652 -> Handler@59659  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #188: Deassert irq_external at cycle 59659
+[IRQ-INJ] #189: Assert irq_external at cycle 59959
+[IRQ-LAT] #189: Assert@59959 -> Handler@59966  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #189: Deassert irq_external at cycle 59966
+[IRQ-INJ] #190: Assert irq_external at cycle 60266
+[IRQ-LAT] #190: Assert@60266 -> Handler@60294  Latency = 28 cycles  PC=0x8000272c
+[IRQ-INJ] #190: Deassert irq_external at cycle 60294
+[IRQ-INJ] #191: Assert irq_external at cycle 60594
+[IRQ-LAT] #191: Assert@60594 -> Handler@60608  Latency = 14 cycles  PC=0x8000272c
+[IRQ-INJ] #191: Deassert irq_external at cycle 60608
+[IRQ-INJ] #192: Assert irq_external at cycle 60908
+[IRQ-LAT] #192: Assert@60908 -> Handler@60951  Latency = 43 cycles  PC=0x8000272c
+[IRQ-INJ] #192: Deassert irq_external at cycle 60951
+[IRQ-INJ] #193: Assert irq_external at cycle 61251
+[IRQ-LAT] #193: Assert@61251 -> Handler@61258  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #193: Deassert irq_external at cycle 61258
+[IRQ-INJ] #194: Assert irq_external at cycle 61558
+[IRQ-LAT] #194: Assert@61558 -> Handler@61568  Latency = 10 cycles  PC=0x8000272c
+[IRQ-INJ] #194: Deassert irq_external at cycle 61568
+[IRQ-INJ] #195: Assert irq_external at cycle 61868
+[IRQ-LAT] #195: Assert@61868 -> Handler@61874  Latency = 6 cycles  PC=0x8000272c
+[IRQ-INJ] #195: Deassert irq_external at cycle 61874
+[IRQ-INJ] #196: Assert irq_external at cycle 62174
+[IRQ-LAT] #196: Assert@62174 -> Handler@62197  Latency = 23 cycles  PC=0x8000272c
+[IRQ-INJ] #196: Deassert irq_external at cycle 62197
+[IRQ-INJ] #197: Assert irq_external at cycle 62497
+[IRQ-LAT] #197: Assert@62497 -> Handler@62509  Latency = 12 cycles  PC=0x8000272c
+[IRQ-INJ] #197: Deassert irq_external at cycle 62509
+[IRQ-INJ] #198: Assert irq_external at cycle 62809
+[IRQ-LAT] #198: Assert@62809 -> Handler@62833  Latency = 24 cycles  PC=0x8000272c
+[IRQ-INJ] #198: Deassert irq_external at cycle 62833
+[IRQ-INJ] #199: Assert irq_external at cycle 63133
+[IRQ-LAT] #199: Assert@63133 -> Handler@63140  Latency = 7 cycles  PC=0x8000272c
+[IRQ-INJ] #199: Deassert irq_external at cycle 63140
+[IRQ-INJ] #200: Assert irq_external at cycle 63440
+[IRQ-LAT] #200: Assert@63440 -> Handler@63476  Latency = 36 cycles  PC=0x8000272c
+[IRQ-INJ] #200: Deassert irq_external at cycle 63476
+[TB] *** TEST PASSED at 749865000 ***
+
+[IRQ-LAT] ============ LATENCY SUMMARY ============
+[IRQ-LAT]   Interrupts measured : 200
+[IRQ-LAT]   Min latency         : 6 cycles
+[IRQ-LAT]   Max latency         : 44 cycles
+[IRQ-LAT]   Avg latency         : 16 cycles
+[IRQ-LAT] ==========================================
+Simulation complete via $finish(1) at time 749965 NS + 0
+./masked_core_tb_interrupt.sv:232       $finish;
+xcelium> exit
+TOOL:	xrun(64)	23.09-s006: Exiting on Mar 07, 2026 at 01:11:32 EST  (total: 00:00:08)
