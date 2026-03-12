@@ -1,0 +1,8 @@
+# Generated Cadence/Xcelium simulation databases
+modifiedCoreTesting/xcelium.d/
+modifiedCoreTesting/gate_level_sim_bundle/xcelium.d/
+modifiedCoreTesting/rtl_test/xrun_netlist_test/xcelium.d/
+modifiedCoreTesting/rtl_test/xrun_work/xcelium.d/
+
+# Archived local simulation runs
+modifiedCoreTesting/logs/
