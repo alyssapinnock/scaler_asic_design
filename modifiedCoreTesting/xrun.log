@@ -1,0 +1,7 @@
+xrun(64): 23.09-s006: (c) Copyright 1995-2024 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	23.09-s006: Started on Mar 08, 2026 at 19:16:27 EDT
+/home/net/cadence/installs/XCELIUM2309/tools.lnx86/inca/bin/64bit/xrun
+	-helpmsgs
+	xminitReg
+xrun: *SE,BDOPT: Unknown option -helpmsgs.
+TOOL:	xrun(64)	23.09-s006: Exiting on Mar 08, 2026 at 19:16:27 EDT  (total: 00:00:00)

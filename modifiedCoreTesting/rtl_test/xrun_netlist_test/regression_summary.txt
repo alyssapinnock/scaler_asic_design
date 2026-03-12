@@ -1,0 +1,94 @@
+===== bubblesort_test =====
+status=0
+verdict=PASS
+software_first_lines:
+=== Bubble Sort Test ===
+Sorted: FFFFFFA8 FFFFFFDF FFFFFFF4 FFFFFFF9 FFFFFFFB FFFFFFFF 00000000 00000001 00000003 00000008 0000000B 00000011 00000016 00000019 0000002A 00000037 00000040 0000004D 0000005A 00000064 
+PASS: Array correctly sorted!
+
+===== crc32_test =====
+status=0
+verdict=PASS
+software_first_lines:
+CRC32 Test
+CRC32 of '123456789': 0xCBF43926
+PASS: CRC32 correct!
+
+===== fibonacci_test =====
+status=0
+verdict=PASS
+software_first_lines:
+=== Fibonacci Test ===
+fib(19) = 0x00001055
+PASS: All Fibonacci numbers correct!
+
+===== hello_test =====
+status=0
+verdict=OK
+software_first_lines:
+Hello simple system
+DEADBEEF
+BAADF00D
+Tick!
+Tock!
+Tick!
+Tock!
+Tick!
+
+===== minimal_timer_test =====
+status=0
+verdict=OK
+software_first_lines:
+=== Minimal Timer Test ===
+RAM ok
+SimCtrl ok
+Trying 0x30000...
+00000304
+PASS!
+
+===== periph_read_test =====
+status=0
+verdict=OK
+software_first_lines:
+=== Periph Read Test ===
+RAM read ok: 0x1073B8B0
+Attempting SimCtrl read (0x20000)...
+SimCtrl read: 0x00000000
+Both reads done!
+
+===== riscv_instr_test =====
+status=0
+verdict=OK
+software_first_lines:
+=== RISC-V Instruction Test ===
+ALU: PASS
+Memory: PASS
+Branch: PASS
+MUL/DIV: PASS
+AUIPC/LUI: PASS
+
+=== All instruction tests complete ===
+
+===== sieve_test =====
+status=0
+verdict=PASS
+software_first_lines:
+=== Sieve of Eratosthenes Test ===
+Number of primes up to 200: 0000002E
+PASS: Correct prime count (46)!
+PASS: All prime checks correct!
+
+===== timer_test =====
+status=0
+verdict=PASS
+software_first_lines:
+=== Timer Read Test ===
+Reading MTIME...
+MTIME_LO: 0x0000020F
+MTIME_HI: 0x00000000
+MTIME_LO (2nd): 0x000003DF
+Writing MTIMECMP...
+MTIMECMP set to max
+MTIMECMP_LO: 0xFFFFFFFF
+PASS: Timer access works!
+

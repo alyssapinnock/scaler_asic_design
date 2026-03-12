@@ -1,0 +1,105 @@
+xrun(64): 23.09-s006: (c) Copyright 1995-2024 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	23.09-s006: Started on Mar 12, 2026 at 16:08:18 EDT
+xrun
+	-64bit
+	-sv
+	-f /home/net/al663069/SD2_ws/scaler_asic_design/modifiedCoreTesting/gate_level_sim_bundle/filelist.f
+		-incdir sources/modifiedCoreRTL
+		-incdir sources/vendor/lowrisc_ip/ip/prim/rtl
+		-incdir sources/vendor/lowrisc_ip/ip/prim_generic/rtl
+		sources/vendor/lowrisc_ip/ip/prim/rtl/prim_util_pkg.sv
+		sources/vendor/lowrisc_ip/ip/prim/rtl/prim_secded_pkg.sv
+		sources/vendor/lowrisc_ip/ip/prim/rtl/prim_cipher_pkg.sv
+		sources/vendor/lowrisc_ip/ip/prim/rtl/prim_mubi_pkg.sv
+		sources/vendor/lowrisc_ip/ip/prim/rtl/prim_count_pkg.sv
+		sources/vendor/lowrisc_ip/ip/prim_generic/rtl/prim_pkg.sv
+		sources/vendor/lowrisc_ip/ip/prim_generic/rtl/prim_ram_1p_pkg.sv
+		sources/vendor/lowrisc_ip/ip/prim_generic/rtl/prim_ram_2p_pkg.sv
+		sources/modifiedCoreRTL/ibex_pkg.sv
+		sources/modifiedCoreRTL/ibex_tracer_pkg.sv
+		sources/vendor/lowrisc_ip/ip/prim/rtl/prim_assert.sv
+		sources/modifiedCoreTesting/tb/std_cells_functional.v
+		sources/modifiedCoreRTL/gates_cmo.v
+		sources/Synthesis/outputs/Core_netlist.v
+		sources/vendor/lowrisc_ip/ip/prim_generic/rtl/prim_buf.sv
+		sources/vendor/lowrisc_ip/ip/prim_generic/rtl/prim_clock_gating.sv
+		sources/vendor/lowrisc_ip/ip/prim_generic/rtl/prim_flop.sv
+		sources/vendor/lowrisc_ip/ip/prim_generic/rtl/prim_flop_en.sv
+		sources/vendor/lowrisc_ip/ip/prim_generic/rtl/prim_flop_2sync.sv
+		sources/vendor/lowrisc_ip/ip/prim_generic/rtl/prim_ram_1p.sv
+		sources/vendor/lowrisc_ip/ip/prim_generic/rtl/prim_ram_2p.sv
+		sources/vendor/lowrisc_ip/ip/prim/rtl/prim_flop_macros.sv
+		sources/vendor/lowrisc_ip/ip/prim/rtl/prim_lfsr.sv
+		sources/vendor/lowrisc_ip/ip/prim/rtl/prim_onehot_check.sv
+		sources/vendor/lowrisc_ip/ip/prim/rtl/prim_count.sv
+		sources/vendor/lowrisc_ip/ip/prim/rtl/prim_sparse_fsm_flop.sv
+		sources/vendor/lowrisc_ip/ip/prim/rtl/prim_secded_inv_39_32_enc.sv
+		sources/vendor/lowrisc_ip/ip/prim/rtl/prim_secded_inv_39_32_dec.sv
+		sources/vendor/lowrisc_ip/ip/prim/rtl/prim_ram_1p_adv.sv
+		sources/vendor/lowrisc_ip/ip/prim/rtl/prim_ram_1p_scr.sv
+		sources/vendor/lowrisc_ip/ip/prim/rtl/prim_subst_perm.sv
+		sources/vendor/lowrisc_ip/ip/prim/rtl/prim_prince.sv
+		sources/vendor/lowrisc_ip/ip/prim/rtl/prim_blanker.sv
+		sources/vendor/lowrisc_ip/ip/prim/rtl/prim_sec_anchor_buf.sv
+		sources/vendor/lowrisc_ip/ip/prim/rtl/prim_sec_anchor_flop.sv
+		sources/modifiedCoreRTL/ibex_alu.sv
+		sources/modifiedCoreRTL/ibex_branch_predict.sv
+		sources/modifiedCoreRTL/ibex_compressed_decoder.sv
+		sources/modifiedCoreRTL/ibex_controller.sv
+		sources/modifiedCoreRTL/ibex_counter.sv
+		sources/modifiedCoreRTL/ibex_cs_registers.sv
+		sources/modifiedCoreRTL/ibex_csr.sv
+		sources/modifiedCoreRTL/ibex_decoder.sv
+		sources/modifiedCoreRTL/ibex_dummy_instr.sv
+		sources/modifiedCoreRTL/ibex_ex_block.sv
+		sources/modifiedCoreRTL/ibex_fetch_fifo.sv
+		sources/modifiedCoreRTL/ibex_icache.sv
+		sources/modifiedCoreRTL/ibex_id_stage.sv
+		sources/modifiedCoreRTL/ibex_if_stage.sv
+		sources/modifiedCoreRTL/ibex_load_store_unit.sv
+		sources/modifiedCoreRTL/ibex_lockstep.sv
+		sources/modifiedCoreRTL/ibex_multdiv_fast.sv
+		sources/modifiedCoreRTL/ibex_multdiv_slow.sv
+		sources/modifiedCoreRTL/ibex_pmp.sv
+		sources/modifiedCoreRTL/ibex_prefetch_buffer.sv
+		sources/modifiedCoreRTL/ibex_register_file_ff.sv
+		sources/modifiedCoreRTL/ibex_register_file_fpga.sv
+		sources/modifiedCoreRTL/ibex_register_file_latch.sv
+		sources/modifiedCoreRTL/ibex_wb_stage.sv
+		sources/modifiedCoreTesting/rtl_test/ibex_core_wrapper_netlist.sv
+		sources/modifiedCoreRTL/ibex_top.sv
+		sources/modifiedCoreRTL/ibex_top_tracing.sv
+		sources/modifiedCoreRTL/ibex_tracer.sv
+		sources/modifiedCoreRTL/gng.v
+		sources/shared/rtl/bus.sv
+		sources/shared/rtl/ram_1p.sv
+		sources/shared/rtl/ram_2p.sv
+		sources/shared/rtl/sim/simulator_ctrl.sv
+		sources/shared/rtl/timer.sv
+		sources/modifiedCoreTesting/rtl_test/ibex_simple_system_netlist.sv
+	-top ibex_simple_system
+	-timescale 1ns/1ps
+	-access rwc
+	-noassert
+	-define RVFI
+	+VMEM=/home/net/al663069/SD2_ws/scaler_asic_design/modifiedCoreTesting/gate_level_sim_bundle/tests/compiled/hello_test.vmem
+	+GLS_DEBUG=0
+	-XMINITIALIZE 0
+	-input /home/net/al663069/SD2_ws/scaler_asic_design/modifiedCoreTesting/gate_level_sim_bundle/work/xrun_netlist_test/run.tcl
+
+   User defined plus("+") options:
+	+VMEM=/home/net/al663069/SD2_ws/scaler_asic_design/modifiedCoreTesting/gate_level_sim_bundle/tests/compiled/hello_test.vmem
+	+GLS_DEBUG=0
+
+Loading snapshot worklib.ibex_simple_system:sv .................... Done
+xcelium> source /home/net/cadence/installs/XCELIUM2309/tools/xcelium/files/xmsimrc
+xcelium> run 2ms
+Loading SRAM from +VMEM plusarg: /home/net/al663069/SD2_ws/scaler_asic_design/modifiedCoreTesting/gate_level_sim_bundle/tests/compiled/hello_test.vmem
+GLS debug logging disabled
+Terminating simulation by software request.
+Simulation complete via $finish(1) at time 26484 NS + 1
+./sources/shared/rtl/sim/simulator_ctrl.sv:93       $finish;
+xcelium> echo "=== Simulation timeout after 2ms ==="
+=== Simulation timeout after 2ms ===
+xcelium> exit
+TOOL:	xrun(64)	23.09-s006: Exiting on Mar 12, 2026 at 16:08:56 EDT  (total: 00:00:38)

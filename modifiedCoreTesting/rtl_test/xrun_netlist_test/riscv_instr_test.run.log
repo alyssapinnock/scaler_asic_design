@@ -1,0 +1,1238 @@
+=== Masked Netlist Test via ibex_simple_system ===
+Using REAL ibex_core_wrapper (XOR share splitting)
+Netlist: /home/net/al663069/SD2_ws/scaler_asic_design/Synthesis/outputs/Core_netlist.v
+VMEM: /home/net/al663069/SD2_ws/scaler_asic_design/modifiedCoreTesting/rtl_test/tests/compiled/riscv_instr_test.vmem
+
+File list created: /home/net/al663069/SD2_ws/scaler_asic_design/modifiedCoreTesting/rtl_test/xrun_netlist_test/filelist.f
+
+=== Starting xrun compilation and simulation ===
+TOOL:	xrun(64)	23.09-s006: Started on Mar 12, 2026 at 15:16:20 EDT
+xrun(64): 23.09-s006: (c) Copyright 1995-2024 Cadence Design Systems, Inc.
+Loading snapshot worklib.ibex_simple_system:sv .................... Done
+xcelium> source /home/net/cadence/installs/XCELIUM2309/tools/xcelium/files/xmsimrc
+xcelium> run 2ms
+Loading SRAM from +VMEM plusarg: /home/net/al663069/SD2_ws/scaler_asic_design/modifiedCoreTesting/rtl_test/tests/compiled/riscv_instr_test.vmem
+[114000 BUS] host_req  addr=00100708 we=1 be=1111
+[114000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[116000 BUS] host_rvalid rdata=00000000 err=0
+[116000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[126000 BUS] host_req  addr=0010070c we=1 be=1111
+[126000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[128000 BUS] host_rvalid rdata=00000000 err=0
+[128000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[138000 BUS] host_req  addr=00100710 we=1 be=1111
+[138000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[140000 BUS] host_rvalid rdata=00000000 err=0
+[140000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[150000 BUS] host_req  addr=00100714 we=1 be=1111
+[150000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[152000 BUS] host_rvalid rdata=00000000 err=0
+[152000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[162000 BUS] host_req  addr=00100718 we=1 be=1111
+[162000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[164000 BUS] host_rvalid rdata=00000000 err=0
+[164000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[174000 BUS] host_req  addr=0010071c we=1 be=1111
+[174000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[176000 BUS] host_rvalid rdata=00000000 err=0
+[176000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[198000 BUS] host_req  addr=00137ffc we=1 be=1111
+[198000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[200000 BUS] host_rvalid rdata=00000000 err=0
+[200000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[208000 BUS] host_req  addr=0010059c we=0 be=0001
+[208000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[210000 BUS] host_rvalid rdata=203d3d3d err=0
+[210000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[220000 BUS] host_req  addr=00020000 we=1 be=1111
+[220000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[222000 BUS] host_rvalid rdata=00000000 err=0
+[222000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[228000 BUS] host_req  addr=0010059c we=0 be=0010
+[228000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[230000 BUS] host_rvalid rdata=203d3d3d err=0
+[230000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[240000 BUS] host_req  addr=00020000 we=1 be=1111
+[240000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[242000 BUS] host_rvalid rdata=00000000 err=0
+[242000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[248000 BUS] host_req  addr=0010059c we=0 be=0100
+[248000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[250000 BUS] host_rvalid rdata=203d3d3d err=0
+[250000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[260000 BUS] host_req  addr=00020000 we=1 be=1111
+[260000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[262000 BUS] host_rvalid rdata=00000000 err=0
+[262000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[268000 BUS] host_req  addr=0010059c we=0 be=1000
+[268000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[270000 BUS] host_rvalid rdata=203d3d3d err=0
+[270000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[280000 BUS] host_req  addr=00020000 we=1 be=1111
+[280000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[282000 BUS] host_rvalid rdata=00000000 err=0
+[282000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[288000 BUS] host_req  addr=001005a0 we=0 be=0001
+[288000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[290000 BUS] host_rvalid rdata=43534952 err=0
+[290000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[300000 BUS] host_req  addr=00020000 we=1 be=1111
+[300000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[302000 BUS] host_rvalid rdata=00000000 err=0
+[302000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[308000 BUS] host_req  addr=001005a0 we=0 be=0010
+[308000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[310000 BUS] host_rvalid rdata=43534952 err=0
+[310000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[320000 BUS] host_req  addr=00020000 we=1 be=1111
+[320000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[322000 BUS] host_rvalid rdata=00000000 err=0
+[322000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[328000 BUS] host_req  addr=001005a0 we=0 be=0100
+[328000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[330000 BUS] host_rvalid rdata=43534952 err=0
+[330000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[340000 BUS] host_req  addr=00020000 we=1 be=1111
+[340000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[342000 BUS] host_rvalid rdata=00000000 err=0
+[342000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[348000 BUS] host_req  addr=001005a0 we=0 be=1000
+[348000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[350000 BUS] host_rvalid rdata=43534952 err=0
+[350000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[360000 BUS] host_req  addr=00020000 we=1 be=1111
+[360000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[362000 BUS] host_rvalid rdata=00000000 err=0
+[362000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[368000 BUS] host_req  addr=001005a4 we=0 be=0001
+[368000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[370000 BUS] host_rvalid rdata=4920562d err=0
+[370000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[380000 BUS] host_req  addr=00020000 we=1 be=1111
+[380000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[382000 BUS] host_rvalid rdata=00000000 err=0
+[382000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[388000 BUS] host_req  addr=001005a4 we=0 be=0010
+[388000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[390000 BUS] host_rvalid rdata=4920562d err=0
+[390000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[400000 BUS] host_req  addr=00020000 we=1 be=1111
+[400000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[402000 BUS] host_rvalid rdata=00000000 err=0
+[402000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[408000 BUS] host_req  addr=001005a4 we=0 be=0100
+[408000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[410000 BUS] host_rvalid rdata=4920562d err=0
+[410000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[420000 BUS] host_req  addr=00020000 we=1 be=1111
+[420000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[422000 BUS] host_rvalid rdata=00000000 err=0
+[422000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[428000 BUS] host_req  addr=001005a4 we=0 be=1000
+[428000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[430000 BUS] host_rvalid rdata=4920562d err=0
+[430000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[440000 BUS] host_req  addr=00020000 we=1 be=1111
+[440000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[442000 BUS] host_rvalid rdata=00000000 err=0
+[442000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[448000 BUS] host_req  addr=001005a8 we=0 be=0001
+[448000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[450000 BUS] host_rvalid rdata=7274736e err=0
+[450000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[460000 BUS] host_req  addr=00020000 we=1 be=1111
+[460000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[462000 BUS] host_rvalid rdata=00000000 err=0
+[462000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[468000 BUS] host_req  addr=001005a8 we=0 be=0010
+[468000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[470000 BUS] host_rvalid rdata=7274736e err=0
+[470000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[480000 BUS] host_req  addr=00020000 we=1 be=1111
+[480000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[482000 BUS] host_rvalid rdata=00000000 err=0
+[482000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[488000 BUS] host_req  addr=001005a8 we=0 be=0100
+[488000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[490000 BUS] host_rvalid rdata=7274736e err=0
+[490000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[500000 BUS] host_req  addr=00020000 we=1 be=1111
+[500000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[502000 BUS] host_rvalid rdata=00000000 err=0
+[502000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[508000 BUS] host_req  addr=001005a8 we=0 be=1000
+[508000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[510000 BUS] host_rvalid rdata=7274736e err=0
+[510000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[520000 BUS] host_req  addr=00020000 we=1 be=1111
+[520000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[522000 BUS] host_rvalid rdata=00000000 err=0
+[522000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[528000 BUS] host_req  addr=001005ac we=0 be=0001
+[528000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[530000 BUS] host_rvalid rdata=69746375 err=0
+[530000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[540000 BUS] host_req  addr=00020000 we=1 be=1111
+[540000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[542000 BUS] host_rvalid rdata=00000000 err=0
+[542000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[548000 BUS] host_req  addr=001005ac we=0 be=0010
+[548000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[550000 BUS] host_rvalid rdata=69746375 err=0
+[550000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[560000 BUS] host_req  addr=00020000 we=1 be=1111
+[560000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[562000 BUS] host_rvalid rdata=00000000 err=0
+[562000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[568000 BUS] host_req  addr=001005ac we=0 be=0100
+[568000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[570000 BUS] host_rvalid rdata=69746375 err=0
+[570000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[580000 BUS] host_req  addr=00020000 we=1 be=1111
+[580000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[582000 BUS] host_rvalid rdata=00000000 err=0
+[582000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[588000 BUS] host_req  addr=001005ac we=0 be=1000
+[588000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[590000 BUS] host_rvalid rdata=69746375 err=0
+[590000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[600000 BUS] host_req  addr=00020000 we=1 be=1111
+[600000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[602000 BUS] host_rvalid rdata=00000000 err=0
+[602000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[608000 BUS] host_req  addr=001005b0 we=0 be=0001
+[608000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[610000 BUS] host_rvalid rdata=54206e6f err=0
+[610000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[620000 BUS] host_req  addr=00020000 we=1 be=1111
+[620000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[622000 BUS] host_rvalid rdata=00000000 err=0
+[622000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[628000 BUS] host_req  addr=001005b0 we=0 be=0010
+[628000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[630000 BUS] host_rvalid rdata=54206e6f err=0
+[630000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[640000 BUS] host_req  addr=00020000 we=1 be=1111
+[640000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[642000 BUS] host_rvalid rdata=00000000 err=0
+[642000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[648000 BUS] host_req  addr=001005b0 we=0 be=0100
+[648000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[650000 BUS] host_rvalid rdata=54206e6f err=0
+[650000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[660000 BUS] host_req  addr=00020000 we=1 be=1111
+[660000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[662000 BUS] host_rvalid rdata=00000000 err=0
+[662000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[668000 BUS] host_req  addr=001005b0 we=0 be=1000
+[668000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[670000 BUS] host_rvalid rdata=54206e6f err=0
+[670000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[680000 BUS] host_req  addr=00020000 we=1 be=1111
+[680000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[682000 BUS] host_rvalid rdata=00000000 err=0
+[682000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[688000 BUS] host_req  addr=001005b4 we=0 be=0001
+[688000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[690000 BUS] host_rvalid rdata=20747365 err=0
+[690000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[700000 BUS] host_req  addr=00020000 we=1 be=1111
+[700000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[702000 BUS] host_rvalid rdata=00000000 err=0
+[702000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[708000 BUS] host_req  addr=001005b4 we=0 be=0010
+[708000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[710000 BUS] host_rvalid rdata=20747365 err=0
+[710000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[720000 BUS] host_req  addr=00020000 we=1 be=1111
+[720000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[722000 BUS] host_rvalid rdata=00000000 err=0
+[722000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[728000 BUS] host_req  addr=001005b4 we=0 be=0100
+[728000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[730000 BUS] host_rvalid rdata=20747365 err=0
+[730000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[740000 BUS] host_req  addr=00020000 we=1 be=1111
+[740000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[742000 BUS] host_rvalid rdata=00000000 err=0
+[742000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[748000 BUS] host_req  addr=001005b4 we=0 be=1000
+[748000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[750000 BUS] host_rvalid rdata=20747365 err=0
+[750000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[760000 BUS] host_req  addr=00020000 we=1 be=1111
+[760000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[762000 BUS] host_rvalid rdata=00000000 err=0
+[762000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[768000 BUS] host_req  addr=001005b8 we=0 be=0001
+[768000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[770000 BUS] host_rvalid rdata=0a3d3d3d err=0
+[770000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[780000 BUS] host_req  addr=00020000 we=1 be=1111
+[780000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[782000 BUS] host_rvalid rdata=00000000 err=0
+[782000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[788000 BUS] host_req  addr=001005b8 we=0 be=0010
+[788000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[790000 BUS] host_rvalid rdata=0a3d3d3d err=0
+[790000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[800000 BUS] host_req  addr=00020000 we=1 be=1111
+[800000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[802000 BUS] host_rvalid rdata=00000000 err=0
+[802000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[808000 BUS] host_req  addr=001005b8 we=0 be=0100
+[808000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[810000 BUS] host_rvalid rdata=0a3d3d3d err=0
+[810000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[820000 BUS] host_req  addr=00020000 we=1 be=1111
+[820000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[822000 BUS] host_rvalid rdata=00000000 err=0
+[822000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[828000 BUS] host_req  addr=001005b8 we=0 be=1000
+[828000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[830000 BUS] host_rvalid rdata=0a3d3d3d err=0
+[830000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[840000 BUS] host_req  addr=00020000 we=1 be=1111
+[840000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[842000 BUS] host_rvalid rdata=00000000 err=0
+[842000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[848000 BUS] host_req  addr=001005bc we=0 be=0001
+[848000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[850000 BUS] host_rvalid rdata=00000000 err=0
+[850000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[870000 BUS] host_req  addr=001005c0 we=0 be=0001
+[870000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[872000 BUS] host_rvalid rdata=3a554c41 err=0
+[872000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[882000 BUS] host_req  addr=00020000 we=1 be=1111
+[882000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[884000 BUS] host_rvalid rdata=00000000 err=0
+[884000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[890000 BUS] host_req  addr=001005c0 we=0 be=0010
+[890000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[892000 BUS] host_rvalid rdata=3a554c41 err=0
+[892000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[902000 BUS] host_req  addr=00020000 we=1 be=1111
+[902000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[904000 BUS] host_rvalid rdata=00000000 err=0
+[904000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[910000 BUS] host_req  addr=001005c0 we=0 be=0100
+[910000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[912000 BUS] host_rvalid rdata=3a554c41 err=0
+[912000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[922000 BUS] host_req  addr=00020000 we=1 be=1111
+[922000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[924000 BUS] host_rvalid rdata=00000000 err=0
+[924000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[930000 BUS] host_req  addr=001005c0 we=0 be=1000
+[930000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[932000 BUS] host_rvalid rdata=3a554c41 err=0
+[932000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[942000 BUS] host_req  addr=00020000 we=1 be=1111
+[942000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[944000 BUS] host_rvalid rdata=00000000 err=0
+[944000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[950000 BUS] host_req  addr=001005c4 we=0 be=0001
+[950000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[952000 BUS] host_rvalid rdata=53415020 err=0
+[952000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[962000 BUS] host_req  addr=00020000 we=1 be=1111
+[962000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[964000 BUS] host_rvalid rdata=00000000 err=0
+[964000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[970000 BUS] host_req  addr=001005c4 we=0 be=0010
+[970000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[972000 BUS] host_rvalid rdata=53415020 err=0
+[972000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[982000 BUS] host_req  addr=00020000 we=1 be=1111
+[982000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[984000 BUS] host_rvalid rdata=00000000 err=0
+[984000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[990000 BUS] host_req  addr=001005c4 we=0 be=0100
+[990000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[992000 BUS] host_rvalid rdata=53415020 err=0
+[992000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[1002000 BUS] host_req  addr=00020000 we=1 be=1111
+[1002000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[1004000 BUS] host_rvalid rdata=00000000 err=0
+[1004000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[1010000 BUS] host_req  addr=001005c4 we=0 be=1000
+[1010000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[1012000 BUS] host_rvalid rdata=53415020 err=0
+[1012000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[1022000 BUS] host_req  addr=00020000 we=1 be=1111
+[1022000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[1024000 BUS] host_rvalid rdata=00000000 err=0
+[1024000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[1030000 BUS] host_req  addr=001005c8 we=0 be=0001
+[1030000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[1032000 BUS] host_rvalid rdata=00000a53 err=0
+[1032000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[1042000 BUS] host_req  addr=00020000 we=1 be=1111
+[1042000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[1044000 BUS] host_rvalid rdata=00000000 err=0
+[1044000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[1050000 BUS] host_req  addr=001005c8 we=0 be=0010
+[1050000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[1052000 BUS] host_rvalid rdata=00000a53 err=0
+[1052000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[1062000 BUS] host_req  addr=00020000 we=1 be=1111
+[1062000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[1064000 BUS] host_rvalid rdata=00000000 err=0
+[1064000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[1070000 BUS] host_req  addr=001005c8 we=0 be=0100
+[1070000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[1072000 BUS] host_rvalid rdata=00000a53 err=0
+[1072000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[1088000 BUS] host_req  addr=00137fec we=1 be=1111
+[1088000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[1090000 BUS] host_rvalid rdata=00000a53 err=0
+[1090000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[1092000 BUS] host_req  addr=00137fec we=0 be=1111
+[1092000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[1094000 BUS] host_rvalid rdata=deadbeef err=0
+[1094000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[1108000 BUS] host_req  addr=00137fe8 we=1 be=0011
+[1108000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[1110000 BUS] host_rvalid rdata=deadbeef err=0
+[1110000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[1112000 BUS] host_req  addr=00137fe8 we=0 be=0011
+[1112000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[1114000 BUS] host_rvalid rdata=00001234 err=0
+[1114000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[1130000 BUS] host_req  addr=00137fe4 we=1 be=0100
+[1130000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[1132000 BUS] host_rvalid rdata=00001234 err=0
+[1132000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[1134000 BUS] host_req  addr=00137fe4 we=0 be=0100
+[1134000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[1136000 BUS] host_rvalid rdata=00420000 err=0
+[1136000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[1150000 BUS] host_req  addr=00137fe8 we=1 be=1100
+[1150000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[1152000 BUS] host_rvalid rdata=00420000 err=0
+[1152000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[1154000 BUS] host_req  addr=00137fe8 we=0 be=1100
+[1154000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[1156000 BUS] host_rvalid rdata=f2341234 err=0
+[1156000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[1174000 BUS] host_req  addr=00137fe4 we=1 be=1000
+[1174000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[1176000 BUS] host_rvalid rdata=f2341234 err=0
+[1176000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[1178000 BUS] host_req  addr=00137fe4 we=0 be=1000
+[1178000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[1180000 BUS] host_rvalid rdata=f2420000 err=0
+[1180000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[1204000 BUS] host_req  addr=00100614 we=0 be=0001
+[1204000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[1206000 BUS] host_rvalid rdata=6f6d654d err=0
+[1206000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[1216000 BUS] host_req  addr=00020000 we=1 be=1111
+[1216000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[1218000 BUS] host_rvalid rdata=00000000 err=0
+[1218000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[1224000 BUS] host_req  addr=00100614 we=0 be=0010
+[1224000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[1226000 BUS] host_rvalid rdata=6f6d654d err=0
+[1226000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[1236000 BUS] host_req  addr=00020000 we=1 be=1111
+[1236000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[1238000 BUS] host_rvalid rdata=00000000 err=0
+[1238000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[1244000 BUS] host_req  addr=00100614 we=0 be=0100
+[1244000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[1246000 BUS] host_rvalid rdata=6f6d654d err=0
+[1246000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[1256000 BUS] host_req  addr=00020000 we=1 be=1111
+[1256000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[1258000 BUS] host_rvalid rdata=00000000 err=0
+[1258000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[1264000 BUS] host_req  addr=00100614 we=0 be=1000
+[1264000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[1266000 BUS] host_rvalid rdata=6f6d654d err=0
+[1266000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[1276000 BUS] host_req  addr=00020000 we=1 be=1111
+[1276000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[1278000 BUS] host_rvalid rdata=00000000 err=0
+[1278000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[1284000 BUS] host_req  addr=00100618 we=0 be=0001
+[1284000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[1286000 BUS] host_rvalid rdata=203a7972 err=0
+[1286000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[1296000 BUS] host_req  addr=00020000 we=1 be=1111
+[1296000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[1298000 BUS] host_rvalid rdata=00000000 err=0
+[1298000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[1304000 BUS] host_req  addr=00100618 we=0 be=0010
+[1304000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[1306000 BUS] host_rvalid rdata=203a7972 err=0
+[1306000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[1316000 BUS] host_req  addr=00020000 we=1 be=1111
+[1316000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[1318000 BUS] host_rvalid rdata=00000000 err=0
+[1318000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[1324000 BUS] host_req  addr=00100618 we=0 be=0100
+[1324000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[1326000 BUS] host_rvalid rdata=203a7972 err=0
+[1326000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[1336000 BUS] host_req  addr=00020000 we=1 be=1111
+[1336000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[1338000 BUS] host_rvalid rdata=00000000 err=0
+[1338000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[1344000 BUS] host_req  addr=00100618 we=0 be=1000
+[1344000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[1346000 BUS] host_rvalid rdata=203a7972 err=0
+[1346000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[1356000 BUS] host_req  addr=00020000 we=1 be=1111
+[1356000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[1358000 BUS] host_rvalid rdata=00000000 err=0
+[1358000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[1364000 BUS] host_req  addr=0010061c we=0 be=0001
+[1364000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[1366000 BUS] host_rvalid rdata=53534150 err=0
+[1366000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[1376000 BUS] host_req  addr=00020000 we=1 be=1111
+[1376000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[1378000 BUS] host_rvalid rdata=00000000 err=0
+[1378000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[1384000 BUS] host_req  addr=0010061c we=0 be=0010
+[1384000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[1386000 BUS] host_rvalid rdata=53534150 err=0
+[1386000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[1396000 BUS] host_req  addr=00020000 we=1 be=1111
+[1396000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[1398000 BUS] host_rvalid rdata=00000000 err=0
+[1398000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[1404000 BUS] host_req  addr=0010061c we=0 be=0100
+[1404000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[1406000 BUS] host_rvalid rdata=53534150 err=0
+[1406000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[1416000 BUS] host_req  addr=00020000 we=1 be=1111
+[1416000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[1418000 BUS] host_rvalid rdata=00000000 err=0
+[1418000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[1424000 BUS] host_req  addr=0010061c we=0 be=1000
+[1424000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[1426000 BUS] host_rvalid rdata=53534150 err=0
+[1426000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[1436000 BUS] host_req  addr=00020000 we=1 be=1111
+[1436000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[1438000 BUS] host_rvalid rdata=00000000 err=0
+[1438000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[1444000 BUS] host_req  addr=00100620 we=0 be=0001
+[1444000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[1446000 BUS] host_rvalid rdata=0000000a err=0
+[1446000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[1456000 BUS] host_req  addr=00020000 we=1 be=1111
+[1456000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[1458000 BUS] host_rvalid rdata=00000000 err=0
+[1458000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[1464000 BUS] host_req  addr=00100620 we=0 be=0010
+[1464000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[1466000 BUS] host_rvalid rdata=0000000a err=0
+[1466000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[1486000 BUS] host_req  addr=00100634 we=0 be=0001
+[1486000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[1488000 BUS] host_rvalid rdata=6e617242 err=0
+[1488000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[1498000 BUS] host_req  addr=00020000 we=1 be=1111
+[1498000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[1500000 BUS] host_rvalid rdata=00000000 err=0
+[1500000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[1506000 BUS] host_req  addr=00100634 we=0 be=0010
+[1506000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[1508000 BUS] host_rvalid rdata=6e617242 err=0
+[1508000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[1518000 BUS] host_req  addr=00020000 we=1 be=1111
+[1518000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[1520000 BUS] host_rvalid rdata=00000000 err=0
+[1520000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[1526000 BUS] host_req  addr=00100634 we=0 be=0100
+[1526000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[1528000 BUS] host_rvalid rdata=6e617242 err=0
+[1528000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[1538000 BUS] host_req  addr=00020000 we=1 be=1111
+[1538000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[1540000 BUS] host_rvalid rdata=00000000 err=0
+[1540000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[1546000 BUS] host_req  addr=00100634 we=0 be=1000
+[1546000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[1548000 BUS] host_rvalid rdata=6e617242 err=0
+[1548000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[1558000 BUS] host_req  addr=00020000 we=1 be=1111
+[1558000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[1560000 BUS] host_rvalid rdata=00000000 err=0
+[1560000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[1566000 BUS] host_req  addr=00100638 we=0 be=0001
+[1566000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[1568000 BUS] host_rvalid rdata=203a6863 err=0
+[1568000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[1578000 BUS] host_req  addr=00020000 we=1 be=1111
+[1578000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[1580000 BUS] host_rvalid rdata=00000000 err=0
+[1580000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[1586000 BUS] host_req  addr=00100638 we=0 be=0010
+[1586000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[1588000 BUS] host_rvalid rdata=203a6863 err=0
+[1588000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[1598000 BUS] host_req  addr=00020000 we=1 be=1111
+[1598000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[1600000 BUS] host_rvalid rdata=00000000 err=0
+[1600000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[1606000 BUS] host_req  addr=00100638 we=0 be=0100
+[1606000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[1608000 BUS] host_rvalid rdata=203a6863 err=0
+[1608000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[1618000 BUS] host_req  addr=00020000 we=1 be=1111
+[1618000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[1620000 BUS] host_rvalid rdata=00000000 err=0
+[1620000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[1626000 BUS] host_req  addr=00100638 we=0 be=1000
+[1626000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[1628000 BUS] host_rvalid rdata=203a6863 err=0
+[1628000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[1638000 BUS] host_req  addr=00020000 we=1 be=1111
+[1638000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[1640000 BUS] host_rvalid rdata=00000000 err=0
+[1640000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[1646000 BUS] host_req  addr=0010063c we=0 be=0001
+[1646000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[1648000 BUS] host_rvalid rdata=53534150 err=0
+[1648000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[1658000 BUS] host_req  addr=00020000 we=1 be=1111
+[1658000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[1660000 BUS] host_rvalid rdata=00000000 err=0
+[1660000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[1666000 BUS] host_req  addr=0010063c we=0 be=0010
+[1666000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[1668000 BUS] host_rvalid rdata=53534150 err=0
+[1668000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[1678000 BUS] host_req  addr=00020000 we=1 be=1111
+[1678000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[1680000 BUS] host_rvalid rdata=00000000 err=0
+[1680000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[1686000 BUS] host_req  addr=0010063c we=0 be=0100
+[1686000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[1688000 BUS] host_rvalid rdata=53534150 err=0
+[1688000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[1698000 BUS] host_req  addr=00020000 we=1 be=1111
+[1698000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[1700000 BUS] host_rvalid rdata=00000000 err=0
+[1700000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[1706000 BUS] host_req  addr=0010063c we=0 be=1000
+[1706000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[1708000 BUS] host_rvalid rdata=53534150 err=0
+[1708000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[1718000 BUS] host_req  addr=00020000 we=1 be=1111
+[1718000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[1720000 BUS] host_rvalid rdata=00000000 err=0
+[1720000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[1726000 BUS] host_req  addr=00100640 we=0 be=0001
+[1726000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[1728000 BUS] host_rvalid rdata=0000000a err=0
+[1728000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[1738000 BUS] host_req  addr=00020000 we=1 be=1111
+[1738000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[1740000 BUS] host_rvalid rdata=00000000 err=0
+[1740000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[1746000 BUS] host_req  addr=00100640 we=0 be=0010
+[1746000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[1748000 BUS] host_rvalid rdata=0000000a err=0
+[1748000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[1804000 BUS] host_req  addr=0010066c we=0 be=0001
+[1804000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[1806000 BUS] host_rvalid rdata=2f4c554d err=0
+[1806000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[1816000 BUS] host_req  addr=00020000 we=1 be=1111
+[1816000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[1818000 BUS] host_rvalid rdata=00000000 err=0
+[1818000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[1824000 BUS] host_req  addr=0010066c we=0 be=0010
+[1824000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[1826000 BUS] host_rvalid rdata=2f4c554d err=0
+[1826000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[1836000 BUS] host_req  addr=00020000 we=1 be=1111
+[1836000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[1838000 BUS] host_rvalid rdata=00000000 err=0
+[1838000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[1844000 BUS] host_req  addr=0010066c we=0 be=0100
+[1844000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[1846000 BUS] host_rvalid rdata=2f4c554d err=0
+[1846000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[1856000 BUS] host_req  addr=00020000 we=1 be=1111
+[1856000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[1858000 BUS] host_rvalid rdata=00000000 err=0
+[1858000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[1864000 BUS] host_req  addr=0010066c we=0 be=1000
+[1864000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[1866000 BUS] host_rvalid rdata=2f4c554d err=0
+[1866000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[1876000 BUS] host_req  addr=00020000 we=1 be=1111
+[1876000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[1878000 BUS] host_rvalid rdata=00000000 err=0
+[1878000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[1884000 BUS] host_req  addr=00100670 we=0 be=0001
+[1884000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[1886000 BUS] host_rvalid rdata=3a564944 err=0
+[1886000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[1896000 BUS] host_req  addr=00020000 we=1 be=1111
+[1896000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[1898000 BUS] host_rvalid rdata=00000000 err=0
+[1898000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[1904000 BUS] host_req  addr=00100670 we=0 be=0010
+[1904000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[1906000 BUS] host_rvalid rdata=3a564944 err=0
+[1906000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[1916000 BUS] host_req  addr=00020000 we=1 be=1111
+[1916000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[1918000 BUS] host_rvalid rdata=00000000 err=0
+[1918000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[1924000 BUS] host_req  addr=00100670 we=0 be=0100
+[1924000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[1926000 BUS] host_rvalid rdata=3a564944 err=0
+[1926000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[1936000 BUS] host_req  addr=00020000 we=1 be=1111
+[1936000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[1938000 BUS] host_rvalid rdata=00000000 err=0
+[1938000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[1944000 BUS] host_req  addr=00100670 we=0 be=1000
+[1944000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[1946000 BUS] host_rvalid rdata=3a564944 err=0
+[1946000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[1956000 BUS] host_req  addr=00020000 we=1 be=1111
+[1956000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[1958000 BUS] host_rvalid rdata=00000000 err=0
+[1958000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[1964000 BUS] host_req  addr=00100674 we=0 be=0001
+[1964000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[1966000 BUS] host_rvalid rdata=53415020 err=0
+[1966000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[1976000 BUS] host_req  addr=00020000 we=1 be=1111
+[1976000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[1978000 BUS] host_rvalid rdata=00000000 err=0
+[1978000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[1984000 BUS] host_req  addr=00100674 we=0 be=0010
+[1984000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[1986000 BUS] host_rvalid rdata=53415020 err=0
+[1986000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[1996000 BUS] host_req  addr=00020000 we=1 be=1111
+[1996000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[1998000 BUS] host_rvalid rdata=00000000 err=0
+[1998000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[2004000 BUS] host_req  addr=00100674 we=0 be=0100
+[2004000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[2006000 BUS] host_rvalid rdata=53415020 err=0
+[2006000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[2016000 BUS] host_req  addr=00020000 we=1 be=1111
+[2016000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[2018000 BUS] host_rvalid rdata=00000000 err=0
+[2018000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[2024000 BUS] host_req  addr=00100674 we=0 be=1000
+[2024000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[2026000 BUS] host_rvalid rdata=53415020 err=0
+[2026000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[2036000 BUS] host_req  addr=00020000 we=1 be=1111
+[2036000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[2038000 BUS] host_rvalid rdata=00000000 err=0
+[2038000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[2044000 BUS] host_req  addr=00100678 we=0 be=0001
+[2044000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[2046000 BUS] host_rvalid rdata=00000a53 err=0
+[2046000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[2056000 BUS] host_req  addr=00020000 we=1 be=1111
+[2056000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[2058000 BUS] host_rvalid rdata=00000000 err=0
+[2058000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[2064000 BUS] host_req  addr=00100678 we=0 be=0010
+[2064000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[2066000 BUS] host_rvalid rdata=00000a53 err=0
+[2066000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[2076000 BUS] host_req  addr=00020000 we=1 be=1111
+[2076000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[2078000 BUS] host_rvalid rdata=00000000 err=0
+[2078000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[2084000 BUS] host_req  addr=00100678 we=0 be=0100
+[2084000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[2086000 BUS] host_rvalid rdata=00000a53 err=0
+[2086000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[2138000 BUS] host_req  addr=001006b4 we=0 be=0001
+[2138000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[2140000 BUS] host_rvalid rdata=50495541 err=0
+[2140000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[2150000 BUS] host_req  addr=00020000 we=1 be=1111
+[2150000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[2152000 BUS] host_rvalid rdata=00000000 err=0
+[2152000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[2158000 BUS] host_req  addr=001006b4 we=0 be=0010
+[2158000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[2160000 BUS] host_rvalid rdata=50495541 err=0
+[2160000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[2170000 BUS] host_req  addr=00020000 we=1 be=1111
+[2170000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[2172000 BUS] host_rvalid rdata=00000000 err=0
+[2172000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[2178000 BUS] host_req  addr=001006b4 we=0 be=0100
+[2178000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[2180000 BUS] host_rvalid rdata=50495541 err=0
+[2180000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[2190000 BUS] host_req  addr=00020000 we=1 be=1111
+[2190000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[2192000 BUS] host_rvalid rdata=00000000 err=0
+[2192000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[2198000 BUS] host_req  addr=001006b4 we=0 be=1000
+[2198000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[2200000 BUS] host_rvalid rdata=50495541 err=0
+[2200000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[2210000 BUS] host_req  addr=00020000 we=1 be=1111
+[2210000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[2212000 BUS] host_rvalid rdata=00000000 err=0
+[2212000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[2218000 BUS] host_req  addr=001006b8 we=0 be=0001
+[2218000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[2220000 BUS] host_rvalid rdata=554c2f43 err=0
+[2220000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[2230000 BUS] host_req  addr=00020000 we=1 be=1111
+[2230000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[2232000 BUS] host_rvalid rdata=00000000 err=0
+[2232000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[2238000 BUS] host_req  addr=001006b8 we=0 be=0010
+[2238000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[2240000 BUS] host_rvalid rdata=554c2f43 err=0
+[2240000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[2250000 BUS] host_req  addr=00020000 we=1 be=1111
+[2250000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[2252000 BUS] host_rvalid rdata=00000000 err=0
+[2252000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[2258000 BUS] host_req  addr=001006b8 we=0 be=0100
+[2258000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[2260000 BUS] host_rvalid rdata=554c2f43 err=0
+[2260000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[2270000 BUS] host_req  addr=00020000 we=1 be=1111
+[2270000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[2272000 BUS] host_rvalid rdata=00000000 err=0
+[2272000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[2278000 BUS] host_req  addr=001006b8 we=0 be=1000
+[2278000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[2280000 BUS] host_rvalid rdata=554c2f43 err=0
+[2280000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[2290000 BUS] host_req  addr=00020000 we=1 be=1111
+[2290000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[2292000 BUS] host_rvalid rdata=00000000 err=0
+[2292000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[2298000 BUS] host_req  addr=001006bc we=0 be=0001
+[2298000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[2300000 BUS] host_rvalid rdata=50203a49 err=0
+[2300000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[2310000 BUS] host_req  addr=00020000 we=1 be=1111
+[2310000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[2312000 BUS] host_rvalid rdata=00000000 err=0
+[2312000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[2318000 BUS] host_req  addr=001006bc we=0 be=0010
+[2318000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[2320000 BUS] host_rvalid rdata=50203a49 err=0
+[2320000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[2330000 BUS] host_req  addr=00020000 we=1 be=1111
+[2330000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[2332000 BUS] host_rvalid rdata=00000000 err=0
+[2332000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[2338000 BUS] host_req  addr=001006bc we=0 be=0100
+[2338000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[2340000 BUS] host_rvalid rdata=50203a49 err=0
+[2340000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[2350000 BUS] host_req  addr=00020000 we=1 be=1111
+[2350000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[2352000 BUS] host_rvalid rdata=00000000 err=0
+[2352000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[2358000 BUS] host_req  addr=001006bc we=0 be=1000
+[2358000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[2360000 BUS] host_rvalid rdata=50203a49 err=0
+[2360000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[2370000 BUS] host_req  addr=00020000 we=1 be=1111
+[2370000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[2372000 BUS] host_rvalid rdata=00000000 err=0
+[2372000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[2378000 BUS] host_req  addr=001006c0 we=0 be=0001
+[2378000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[2380000 BUS] host_rvalid rdata=0a535341 err=0
+[2380000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[2390000 BUS] host_req  addr=00020000 we=1 be=1111
+[2390000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[2392000 BUS] host_rvalid rdata=00000000 err=0
+[2392000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[2398000 BUS] host_req  addr=001006c0 we=0 be=0010
+[2398000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[2400000 BUS] host_rvalid rdata=0a535341 err=0
+[2400000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[2410000 BUS] host_req  addr=00020000 we=1 be=1111
+[2410000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[2412000 BUS] host_rvalid rdata=00000000 err=0
+[2412000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[2418000 BUS] host_req  addr=001006c0 we=0 be=0100
+[2418000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[2420000 BUS] host_rvalid rdata=0a535341 err=0
+[2420000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[2430000 BUS] host_req  addr=00020000 we=1 be=1111
+[2430000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[2432000 BUS] host_rvalid rdata=00000000 err=0
+[2432000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[2438000 BUS] host_req  addr=001006c0 we=0 be=1000
+[2438000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[2440000 BUS] host_rvalid rdata=0a535341 err=0
+[2440000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[2450000 BUS] host_req  addr=00020000 we=1 be=1111
+[2450000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[2452000 BUS] host_rvalid rdata=00000000 err=0
+[2452000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[2458000 BUS] host_req  addr=001006c4 we=0 be=0001
+[2458000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[2460000 BUS] host_rvalid rdata=00000000 err=0
+[2460000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[2482000 BUS] host_req  addr=001006dc we=0 be=0001
+[2482000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[2484000 BUS] host_rvalid rdata=3d3d3d0a err=0
+[2484000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[2494000 BUS] host_req  addr=00020000 we=1 be=1111
+[2494000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[2496000 BUS] host_rvalid rdata=00000000 err=0
+[2496000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[2502000 BUS] host_req  addr=001006dc we=0 be=0010
+[2502000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[2504000 BUS] host_rvalid rdata=3d3d3d0a err=0
+[2504000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[2514000 BUS] host_req  addr=00020000 we=1 be=1111
+[2514000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[2516000 BUS] host_rvalid rdata=00000000 err=0
+[2516000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[2522000 BUS] host_req  addr=001006dc we=0 be=0100
+[2522000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[2524000 BUS] host_rvalid rdata=3d3d3d0a err=0
+[2524000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[2534000 BUS] host_req  addr=00020000 we=1 be=1111
+[2534000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[2536000 BUS] host_rvalid rdata=00000000 err=0
+[2536000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[2542000 BUS] host_req  addr=001006dc we=0 be=1000
+[2542000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[2544000 BUS] host_rvalid rdata=3d3d3d0a err=0
+[2544000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[2554000 BUS] host_req  addr=00020000 we=1 be=1111
+[2554000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[2556000 BUS] host_rvalid rdata=00000000 err=0
+[2556000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[2562000 BUS] host_req  addr=001006e0 we=0 be=0001
+[2562000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[2564000 BUS] host_rvalid rdata=6c6c4120 err=0
+[2564000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[2574000 BUS] host_req  addr=00020000 we=1 be=1111
+[2574000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[2576000 BUS] host_rvalid rdata=00000000 err=0
+[2576000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[2582000 BUS] host_req  addr=001006e0 we=0 be=0010
+[2582000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[2584000 BUS] host_rvalid rdata=6c6c4120 err=0
+[2584000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[2594000 BUS] host_req  addr=00020000 we=1 be=1111
+[2594000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[2596000 BUS] host_rvalid rdata=00000000 err=0
+[2596000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[2602000 BUS] host_req  addr=001006e0 we=0 be=0100
+[2602000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[2604000 BUS] host_rvalid rdata=6c6c4120 err=0
+[2604000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[2614000 BUS] host_req  addr=00020000 we=1 be=1111
+[2614000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[2616000 BUS] host_rvalid rdata=00000000 err=0
+[2616000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[2622000 BUS] host_req  addr=001006e0 we=0 be=1000
+[2622000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[2624000 BUS] host_rvalid rdata=6c6c4120 err=0
+[2624000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[2634000 BUS] host_req  addr=00020000 we=1 be=1111
+[2634000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[2636000 BUS] host_rvalid rdata=00000000 err=0
+[2636000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[2642000 BUS] host_req  addr=001006e4 we=0 be=0001
+[2642000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[2644000 BUS] host_rvalid rdata=736e6920 err=0
+[2644000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[2654000 BUS] host_req  addr=00020000 we=1 be=1111
+[2654000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[2656000 BUS] host_rvalid rdata=00000000 err=0
+[2656000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[2662000 BUS] host_req  addr=001006e4 we=0 be=0010
+[2662000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[2664000 BUS] host_rvalid rdata=736e6920 err=0
+[2664000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[2674000 BUS] host_req  addr=00020000 we=1 be=1111
+[2674000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[2676000 BUS] host_rvalid rdata=00000000 err=0
+[2676000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[2682000 BUS] host_req  addr=001006e4 we=0 be=0100
+[2682000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[2684000 BUS] host_rvalid rdata=736e6920 err=0
+[2684000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[2694000 BUS] host_req  addr=00020000 we=1 be=1111
+[2694000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[2696000 BUS] host_rvalid rdata=00000000 err=0
+[2696000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[2702000 BUS] host_req  addr=001006e4 we=0 be=1000
+[2702000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[2704000 BUS] host_rvalid rdata=736e6920 err=0
+[2704000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[2714000 BUS] host_req  addr=00020000 we=1 be=1111
+[2714000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[2716000 BUS] host_rvalid rdata=00000000 err=0
+[2716000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[2722000 BUS] host_req  addr=001006e8 we=0 be=0001
+[2722000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[2724000 BUS] host_rvalid rdata=63757274 err=0
+[2724000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[2734000 BUS] host_req  addr=00020000 we=1 be=1111
+[2734000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[2736000 BUS] host_rvalid rdata=00000000 err=0
+[2736000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[2742000 BUS] host_req  addr=001006e8 we=0 be=0010
+[2742000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[2744000 BUS] host_rvalid rdata=63757274 err=0
+[2744000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[2754000 BUS] host_req  addr=00020000 we=1 be=1111
+[2754000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[2756000 BUS] host_rvalid rdata=00000000 err=0
+[2756000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[2762000 BUS] host_req  addr=001006e8 we=0 be=0100
+[2762000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[2764000 BUS] host_rvalid rdata=63757274 err=0
+[2764000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[2774000 BUS] host_req  addr=00020000 we=1 be=1111
+[2774000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[2776000 BUS] host_rvalid rdata=00000000 err=0
+[2776000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[2782000 BUS] host_req  addr=001006e8 we=0 be=1000
+[2782000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[2784000 BUS] host_rvalid rdata=63757274 err=0
+[2784000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[2794000 BUS] host_req  addr=00020000 we=1 be=1111
+[2794000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[2796000 BUS] host_rvalid rdata=00000000 err=0
+[2796000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[2802000 BUS] host_req  addr=001006ec we=0 be=0001
+[2802000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[2804000 BUS] host_rvalid rdata=6e6f6974 err=0
+[2804000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[2814000 BUS] host_req  addr=00020000 we=1 be=1111
+[2814000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[2816000 BUS] host_rvalid rdata=00000000 err=0
+[2816000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[2822000 BUS] host_req  addr=001006ec we=0 be=0010
+[2822000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[2824000 BUS] host_rvalid rdata=6e6f6974 err=0
+[2824000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[2834000 BUS] host_req  addr=00020000 we=1 be=1111
+[2834000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[2836000 BUS] host_rvalid rdata=00000000 err=0
+[2836000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[2842000 BUS] host_req  addr=001006ec we=0 be=0100
+[2842000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[2844000 BUS] host_rvalid rdata=6e6f6974 err=0
+[2844000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[2854000 BUS] host_req  addr=00020000 we=1 be=1111
+[2854000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[2856000 BUS] host_rvalid rdata=00000000 err=0
+[2856000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[2862000 BUS] host_req  addr=001006ec we=0 be=1000
+[2862000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[2864000 BUS] host_rvalid rdata=6e6f6974 err=0
+[2864000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[2874000 BUS] host_req  addr=00020000 we=1 be=1111
+[2874000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[2876000 BUS] host_rvalid rdata=00000000 err=0
+[2876000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[2882000 BUS] host_req  addr=001006f0 we=0 be=0001
+[2882000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[2884000 BUS] host_rvalid rdata=73657420 err=0
+[2884000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[2894000 BUS] host_req  addr=00020000 we=1 be=1111
+[2894000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[2896000 BUS] host_rvalid rdata=00000000 err=0
+[2896000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[2902000 BUS] host_req  addr=001006f0 we=0 be=0010
+[2902000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[2904000 BUS] host_rvalid rdata=73657420 err=0
+[2904000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[2914000 BUS] host_req  addr=00020000 we=1 be=1111
+[2914000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[2916000 BUS] host_rvalid rdata=00000000 err=0
+[2916000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[2922000 BUS] host_req  addr=001006f0 we=0 be=0100
+[2922000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[2924000 BUS] host_rvalid rdata=73657420 err=0
+[2924000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[2934000 BUS] host_req  addr=00020000 we=1 be=1111
+[2934000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[2936000 BUS] host_rvalid rdata=00000000 err=0
+[2936000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[2942000 BUS] host_req  addr=001006f0 we=0 be=1000
+[2942000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[2944000 BUS] host_rvalid rdata=73657420 err=0
+[2944000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[2954000 BUS] host_req  addr=00020000 we=1 be=1111
+[2954000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[2956000 BUS] host_rvalid rdata=00000000 err=0
+[2956000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[2962000 BUS] host_req  addr=001006f4 we=0 be=0001
+[2962000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[2964000 BUS] host_rvalid rdata=63207374 err=0
+[2964000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[2974000 BUS] host_req  addr=00020000 we=1 be=1111
+[2974000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[2976000 BUS] host_rvalid rdata=00000000 err=0
+[2976000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[2982000 BUS] host_req  addr=001006f4 we=0 be=0010
+[2982000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[2984000 BUS] host_rvalid rdata=63207374 err=0
+[2984000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[2994000 BUS] host_req  addr=00020000 we=1 be=1111
+[2994000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[2996000 BUS] host_rvalid rdata=00000000 err=0
+[2996000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[3002000 BUS] host_req  addr=001006f4 we=0 be=0100
+[3002000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[3004000 BUS] host_rvalid rdata=63207374 err=0
+[3004000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[3014000 BUS] host_req  addr=00020000 we=1 be=1111
+[3014000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[3016000 BUS] host_rvalid rdata=00000000 err=0
+[3016000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[3022000 BUS] host_req  addr=001006f4 we=0 be=1000
+[3022000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[3024000 BUS] host_rvalid rdata=63207374 err=0
+[3024000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[3034000 BUS] host_req  addr=00020000 we=1 be=1111
+[3034000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[3036000 BUS] host_rvalid rdata=00000000 err=0
+[3036000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[3042000 BUS] host_req  addr=001006f8 we=0 be=0001
+[3042000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[3044000 BUS] host_rvalid rdata=6c706d6f err=0
+[3044000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[3054000 BUS] host_req  addr=00020000 we=1 be=1111
+[3054000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[3056000 BUS] host_rvalid rdata=00000000 err=0
+[3056000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[3062000 BUS] host_req  addr=001006f8 we=0 be=0010
+[3062000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[3064000 BUS] host_rvalid rdata=6c706d6f err=0
+[3064000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[3074000 BUS] host_req  addr=00020000 we=1 be=1111
+[3074000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[3076000 BUS] host_rvalid rdata=00000000 err=0
+[3076000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[3082000 BUS] host_req  addr=001006f8 we=0 be=0100
+[3082000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[3084000 BUS] host_rvalid rdata=6c706d6f err=0
+[3084000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[3094000 BUS] host_req  addr=00020000 we=1 be=1111
+[3094000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[3096000 BUS] host_rvalid rdata=00000000 err=0
+[3096000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[3102000 BUS] host_req  addr=001006f8 we=0 be=1000
+[3102000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[3104000 BUS] host_rvalid rdata=6c706d6f err=0
+[3104000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[3114000 BUS] host_req  addr=00020000 we=1 be=1111
+[3114000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[3116000 BUS] host_rvalid rdata=00000000 err=0
+[3116000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[3122000 BUS] host_req  addr=001006fc we=0 be=0001
+[3122000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[3124000 BUS] host_rvalid rdata=20657465 err=0
+[3124000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[3134000 BUS] host_req  addr=00020000 we=1 be=1111
+[3134000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[3136000 BUS] host_rvalid rdata=00000000 err=0
+[3136000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[3142000 BUS] host_req  addr=001006fc we=0 be=0010
+[3142000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[3144000 BUS] host_rvalid rdata=20657465 err=0
+[3144000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[3154000 BUS] host_req  addr=00020000 we=1 be=1111
+[3154000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[3156000 BUS] host_rvalid rdata=00000000 err=0
+[3156000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[3162000 BUS] host_req  addr=001006fc we=0 be=0100
+[3162000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[3164000 BUS] host_rvalid rdata=20657465 err=0
+[3164000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[3174000 BUS] host_req  addr=00020000 we=1 be=1111
+[3174000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[3176000 BUS] host_rvalid rdata=00000000 err=0
+[3176000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[3182000 BUS] host_req  addr=001006fc we=0 be=1000
+[3182000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[3184000 BUS] host_rvalid rdata=20657465 err=0
+[3184000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[3194000 BUS] host_req  addr=00020000 we=1 be=1111
+[3194000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[3196000 BUS] host_rvalid rdata=00000000 err=0
+[3196000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[3202000 BUS] host_req  addr=00100700 we=0 be=0001
+[3202000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[3204000 BUS] host_rvalid rdata=0a3d3d3d err=0
+[3204000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[3214000 BUS] host_req  addr=00020000 we=1 be=1111
+[3214000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[3216000 BUS] host_rvalid rdata=00000000 err=0
+[3216000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[3222000 BUS] host_req  addr=00100700 we=0 be=0010
+[3222000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[3224000 BUS] host_rvalid rdata=0a3d3d3d err=0
+[3224000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[3234000 BUS] host_req  addr=00020000 we=1 be=1111
+[3234000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[3236000 BUS] host_rvalid rdata=00000000 err=0
+[3236000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[3242000 BUS] host_req  addr=00100700 we=0 be=0100
+[3242000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[3244000 BUS] host_rvalid rdata=0a3d3d3d err=0
+[3244000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[3254000 BUS] host_req  addr=00020000 we=1 be=1111
+[3254000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[3256000 BUS] host_rvalid rdata=00000000 err=0
+[3256000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[3262000 BUS] host_req  addr=00100700 we=0 be=1000
+[3262000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[3264000 BUS] host_rvalid rdata=0a3d3d3d err=0
+[3264000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[3274000 BUS] host_req  addr=00020000 we=1 be=1111
+[3274000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[3276000 BUS] host_rvalid rdata=00000000 err=0
+[3276000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[3282000 BUS] host_req  addr=00100704 we=0 be=0001
+[3282000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+[3284000 BUS] host_rvalid rdata=00000000 err=0
+[3284000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+[3302000 BUS] host_req  addr=00020008 we=1 be=1111
+[3302000 LSU] tlreq=1 lsu_req=1 dreq=1 load_err=0 lsu_rv=0 top_rv=0 top_lerr=0
+Terminating simulation by software request.
+[3304000 BUS] host_rvalid rdata=00000000 err=0
+[3304000 LSU] tlreq=0 lsu_req=0 dreq=0 load_err=0 lsu_rv=1 top_rv=1 top_lerr=0
+Simulation complete via $finish(1) at time 3306 NS + 1
+/home/net/al663069/SD2_ws/ibex/shared/rtl/sim/simulator_ctrl.sv:93       $finish;
+xcelium> echo "=== Simulation timeout after 2ms ==="
+=== Simulation timeout after 2ms ===
+xcelium> exit
+TOOL:	xrun(64)	23.09-s006: Exiting on Mar 12, 2026 at 15:16:32 EDT  (total: 00:00:12)
+
+=== Simulation complete ===
+Log: /home/net/al663069/SD2_ws/scaler_asic_design/modifiedCoreTesting/rtl_test/xrun_netlist_test/xrun.log
+
+=== Software output (ibex_simple_system.log) ===
+=== RISC-V Instruction Test ===
+ALU: PASS
+Memory: PASS
+Branch: PASS
+MUL/DIV: PASS
+AUIPC/LUI: PASS
+
+=== All instruction tests complete ===

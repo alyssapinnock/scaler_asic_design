@@ -1,0 +1,14 @@
+TOOL:	xrun(64)	23.09-s006: Started on Mar 12, 2026 at 16:08:18 EDT
+xrun(64): 23.09-s006: (c) Copyright 1995-2024 Cadence Design Systems, Inc.
+Loading snapshot worklib.ibex_simple_system:sv .................... Done
+xcelium> source /home/net/cadence/installs/XCELIUM2309/tools/xcelium/files/xmsimrc
+xcelium> run 2ms
+Loading SRAM from +VMEM plusarg: /home/net/al663069/SD2_ws/scaler_asic_design/modifiedCoreTesting/gate_level_sim_bundle/tests/compiled/hello_test.vmem
+GLS debug logging disabled
+Terminating simulation by software request.
+Simulation complete via $finish(1) at time 26484 NS + 1
+./sources/shared/rtl/sim/simulator_ctrl.sv:93       $finish;
+xcelium> echo "=== Simulation timeout after 2ms ==="
+=== Simulation timeout after 2ms ===
+xcelium> exit
+TOOL:	xrun(64)	23.09-s006: Exiting on Mar 12, 2026 at 16:08:56 EDT  (total: 00:00:38)

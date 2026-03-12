@@ -1,0 +1,9 @@
+=== Timer Read Test ===
+Reading MTIME...
+MTIME_LO: 0x0000020F
+MTIME_HI: 0x00000000
+MTIME_LO (2nd): 0x000003DF
+Writing MTIMECMP...
+MTIMECMP set to max
+MTIMECMP_LO: 0xFFFFFFFF
+PASS: Timer access works!
