@@ -1,0 +1,34 @@
+create_library_set -name fast_lib_0C \
+    -timing {../lib/gpdk045_v_6_0/gsclib045/timing/fast_vdd1v2_basicCells.lib}
+
+create_library_set -name slow_lib_125C \
+    -timing {../lib/gpdk045_v_6_0/gsclib045/timing/slow_vdd1v0_basicCells.lib}
+
+create_timing_condition -name fast -library_sets fast_lib_0C
+create_timing_condition -name slow -library_sets slow_lib_125C
+
+create_rc_corner -name PVT.fast \
+    -qrc_tech  ../QRC_Tech/gpdk045.tch \
+    -temperature 0
+
+create_rc_corner -name PVT.slow \
+    -qrc_tech  ../QRC_Tech/gpdk045.tch \
+    -temperature 125
+
+create_delay_corner -name PVT.fast_delay -timing_condition fast \
+    -rc_corner PVT.fast
+create_delay_corner -name PVT.slow_delay -timing_condition slow \
+    -rc_corner PVT.slow
+
+create_constraint_mode -name fast_mode -sdc_files {../Synthesis/outputs/top_sdc.sdc}
+create_constraint_mode -name slow_mode -sdc_files {../Synthesis/outputs/top_sdc.sdc}
+
+create_analysis_view -name fast_setup -delay_corner \
+    PVT.fast_delay -constraint_mode fast_mode
+
+create_analysis_view -name slow_setup -delay_corner \
+    PVT.slow_delay -constraint_mode slow_mode
+
+set_analysis_view -setup { slow_setup } -hold { fast_setup }
+#set_analysis_view -setup { slow_setup } -hold { slow_setup }
+#set_analysis_view -setup { fast_setup } -hold { fast_setup }
