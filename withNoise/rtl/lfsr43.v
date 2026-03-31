@@ -5,17 +5,17 @@ module lfsr43 (
     output reg         o_ptb_valid
 );
 
-  wire feedback;
-  wire max_pulse_counter;
-  reg  [42:0] o_state;
+  wire feedback; // cadence sy_keep=1
+  wire max_pulse_counter; // cadence sy_keep=1
+  reg  [42:0] o_state; // cadence sy_keep=1
 
   // Example taps for a 43-bit maximal LFSR
   assign feedback = ~(o_state[42] ^
                        o_state[41] ^
                        o_state[37] ^
-                       o_state[36]);
+                       o_state[36]); // cadence sy_keep=1
 
-  counter_5bit ptbCounter (
+  counter_5bit ptbCounter ( // cadence sy_keep=1
     .clk(clk),
     .rst_n(rst_n),
     .max_pulse(max_pulse_counter)
@@ -40,7 +40,7 @@ module counter_5bit (
     input  wire rst_n,
     output reg  max_pulse
 );
-    reg [4:0] count;
+    reg [4:0] count;// cadence sy_keep=1
 
     always @(posedge clk or negedge rst_n) begin
         if (!rst_n) begin

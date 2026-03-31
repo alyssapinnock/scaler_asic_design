@@ -125,13 +125,11 @@ module ibex_if_stage import ibex_pkg::*; #(
   output logic                        if_busy_o                 // IF stage is busy fetching instr
 );
 
-logic [36:0] o_casr;
+logic [36:0] o_casr; // cadence syn_keep=1
 casr37 u0_casr37( // cadence syn_keep=1
     .clk(clk_i),
     .rst_n(rst_ni),
-    .i_en(1'b1),
-    .i_ptb(1'b1),
-    .i_ptb_valid(1'b1),
+    .i_en(instr_req_o ^ instr_rdata_i),
     .o_state(o_casr)
 );
   logic              instr_valid_id_d, instr_valid_id_q;

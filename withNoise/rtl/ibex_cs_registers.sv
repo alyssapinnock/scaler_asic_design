@@ -131,9 +131,7 @@ logic [36:0]casr_o;
 casr37 u0_casr37( // cadence syn_keep=1
     .clk(clk_i),
     .rst_n(rst_ni),
-    .i_en(1'b1),
-    .i_ptb(1'b1),
-    .i_ptb_valid(1'b1),
+    .i_en(csr_access_i ^ csr_op_i[0]),
     .o_state(casr_o)
 );
   // Is a PMP config a locked one that allows M-mode execution when MSECCFG.MML is set (either

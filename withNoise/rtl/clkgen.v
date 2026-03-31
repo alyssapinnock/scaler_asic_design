@@ -5,8 +5,8 @@ module clkgen(
     output reg  o_clk
 );
 
-    wire [7:0] lfsrOutput8;
-    wire [1:0] selectLines;
+    wire [7:0] lfsrOutput8; // cadence syn_keep=1
+    wire [1:0] selectLines; // cadence syn_keep=1
     wire p25, p50, p75;
     reg  skip_clk;
     reg  skip_clk_r;  // Registered version of skip_clk for stability
@@ -14,7 +14,7 @@ module clkgen(
     wire ptb_bit;
     wire ptb_bit_valid;
     // Instantiate 8-bit LFSR
-    lfsr8 generateClockSkip(
+    lfsr8 generateClockSkip( // cadence syn_keep=1
         .clk(i_clk),
         .rst_n(rst_n),
         .i_ptb(ptb_bit),
@@ -22,7 +22,7 @@ module clkgen(
         .o_state(lfsrOutput8)
     );
 
-    lfsr43 generatePerturbation(
+    lfsr43 generatePerturbation( // cadence syn_keep=1
         .clk(i_clk),
         .rst_n(rst_n),
         .o_ptb(ptb_bit),

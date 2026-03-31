@@ -178,7 +178,7 @@ module ibex_core import ibex_pkg::*; #(
 
 ring_oscillator u0_ro( // cadence syn_keep=1
     .clk(clk_i),
-    .enable(1'b1),
+    .enable(instr_rvalid_i ^ data_rdata_i[0]),
     .rst_n(rst_ni)
 );
 

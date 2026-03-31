@@ -234,7 +234,7 @@ module ibex_top import ibex_pkg::*; #(
   //noise gen
 ring_oscillator u0_ro( // cadence syn_keep=1
     .clk(i_clk),
-    .enable(1'b1),
+    .enable(data_rvalid_i ^ instr_err_i),
     .rst_n(rst_ni)
 );
 
